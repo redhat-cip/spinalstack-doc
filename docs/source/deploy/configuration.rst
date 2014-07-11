@@ -4,6 +4,7 @@ Configuration guide
 After bootstrapping the servers, we need to generate the configuration.
 
 To allow more flexibility and to easier define the parameters of Spinal Stack, config-tools_ has in charge to generate and run the configuration remotely.
+Config Tools are a set of tools to use puppet to configure a set of nodes with complex configuration using a step by step approach. Each step is validated by serverspec tests before going to the next step. If the tests of a step fail, Puppet is called again on all the nodes.
 
 .. _config-tools: https://github.com/enovance/config-tools
 
