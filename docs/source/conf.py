@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # Spinal Stack documentation build configuration file, created by
-# sphinx-quickstart on Fri Jul 11 13:19:58 2014.
+# sphinx-quickstart on Fri Jul 11 14:13:11 2014.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -67,7 +67,7 @@ release = 'I.1.1.0'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build']
+exclude_patterns = []
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
