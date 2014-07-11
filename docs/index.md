@@ -1,4 +1,4 @@
-spinalstack-doc
-===============
+# Summary
 
-Official manual of Spinal Stack
+* [Introduction](introduction.md)
+* [Architecture](architecture.md)
