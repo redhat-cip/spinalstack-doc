@@ -1,4 +1,15 @@
 Operations guide
 ================
 
-Here is some content about managing Spinal Stack in production.
+This section aims to document how to manage Spinal Stack deployments in production.
+
+.. toctree::
+   :maxdepth: 5
+
+   introduction
+   monitoring
+   logging
+   openstack
+   ceph
+
+.. update index

@@ -6,10 +6,10 @@ The :term:`Spinal Stack` aims to deliver a flexible, high available and scalable
 
 
 Tables of contents
-=================
+==================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 10
 
    introduction
    architecture
