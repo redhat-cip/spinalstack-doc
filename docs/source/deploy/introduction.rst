@@ -3,9 +3,9 @@ Introduction
 
 The deployment of Spinal Stack is done by 3 steps:
 
-- bootstrap
-- configuration
-- validation
+- bootstrap: manage lifecycle of servers (harward + OS + packages)
+- configuration: configure all services to make Spinal Stack working
+- sanity: ensure Spinal Stack is deployed and working as expected
 
 
 Requirements
@@ -13,13 +13,13 @@ Requirements
 
 Before running a deployment, there are some requirements to understand the way Spinal Stack works do be deployed.
 
-============= ==================================== =========================
-step          project(s)                            external documentation
-============= ==================================== =========================
-bootstrap     eDeploy, PXEmgr                      eDeploy_, PXEmngr_
-configuration config-tools, Puppet, Hiera, Ansible Puppet_, Hiera_, Ansible_
-validation    Tempest                              Tempest_
-============= ==================================== =========================
+====================== ==================================== =========================
+step                   project(s)                            external documentation
+====================== ==================================== =========================
+bootstrap              eDeploy, PXEmgr                      eDeploy_, PXEmngr_
+configuration, upgrade config-tools, Puppet, Hiera, Ansible Puppet_, Hiera_, Ansible_
+sanity                 Tempest                              Tempest_
+====================== ==================================== =========================
 
 .. _eDeploy: https://github.com/enovance/edeploy/blob/master/docs/eDeployUserGuide.rst
 .. _PXEmngr: https://github.com/enovance/pxemngr/blob/master/README.rst
