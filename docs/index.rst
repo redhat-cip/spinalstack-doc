@@ -6,6 +6,8 @@
 Welcome to Spinal Stack's documentation!
 ========================================
 
+test
+
 Contents:
 
 .. toctree::
