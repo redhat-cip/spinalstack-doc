@@ -1,0 +1,11 @@
+{
+    "name": "Spinal Sack",
+    "version": "0.0.1",
+    "description": "Spinal Stack official guide",
+    "repository": {
+            "type": "git",
+            "url": "https://github.com/enovance/spinalstack-doc"
+        },
+    "author": "eNovance developper team <dev@enovance.com>",
+    "license": "Apache 2.0"
+}
