@@ -150,7 +150,8 @@ Generate the configuration
 From the installation server, run::
 
     $ git clone git@github.com:enovance/config-tools.git
-    $ ./provision I.1.1.0 git@my-env-git-repo:spinalstack-env/env-joe.yaml version=D7-I.1.1.0
+    $ cd config-tools
+    $ ./provision.sh I.1.1.0 git@my-env-git-repo:spinalstack-env/env-joe.yaml version=D7-I.1.1.0
 
 Run the configuration
 ---------------------
