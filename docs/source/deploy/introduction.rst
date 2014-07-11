@@ -1,2 +1,42 @@
 Introduction
 ============
+
+The deployment of Spinal Stack is done by 3 steps:
+
+- bootstrap
+- configuration
+- validation
+
+
+Requirements
+------------
+
+Before running a deployment, there are some requirements to understand the way Spinal Stack works do be deployed.
+
+============= ==================================== =========================
+step          project(s)                            external documentation
+============= ==================================== =========================
+bootstrap     eDeploy, PXEmgr                      eDeploy_, PXEmngr_
+configuration config-tools, Puppet, Hiera, Ansible Puppet_, Hiera_, Ansible_
+validation    Tempest                              Tempest_
+============= ==================================== =========================
+
+.. _eDeploy: https://github.com/enovance/edeploy/blob/master/docs/eDeployUserGuide.rst
+.. _PXEmngr: https://github.com/enovance/pxemngr/blob/master/README.rst
+.. _Puppet: http://docs.puppetlabs.com/
+.. _Hiera: http://docs.puppetlabs.com/hiera/1/
+.. _Ansible: http://docs.ansible.com/
+.. _Tempest: http://docs.openstack.org/developer/tempest/
+
+
+The minimal requirements to install Spinal Stack are:
+
+=============== ================= =================
+Deployment type Number of Servers Operating Systems
+=============== ================= =================
+PoC, dev        4                 RHEL 6.5, Debian Wheezy
+Production      > 10              RHEL 6.5, Debian Wheezy
+=============== ================= =================
+
+.. note::
+    Spinal Stack can be install on bare-metal server or in a virtualized environment.
