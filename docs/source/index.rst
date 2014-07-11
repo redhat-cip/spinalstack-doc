@@ -12,6 +12,7 @@ Tables of contents
    :maxdepth: 2
 
    introduction
+   architecture
    deploy/index
    ops/index
    dev/index
