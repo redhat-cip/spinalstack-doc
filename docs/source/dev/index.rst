@@ -1,4 +1,13 @@
 Developper guide
 ================
 
-Here is some content about Spinal Stack developpement.
+This guide will help anyone who want to contribute to Spinal Stack.
+
+.. toctree::
+   :maxdepth: 5
+
+   contribute
+   bug
+   feature
+
+.. update index
