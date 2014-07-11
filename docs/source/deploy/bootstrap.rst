@@ -37,6 +37,7 @@ Deploy the install-server role
 ------------------------------
 
 This role contains all these components:
+
 - eDeploy
 - PXEmngr
 - Puppet Master: running Passenger with Apache2 and PuppetDB on 81 port.
