@@ -10,7 +10,7 @@ The upgrade is orchestred by 4 steps:
 
 - eDeploy from installation server (downstream) has to synchronize the last roles with eDeploy from upstream (CI). Currently, it's done by the `ansible playbooks`_ with `edeploy_sync` tag.
 
-.. _`ansible playbooks`: https://github.com/enovance/edeploy-roles/blob/master/update
+.. _`ansible playbooks`: https://github.com/enovance/edeploy-roles/blob/master/upgrade
 
 - Generate the new configuration on the install-server. Example with I.1.2.0 (release that we want) on 3 nodes::
 
@@ -25,6 +25,3 @@ The upgrade is orchestred by 4 steps:
   - Run some actions on OpenStack nodes by running the `ansible playbooks`_ with `after_config` tag.
 
 - Run `sanity` Jenkins job to ensure that we still have Spinal Stack working as expected.
-
-.. warning::
-    Some work is in progress to move all automation in the upgrade Jenkins job.
