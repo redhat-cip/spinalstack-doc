@@ -1,7 +1,7 @@
 Welcome to Spinal Stack's documentation!
 ========================================
 
-The :term:`Spinal Stack` aims to deliver a flexible, high available and scalable OpenStack infrastructure running all OpenStack core components.
+The `Spinal Stack` aims to deliver a flexible, high available and scalable OpenStack infrastructure running all OpenStack core components.
 
 
 
@@ -16,7 +16,6 @@ Tables of contents
    deploy/index
    ops/index
    dev/index
-   glossary
 
 .. update index
 
