@@ -3,9 +3,10 @@ Introduction
 
 The deployment of Spinal Stack is done by 3 steps:
 
-- bootstrap: manage lifecycle of servers (harward + OS + packages)
-- configuration: configure all services to make Spinal Stack working
-- sanity: ensure Spinal Stack is deployed and working as expected
+- **bootstrap**: manage lifecycle of servers (hardware + Operating System + packages)
+- **configuration**: configure all services to make Spinal Stack working
+- **sanity**: ensure Spinal Stack is deployed and working as expected by running advanced
+  functionnal testing
 
 
 Requirements
@@ -39,4 +40,4 @@ Production      > 10              RHEL 6.5, Debian Wheezy
 =============== ================= =================
 
 .. note::
-    Spinal Stack can be install on bare-metal server or in a virtualized environment.
+    Spinal Stack can be installed on bare-metal server or in a virtualized environment.
