@@ -3,7 +3,8 @@ Welcome to Spinal Stack's documentation!
 
 The `Spinal Stack` aims to deliver a flexible, high available and scalable OpenStack infrastructure running all OpenStack core components.
 
-
+.. warning::
+    The documentation is still work in progress and is not yet released as official manual yet.
 
 Tables of contents
 ==================
