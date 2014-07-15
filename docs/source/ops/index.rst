@@ -8,7 +8,7 @@ This section aims to document how to manage Spinal Stack deployments in producti
 
    introduction
    monitoring
-   logging
+   logging/index
    openstack
    ceph
 
