@@ -16,6 +16,7 @@ Tables of contents
    architecture
    deploy/index
    ops/index
+   security/index
    dev/index
 
 .. update index
