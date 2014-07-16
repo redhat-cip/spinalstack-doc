@@ -68,5 +68,5 @@ To tell Spinal Stack that nova should be contacted via 'https' on its adminUrl, 
 .. code-block:: none
 
   ---
-  cloud::identity::ks_nova_internal_proto: https
+  cloud::identity::ks_nova_admin_proto: https
 
