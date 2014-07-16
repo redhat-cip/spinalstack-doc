@@ -1,7 +1,7 @@
 Configuration
 =============
 
-SpinalStack provides two classes related to logging. logging/agent.pp and logging/server.pp. Please read below for more details.
+Spinal Stack provides two classes related to logging. logging/agent.pp and logging/server.pp. Please read below for more details.
 
 Puppet
 ------
@@ -18,7 +18,7 @@ The class itself takes only 4 parameters :
 * matches (hash) : An hash describing the matches for specific tagged logs.
 * plugins (hash) : An hash describing the list of plugins that should be installed on the instance.
 
-As for the rest of SpinalStack, the whole configuration takes place in the according hiera's yaml configuration file.
+As for the rest of Spinal Stack, the whole configuration takes place in the according hiera's yaml configuration file.
 
 logging/server.pp
 *****************
@@ -32,7 +32,7 @@ The configuration mentionned above applies here, plus the operator should config
 Components Configuration
 ------------------------
 
-Following is the list of the puppet modules used for SpinalStack logging infrastructure :
+Following is the list of the puppet modules used for Spinal Stack logging infrastructure :
 
 ==================== ===============================================================
 name                 homepage
