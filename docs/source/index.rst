@@ -18,6 +18,7 @@ Tables of contents
    ops/index
    security/index
    dev/index
+   troubleshooting/index
 
 .. update index
 
