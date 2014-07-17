@@ -1,5 +1,5 @@
-Operations guide
-================
+Troubleshooting
+===============
 
 This section aims to document how to troubleshoot Spinal Stack deployments during the installation phase and beyond.
 
