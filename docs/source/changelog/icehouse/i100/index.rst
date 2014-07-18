@@ -1,10 +1,9 @@
-Icehouse
-========
+I-1.0.0
+=======
 
 .. toctree::
    :maxdepth: 10
 
-   i110/index
-   i100/index
+   i100
 
 .. update index

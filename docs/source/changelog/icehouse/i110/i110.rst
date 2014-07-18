@@ -1,0 +1,123 @@
+Icehouse I-1.1.0
+================
+
+Features
+--------
+
+* SSL termination suppot on load-balancer nodes
+* Centralized logging support (Stack: fluentd + elasticsearch + kibana)
+* Puppet dashboard is now installed by default in install-server and available at http://install-server:82/
+* Heat-engine is no more managed by Pacemaker and can be run on all controller nodes
+* Pacemaker support on Red Hat
+* OpenStack database as a service (Trove) support
+* Glance local backend support
+* Add galera-status script to check MySQL cluster status
+* Add jenkins on the install-server which manages Puppet, Sanity and Upgradejobs
+* Ansible playbooks to upgrade from Debianwheezy I-1.0.0 to I.1.1.0
+
+
+Release Components
+------------------
+
+* edeploy-I-1.1.0.tar.gz
+* edeploy-roles-I-1.1.0.tar.gz
+* install-server-D7-I.1.1.0.edeploy
+* openstack-full-D7-I.1.1.0.edeploy
+* openstack-full-RH6.5-I.1.1.0.edeploy
+* puppet-openstack-cloud-I.1.1.0.tgz
+* serversoec-I.1.1.0.tgz
+
+All the sources have been tagged with the tag I.1.1.0 in their respective repositories on Github
+
+Package Diff
+------------
+
+Added
+#####
+
+=========================== =============================
+Package                     Version
+=========================== =============================
+crash                       6.0.6-1
+dnsutils                    1:9.8.4.dfsg.P1-6+nmu2+deb7u1 
+iotop                       0.4.4-4
+less                        444-4
+ltrace                      0.5.3-2.1
+manpages                    3.44-1
+mtr                         0.82-3
+ncdu                        1.8-1
+nmap                        6.00-0.3+deb7u1
+percona-toolkit             2.1.2-1
+python-designateclient      1.0.3-1~bpo70+1
+python-trove                2014.1-5~bpo70+1
+shared-mime-info            1.0-1+b1
+socat                       1.7.1.3-1.4
+strace                      4.5.20-2.3 
+sysstat                     10.0.5-1
+telnet                      0.17-36
+tmux                        1.6-2
+trove-api                   2014.1-5~bpo70+1
+trove-common                2014.1-5~bpo70+1
+trove-conductor             2014.1-5~bpo70+1
+trove-guestagent            2014.1-5~bpo70+1
+trove-taskmanager           2014.1-5~bpo70+1
+w3m                         0.5.3-8
+=========================== =============================
+
+Updated
+#######
+
+=========================== ==================== ===================
+Package                     Old Version          New Version
+=========================== ==================== ===================
+cinder-api                  2014.1.1-2~bpo70+1   2014.1.1-3~bpo70+1
+cinder-backup               2014.1.1-2~bpo70+1   2014.1.1-3~bpo70+1
+cinder-common               2014.1.1-2~bpo70+1   2014.1.1-3~bpo70+1 
+cinder-schedule             2014.1.1-2~bpo70+1   2014.1.1-3~bpo70+1 
+cinder-volume               2014.1.1-2~bpo70+1   2014.1.1-3~bpo70+1
+cloud-initramfs-growroot    0.18.debian3~bpo70+1 0.8.debian5
+facter                      2.0.2-1puppetlabs1   2.1.0-1puppetlabs1
+haproxy                     1.4.25-1~bpo70+1     1.5~dev26-2~bpo70+1
+keystone                    2014.1.1-2~bpo70+1   2014.1.1-3~bpo70+1
+linux-image-3.2.2-4-amd64   3.2.57-3+deb7u2      3.2.60-1+deb7u1
+nova-api                    2014.1.1-3~bpo70+1   2014.1.1-7~bpo70+1
+nova-cert                   2014.1.1-3~bpo70+1   2014.1.1-7~bpo70+1
+nova-common                 2014.1.1-3~bpo70+1   2014.1.1-7~bpo70+1
+nova-compute                2014.1.1-3~bpo70+1   2014.1.1-7~bpo70+1
+nova-compute-kvm            2014.1.1-3~bpo70+1   2014.1.1-7~bpo70+1
+nova-conductor              2014.1.1-3~bpo70+1   2014.1.1-7~bpo70+1
+nova-consoleauth            2014.1.1-3~bpo70+1   2014.1.1-7~bpo70+1
+nova-consoleproxy           2014.1.1-3~bpo70+1   2014.1.1-7~bpo70+1
+openstack-dashboard         2014.1.1-2~bpo70+1   2014.1.1-3~bpo70+1
+python-cinder               2014.1.1-2~bpo70+1   2014.1.1-3~bpo70+1
+python-compressor           1.3-1~bpo70+1        1.4-1~bpo70+1
+python-keystone             2014.1.1-2~bpo70+1   2014.1.1-3~bpo70+1
+python-nova                 2014.1.1-3~bpo70+1   2014.1.1-7~bpo70+1
+python-django-horizon       2014.1.1-2~bpo70+1   2014.1.1-3~bpo70+1
+td-agent                    1.1.20-1             2.0.3-0
+=========================== ==================== ===================
+
+Removed
+#######
+
+============================ =================
+Package                      Version
+============================ =================
+dkms                         2.2.0.3-1.2
+libssl0.9.8                  0.9.8o-4squeeze14
+linux-hearder-3.2.0-4-amd64  3.2.57-3+deb7u2
+linux-hearder-3.2.0-4-common 3.2.57-3+deb7u2
+linux-libc-dev:amd64         3.2.57-3+deb7u2
+openvswitch-datapath-dkms    2.0.1.1~bpo70+1
+============================ =================
+
+Bug Solved
+----------
+
+TBD
+
+Known Bug
+---------
+
+TBD
+
