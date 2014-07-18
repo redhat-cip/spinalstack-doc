@@ -1,9 +1,6 @@
 Icehouse
 ========
 
-Tables of contents
-==================
-
 .. toctree::
    :maxdepth: 10
 

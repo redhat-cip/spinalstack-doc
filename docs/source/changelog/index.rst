@@ -1,9 +1,6 @@
 Changelog
 =========
 
-Tables of contents
-==================
-
 .. toctree::
    :maxdepth: 10
 

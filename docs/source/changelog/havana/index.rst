@@ -1,8 +1,5 @@
-Havana Changelog
-================
-
-Tables of contents
-==================
+Havana
+======
 
 .. toctree::
    :maxdepth: 10
