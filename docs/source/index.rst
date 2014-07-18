@@ -19,6 +19,7 @@ Tables of contents
    security/index
    dev/index
    troubleshooting/index
+   changelog/index
 
 .. update index
 
