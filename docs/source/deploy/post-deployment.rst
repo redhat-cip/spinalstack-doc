@@ -44,7 +44,7 @@ In order to bypass this, we use `IDE` disks and `rtl8139` network card instead o
 
 
 Nova
-====
+----
 
 Delete flavors and re-create tiny flavors
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -97,7 +97,7 @@ Assign to this flavor a special property:
 
 
 Neutron
-=======
+-------
 
 Initiale br-pub: Public Network
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -113,7 +113,7 @@ Create a new provider network (on VLAN 100)
 
 
 Cinder
-======
+------
 
 Create a QoS for a volume type
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
