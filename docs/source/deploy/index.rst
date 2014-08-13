@@ -10,6 +10,7 @@ This section aims to document how to perform Spinal Stack deployments.
    bootstrap
    configuration
    sanity
+   post-deployment
    upgrade
 
 .. update index
