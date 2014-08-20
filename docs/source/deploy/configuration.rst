@@ -30,8 +30,8 @@ Currently, there are two examples of infrastructure YAML file which work for 2 s
 1. `3 nodes`_ deployment: for PoC or dev
 2. `Reference Architecture`_ deployment: for production
 
-.. _`3 nodes`: htpps://github.com/enovance/openstack-yaml-infra-3nodes
-.. _`Reference Architecture`: htpps://github.com/enovance/openstack-yaml-infra-ref-arch
+.. _`3 nodes`: https://github.com/enovance/openstack-yaml-infra-3nodes
+.. _`Reference Architecture`: https://github.com/enovance/openstack-yaml-infra-ref-arch
 
 If none of these scenarios fits with your deployment, you have to create your own, respecting this architecture:
 
@@ -95,7 +95,7 @@ The `environment` that we just talked in `infrastructure` is something specific 
 
 There is an example of `environment` file here_.
 
-.. _here: htpps://github.com/enovance/openstack-yaml-infra-3nodes/blob/master/example.yml
+.. _here: https://github.com/enovance/openstack-yaml-infra-3nodes/blob/master/example.yml
 
 Let's create this file (in the example it will be named joe.yml) and describe its structure:
 * `infra`: infrastructure name (ex: 3nodes)
