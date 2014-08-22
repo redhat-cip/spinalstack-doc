@@ -32,12 +32,12 @@ sanity                 Tempest                              Tempest_
 
 The minimal requirements to install Spinal Stack are:
 
-=============== ================= =================
+=============== ================= =====================================
 Deployment type Number of Servers Operating Systems
-=============== ================= =================
-PoC, dev        4                 RHEL 6.5, Debian Wheezy
-Production      > 10              RHEL 6.5, Debian Wheezy
-=============== ================= =================
+=============== ================= =====================================
+PoC, dev        4                 RHEL 6.5, RHEL 7.0, Debian Wheezy
+Production      > 10              RHEL 7.0 (in progress), Debian Wheezy
+=============== ================= =====================================
 
 .. note::
     Spinal Stack can be installed on bare-metal server or in a virtualized environment.
