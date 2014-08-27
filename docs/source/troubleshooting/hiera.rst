@@ -96,7 +96,8 @@ Find the value hiera returns to puppet
 
 The latter will show one what hiera returned to puppet.
 
-*Note*: On the previous messaging class exmaple. If one wants to find the rabbit_names value, don't use `hiera rabbit_names -c /etc/puppet/hiera.yaml`, but `hiera cloud::messaging::rabbit_names -c /etc/puppet/hiera.yaml`. cloud::messaging::rabbit_names is your actual parameter name.
+.. note::
+    On the previous messaging class exmaple. If one wants to find the rabbit_names value, don't use ``hiera rabbit_names -c /etc/puppet/hiera.yaml``, but ``hiera cloud::messaging::rabbit_names -c /etc/puppet/hiera.yaml``. ``cloud::messaging::rabbit_names`` is your actual parameter name.
 
 
 Find which files are opened by hiera to look for informations
