@@ -121,3 +121,79 @@ Known Bug
 
 TBD
 
+Environment Parameters
+----------------------
+
+==================================== ======= ========== ========================================================== ==============
+Parameter                            Type    Optional   Description                                                Default
+==================================== ======= ========== ========================================================== ==============
+root_password                        String  False      root password to access the vm via ssh
+domain                               String  False      Domain name used to configure all the servers and services
+region                               String  False      Region used in Spinal Stack
+dns_ips                              String  False      Servername ip address
+ntp_servers                          Array   True       List of NTP servers to sync with
+vip_public_ip                        String  False      Public VIP IP
+vip_admin_ip                         String  False      Admin VIP IP
+vip_public_fqdn                      String  False      Public FQDN
+vip_internal_fqdn                    String  False      Internal FQDN
+vip_admin_fqdn                       String  False      Admin FQDN
+endpoint_proto                       String  False      Endpoint protocol type. (ex. http, https)
+public_network                       String  False      CIDR notation of the public network
+internal_network                     String  False      CIDR notation of the internal network
+admin_network                        String  False      CIDR notation of the admin network
+storage_network                      String  False      CIDR notation of the storage network
+public_netif                         String  False      Public network interface
+internal_netif                       String  False      Internal network interface
+admin_netif                          String  False      Admin network interface
+storage_netif                        String  False      Storage network interface
+external_netif                       String  False      External network interface
+public_netif_ip                      String  True       Public interface IP address                                ipaddress_eth0
+internal_netif_ip                    String  True       Internal interface IP address                              ipaddress_eth0
+admin_netif_ip                       String  True       Admin interface IP address                                 ipaddress_eth0
+storage_netif_ip                     String  True       Storage interface IP address                               ipaddress_eth0
+db_allowed_hosts                     Array   False      Array of MySQL style Host connections are allowed from
+galera_master_name                   String  False      Galera master hostname
+mysql_root_password                  String  False      MySQL root password
+mysql_sys_maint_password             String  False      MySQL maintener password
+galera_clustercheck_dbuser           String  False      Galera cluster check user
+galera_clustercheck_dbpassword       String  False      Galera cluster check user password
+rabbit_host                          String  False      RabbitMQ host
+rabbit_password                      String  False      RabbitMQ password
+secret_key                           String  False      ** TBD **
+cinder_db_password                   String  False      Cinder database password
+ks_cinder_password                   String  False      ks_cinder_password
+heat_db_password                     String  False      Heat database password
+ks_heat_password                     String  False      ks_heat_password
+heat_auth_encryption_key             String  False      Heat authentication encryption key
+glance_db_password                   String  False      Glance database password
+ks_glance_password                   String  False      ks_glance_password
+ceilometer_secret                    String  False      ceilometer secret
+ks_ceilometer_password               String  False      ks_ceilometer_password
+ceph_fsid                            String  False      ceph_fsid
+ceph_mon_secret                      String  False      Monitor secret
+ceph_osd_devices                     Array   False      Array of osd devices
+cinder_rbd_pool                      String  False      RBD pool for cinder
+cinder_rbd_user                      String  False      RBD user for cinder
+keystone_db_password                 String  False      Keystone database user
+ks_admin_email                       String  False      Keystone administrator email
+ks_admin_password                    String  False      Keystone administrator password
+ks_admin_token                       String  False      Keystone administrator token
+ks_nova_password                     String  False      ks_nova_password
+nova_db_password                     String  False      Nova database password
+nova_ssh_public_key                  String  False      Nova ssh public key
+nova_ssh_private_key                 String  False      Nova ssh private key
+libvirt_type                         String  False      Libvirt type
+neutron_db_password                  String  False      Neutron database password
+ks_neutron_password                  String  False      ks_neutron_password
+neutron_metadata_proxy_shared_secret String  False      Shared secret
+trove_db_password                    String  False      Trove database password
+ks_trove_password                    String  False      ks_trove_password
+ks_swift_dispersion_password         String  False      Swift dispersion
+ks_swift_password                    String  False      Keystone Swift password
+replicas                             Integer False      Swift number of replicas
+statsd_host                          String  False      Statsd host IP address
+swift_hash_suffix                    String  False      Hash suffix
+syslog_port                          Integer False      Remote syslog port to export to
+syslog_server                        String  False      Remote syslog ip address to export to
+haproxy_auth                         String  False      HAProxy admin  interface credentials
+==================================== ======= ========== ========================================================== ==============
