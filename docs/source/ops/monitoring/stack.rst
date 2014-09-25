@@ -3,14 +3,14 @@ Monitoring Stack Components
 
 Before tackling how to configure monitoring in Spinal Stack, the following is the list of components used to create the monitoring stack. Every component is open-source and freely available.
 
-========= ==================== =========== ===================    =================================================
+========= ==================== =========== ====================== =================================================
 Name      Role                 Technology  License                Homepage
-========= ==================== =========== ===================    =================================================
+========= ==================== =========== ====================== =================================================
 RabbitMQ  Transport layer      Erlang      Mozilla Public License http://www.rabbitmq.com/
 redis     Data store           C           BSD                    http://www.redis.io/
 Sensu     Monitoting router    Ruby        MIT                    http://www.sensuapp.org/
 Uchiwa    Dashboard for sensu  NodeJS      MIT                    http://sensuapp.org/docs/latest/dashboards_uchiwa
-========= ==================== =========== ===================    =================================================
+========= ==================== =========== ====================== =================================================
 
 
 RabbitMQ
