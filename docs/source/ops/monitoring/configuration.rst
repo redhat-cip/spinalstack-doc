@@ -94,17 +94,12 @@ uchiwa::refresh      1000    Determines the interval to pull the Sensu API, in m
 puppet-redis
 ************
 
-============================ ============================== ===============================================================================================
-name                         default                        purpose
-============================ ============================== ===============================================================================================
-kibana3::config_es_port      9200                           Port the ElasticSearch cluster is listening on
-kibana3::config_es_protocol  http                           Protocol to contact the Elasticsearch cluster. Possible value 'http' or 'https'
-kibana3::config_es_server    '"_+window.location.hostname"' IP address or servername of the ElasticSearch cluster to contact
-kibana3::config_kibana_index kibana-int                     ElasticSearch index to retrieve logs from
-kibana3::manage_ws           true                           Should the module manage the apache webserver
-kibana3::ws_servername       kibana3                        Apache vhost name
-kibana3::ws_port             80                             Port apache is listening on
-============================ ============================== ===============================================================================================
+=================== ======== ======================================
+name                default  purpose
+=================== ======== ======================================
+redis::port         6379     Accept redis connections on this port.
+redis::bind_address false    Address to bind to.
+=================== ======== ======================================
 
 puppetlabs-rabbitmq
 *******************
