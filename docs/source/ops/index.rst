@@ -7,7 +7,7 @@ This section aims to document how to manage Spinal Stack deployments in producti
    :maxdepth: 5
 
    introduction
-   monitoring
+   monitoring/index
    logging/index
    openstack
    ceph
