@@ -36,7 +36,7 @@ The minimal requirements to install Spinal Stack are:
 Deployment type Number of Servers Operating Systems
 =============== ================= =====================================
 PoC, dev        4                 RHEL 6.5, RHEL 7.0, Debian Wheezy
-Production      > 10              RHEL 7.0 (in progress), Debian Wheezy
+Production      > 10              RHEL 7.0, Debian Wheezy
 =============== ================= =====================================
 
 .. note::
