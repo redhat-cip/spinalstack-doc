@@ -26,7 +26,7 @@ Redis
 
 Redis is an advanced key-value cache and store
 
-In Spinal Stack, it allows Sensu server to store persistent data with the need of a full-blown RDBMS.
+In Spinal Stack, it allows Sensu server to store persistent data without the need of a full-blown RDBMS.
 
 Sensu
 -----
