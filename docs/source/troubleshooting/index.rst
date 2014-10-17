@@ -7,5 +7,6 @@ This section aims to document how to troubleshoot Spinal Stack deployments durin
    :maxdepth: 5
 
    hiera
+   faq
 
 .. update index
