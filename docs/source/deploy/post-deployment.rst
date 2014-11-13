@@ -118,6 +118,20 @@ Create a new provider on VLAN 100::
     neutron net-create public --provider:network_type vlan --provider:physical_network public --provider:segmentation_id 100 --shared --router:external=True
 
 
+Create some metering labels for traffic passing through routers external interface
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following will meter all traffic going through routers' external interfaces::
+
+    neutron meter-label-create public-in
+    neutron meter-label-rule-create public-in 0.0.0.0/0 --direction ingress
+
+    neutron meter-label-create public-out
+    neutron meter-label-rule-create public-out 0.0.0.0/0 --direction egress
+
+Rules can be more specific and include or exclude some IP ranges. See http://docs.openstack.org/admin-guide-cloud/content/metering_operations.html for more details.
+
+
 Cinder
 ------
 
