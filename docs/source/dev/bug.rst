@@ -36,3 +36,4 @@ All OpenStack Puppet modules use Launchpad to file bugs. Other modules usually u
 **The Puppet catalog does not compile**
 
 It's highly possible that the issue comes from puppet-openstack-cloud module, which is the high-level module to configure Spinal Stack.
+File a bug on puppet-openstack-cloud Launchpad project
