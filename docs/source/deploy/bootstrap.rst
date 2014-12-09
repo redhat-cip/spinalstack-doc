@@ -5,17 +5,17 @@ Spinal Stack is able to be bootstrapped on physical servers or virtual machines.
 
 In this guide, we will see the physical servers use case.
 
-The bootstrap steps are performed by the installation server node, which will have in charge the deployment of all other nodes.
+The bootstrap steps are performed by the installation server node, which will be in charge of deploying all other nodes.
 
 eDeploy_ is the tool to provision and update systems (physical or virtual) using trees of files instead of packages or VM images.
 
 .. _eDeploy: https://github.com/enovance/edeploy
 
-The installation server node is build by using install-server_ eDeploy role.
+The installation server node is built by using install-server_ eDeploy role.
 
 .. _install-server: https://github.com/enovance/edeploy-roles/blob/master/install-server.install
 
-All other nodes (load-balancers, controllers, compute nodes, etc) are build by using openstack-full_ eDeploy role.
+All other nodes (load-balancers, controllers, compute nodes, etc) are built by using openstack-full_ eDeploy role.
 
 .. _openstack-full: https://github.com/enovance/edeploy-roles/blob/master/openstack-full.install
 
@@ -65,5 +65,5 @@ Once we have eDeploy working, we can continue to prepare the configuration.
 Deploy the openstack-full roles
 -------------------------------
 
-Once we have the install-server node ready, we can deploy all our infrastructure by using eDeploy over the network.
-To start the deployment, boot the targeted server by using the proper boot device regarded the kind of deployment you choose (PXE versus USB).
+Once the install-server node is ready, we can deploy all our infrastructure by using eDeploy over the network.
+To start the deployment, boot the targeted server by using the proper boot device regarding the kind of deployment you choose (PXE versus USB).

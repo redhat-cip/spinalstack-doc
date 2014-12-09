@@ -3,7 +3,7 @@ Configuration guide
 
 After bootstrapping the servers, we need to generate the configuration.
 
-To allow more flexibility and to easier define the parameters of Spinal Stack, config-tools_ has in charge to generate and run the configuration remotely.
+To allow more flexibility and to easily define the parameters of Spinal Stack, config-tools_ is in charge of generating and running the configuration remotely.
 Config Tools are a set of tools to use puppet to configure a set of nodes with complex configuration using a step by step approach. Each step is validated by serverspec tests before going to the next step. If the tests of a step fail, Puppet is called again on all the nodes.
 
 .. _config-tools: https://github.com/enovance/config-tools
@@ -15,10 +15,10 @@ To configure Spinal Stack correctly, there are two notions to understand:
 **Infrastructure** (common accross multiple deployments)
     describe how Spinal Stack will be configured. It will describe the different kind of nodes,
     which services are running on them and some default parameters in the deployment.
-    The infrastructure YAML files can be use by multiple deployment and should never been locked to some environment
-    informations (IP address or passwords).
-**Environment** (deployment specific)
-    describe the details of our deployment: IP address, domain name, passwords, SSH keys, etc.
+    The infrastructure YAML files can be use by multiple deployment and should never be tied to
+    information specific to a single environment (like IP addresses or passwords).
+**Environment** (deployment-specific)
+    describe the details of our deployment: IP addresses, domain name, passwords, SSH keys, etc.
     This file should not be shared with any other deployment and has to be stored safely.
 
 
@@ -64,14 +64,14 @@ This directory is common to all scenarios:
 
 **data/fqdn**
     Later, we will describe another YAML file which is the `environment`. In this file, we will see how
-    Hiera will use at this level. FQDN hiera level is useful when we want to set specific parameters for an
+    Hiera will use at this level. FQDN hiera level is useful when we want to set specific parameters for a
     host (like the storage devices for Swift and Ceph, etc).
 
 **data/type**
     This file contains all the parameters that we pass to the different Puppet classes.
     `config-tools` will generate the different profiles with the corresponding Puppet classes for each profile.
     If we want to override the paramater of a class in particular, we can do this at the FQDN Hiera level.
-    If there is too much modifications to do at this level, it's maybe because the deployment does not fit with
+    If there are too many modifications to do at this level, it may be because the deployment does not fit with
     this scenario and you may have to create a new infrastructure environment.
 
 **data/common**
