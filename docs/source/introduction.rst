@@ -10,9 +10,9 @@ Project features
 ----------------
 
 1. Bare-metal provisionner: hardware discovery, validation and configuration
-2. Configure OpenStack services to be high available and scalable
-3. Flexible environments to adapt at the needs
-4. Post-deployment checks and running a set of tests for validating deployed OpenStack
+2. Configure OpenStack services to be highly available and scalable
+3. Flexible environments to adapt to various needs
+4. Post-deployment checks and runset of tests for validating deployed OpenStack
 5. Orchestration of upgrades without downtime
 6. View logs in real-time through UI
 7. Support for Red Hat and Debian
