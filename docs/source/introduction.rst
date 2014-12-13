@@ -9,7 +9,7 @@ Spinal Stack is the solution to install OpenStack in production at eNovance.
 Project features
 ----------------
 
-1. Bare-metal provisionner: hardware discovery, validation and configuration
+1. Bare-metal provisioner: hardware discovery, validation and configuration
 2. Configure OpenStack services to be highly available and scalable
 3. Flexible environments to adapt to various needs
 4. Post-deployment checks and runset of tests for validating deployed OpenStack
