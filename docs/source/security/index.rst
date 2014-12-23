@@ -7,5 +7,7 @@ Security is a key part in a successful OpenStack cloud eployment. Security needs
    :maxdepth: 5
 
    ssl
+   selinux
+   firewall
 
 .. update index
