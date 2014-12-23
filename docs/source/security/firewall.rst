@@ -19,7 +19,6 @@ To tell Spinal Stack to enable firewalling, apply the following configuration in
 
 .. code-block:: none
 
-  ---
   manage_firewall: true
 
 Personalize firewalling
