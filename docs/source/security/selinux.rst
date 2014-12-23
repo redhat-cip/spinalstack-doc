@@ -1,5 +1,5 @@
-Firewall
-========
+SElinux
+=======
 
 Spinal Stack is able to run SElinux in 'enforced' mode on RHEL7.
 
