@@ -12,11 +12,11 @@ The upgrade is orchestred by 4 steps:
 
 .. _`ansible playbooks`: https://github.com/enovance/edeploy-roles/blob/master/upgrade
 
-- Generate the new configuration on the install-server. Example with I.1.2.0 (release that we want) on 3 nodes::
+- Generate the new configuration on the install-server. Example with I.1.3.0 (release that we want) on 3 nodes::
 
     $ git clone git@github.com:enovance/config-tools.git
     $ cd config-tools
-    $ ./provision.sh I.1.2.0 git@my-env-git-repo:spinalstack-env/env-joe.yaml version=D7-I.1.2.0
+    $ ./provision.sh I.1.3.0 git@my-env-git-repo:spinalstack-env/env-joe.yaml version=D7-I.1.3.0 stable=I.1.2.1
 
 - Run `upgrade` Jenkins job to perform Spinal Stack upgrade. It will automatically:
 
