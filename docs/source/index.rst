@@ -17,6 +17,7 @@ Tables of contents
    dev/index
    troubleshooting/index
    changelog/index
+   advisories/index
 
 .. update index
 
