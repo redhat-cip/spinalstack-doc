@@ -1,2 +1,4 @@
 _book/
 *.pdf
+docs/build/
+.DS_Store
