@@ -1,5 +1,5 @@
-Icehouse I-1.2.1
-================
+Spinal Stack I-1.2.1
+====================
 
 OpenStack version and supported distros
 ---------------------------------------
