@@ -1,0 +1,357 @@
+### New Packages ###
+euca2ools
+openstack-selinux
+nagios-common
+iotop
+selinux-policy-targeted
+ceph-common
+boost-iostreams
+sensu
+mtr
+librados2
+dracut-network
+python-ceph
+hpssacli
+openstack-neutron-cisco
+gpm-libs
+sysstat
+ltrace
+lldpad
+libstdc++
+librbd1
+kmod-rbd
+elfutils-libs
+libconfig
+v8
+boost-filesystem
+cloud-utils-growpart
+python-psutil
+rsyslog-gnutls
+vim-common
+tmux
+libcephfs1
+python-itsdangerous
+mongodb-server
+cloud-utils
+td-agent
+vim-enhanced
+traceroute
+python-flask
+bind-utils
+python-ecdsa
+mod_ssl
+yum-plugin-priorities
+nagios-plugins
+librelp
+crash
+python-werkzeug
+kmod-libceph
+spice-html5
+python-oslo-vmware
+rsyslog-relp
+vim-filesystem
+kexec-tools
+
+### Deleted Packages ###
+mongodb-org-shell
+mongodb-org-server
+ruby-rgen
+mongodb-org-tools
+mongodb-org
+ceph-libs
+libstdc++
+mongodb-org-mongos
+cryptopp
+openvswitch-controller
+
+### Version changes ###
+Package name                                 Previous version             Newer version
+-------------------------           ------------------------- -------------------------
+python-keystone                               2014.1-6.el7ost       2014.1.2.1-2.el7ost
+libvirt-daemon-driver-qemu                       1.1.1-29.el7          1.1.1-29.el7_0.3
+libvirt-daemon-config-nwfilter                   1.1.1-29.el7          1.1.1-29.el7_0.3
+openstack-nova-compute                        2014.1-7.el7ost         2014.1.2-1.el7ost
+openstack-keystone                            2014.1-6.el7ost       2014.1.2.1-2.el7ost
+openstack-nova-scheduler                      2014.1-7.el7ost         2014.1.2-1.el7ost
+euca2ools                                                 N/A               2.1.4-1.el7
+openstack-neutron-linuxbridge                2014.1-35.el7ost         2014.1.2-2.el7ost
+openstack-selinux                                         N/A           0.5.16-2.el7ost
+httpd                                            2.4.6-17.el7            2.4.6-18.el7_0
+augeas                                                    N/A              1.1.0-12.el7
+nagios-common                                             N/A               3.5.1-6.el7
+iotop                                                     N/A                 0.6-2.el7
+seavgabios-bin                                 1.7.2.2-12.el7        1.7.2.2-12.el7_0.1
+tzdata                                            2014b-1.el7               2014h-1.el7
+python-qpid                                        0.28-3.el7                0.28-4.el7
+nss-util                                         3.15.4-2.el7            3.16.2-2.el7_0
+kernel                                         3.10.0-123.el7 3.10.0-123.8.1.el7
+3.10.0-123.el7
+selinux-policy-targeted                                   N/A       3.12.1-153.el7_0.11
+nss-tools                                        3.15.4-6.el7            3.16.2-7.el7_0
+json-c                                             0.11-3.el7              0.11-4.el7_0
+python-jinja2                                     2.7.2-2.el7                 2.6-6.el7
+ceph-common                                               N/A     0.80.4-1.g67b5193.el7
+libvirt-daemon-driver-secret                     1.1.1-29.el7          1.1.1-29.el7_0.3
+python-cinder                                 2014.1-7.el7ost         2014.1.2-2.el7ost
+libquadmath                                      4.8.2-16.el7          4.8.2-16.2.el7_0
+openstack-ceilometer-alarm                  2014.1-2.4.el7ost         2014.1.2-1.el7ost
+gpg-pubkey                          4bd6ec30-4ff1e4fa
+fd431d51-4ae0493b
+17ed316d-4fb96ee8
+2fa658e0-45700c69 5ce2d476-50be41ba
+056e8e56-468e43f2
+2fa658e0-45700c69
+4bd6ec30-4ff1e4fa
+2689b887-42315a9a
+d88e42b4-52371eca
+352c64e5-52ae6884
+fd431d51-4ae0493b
+boost-iostreams                                           N/A             1.53.0-18.el7
+openstack-swift-account                       1.13.1-2.el7ost           1.13.1-3.el7ost
+rsyslog                                           7.4.7-6.el7             7.4.7-7.el7_0
+openstack-nova-cert                           2014.1-7.el7ost         2014.1.2-1.el7ost
+python-ceilometerclient                        1.0.9-3.el7ost           1.0.10-1.el7ost
+openstack-heat-api-cloudwatch               2014.1-1.5.el7ost       2014.1.2-1.1.el7ost
+python-requests                                   1.1.0-8.el7          1.1.0-8.1.el7ost
+cloud-init                                        0.7.2-8.el7               0.7.5-6.el7
+pacemaker-cluster-libs                        1.1.10-31.el7_0         1.1.10-32.el7_0.1
+sensu                                                     N/A                  0.13.1-1
+gpg-pubkey                          4bd6ec30-4ff1e4fa
+fd431d51-4ae0493b
+17ed316d-4fb96ee8
+2fa658e0-45700c69 5ce2d476-50be41ba
+056e8e56-468e43f2
+2fa658e0-45700c69
+4bd6ec30-4ff1e4fa
+2689b887-42315a9a
+d88e42b4-52371eca
+352c64e5-52ae6884
+fd431d51-4ae0493b
+nmap                                                      N/A                6.40-4.el7
+mtr                                                       N/A                0.85-7.el7
+python-django-horizon                         2014.1-7.el7ost         2014.1.2-2.el7ost
+qemu-kvm-rhev                              1.5.3-60.el7ev_0.2          1.5.3-60.el7_0.7
+nspr                                             4.10.2-4.el7            4.10.6-1.el7_0
+initscripts                                     9.49.17-1.el7         9.49.17-1.el7_0.1
+ethtool                                             3.8-3.el7               3.8-4.el7_0
+python-neutron                               2014.1-35.el7ost         2014.1.2-2.el7ost
+mesa-libEGL                              9.2.5-5.20131218.el7    9.2.5-6.20131218.el7_0
+libtasn1                                            3.3-3.el7               3.3-5.el7_0
+librados2                                                 N/A     0.80.4-1.g67b5193.el7
+openstack-dashboard                           2014.1-7.el7ost         2014.1.2-2.el7ost
+gperftools-libs                                  2.1-1.el7ost                 2.1-1.el7
+dracut-network                                            N/A               033-161.el7
+python-ceph                                               N/A     0.80.4-1.g67b5193.el7
+python-webob                                      1.2.3-8.el7               1.2.3-5.el7
+libvirt-daemon-driver-storage                    1.1.1-29.el7          1.1.1-29.el7_0.3
+libvirt                                          1.1.1-29.el7          1.1.1-29.el7_0.3
+kernel                                         3.10.0-123.el7 3.10.0-123.8.1.el7
+3.10.0-123.el7
+python-ceilometer                           2014.1-2.4.el7ost         2014.1.2-1.el7ost
+openstack-ceilometer-central                2014.1-2.4.el7ost         2014.1.2-1.el7ost
+hpssacli                                                  N/A                  2.0-23.0
+openstack-nova-novncproxy                     2014.1-7.el7ost         2014.1.2-1.el7ost
+python-swiftclient                             2.0.2-1.el7ost            2.1.0-2.el7ost
+openstack-neutron-cisco                                   N/A         2014.1.2-2.el7ost
+python-glanceclient                           0.12.0-1.el7ost           0.13.1-1.el7ost
+gpm-libs                                                  N/A              1.20.7-5.el7
+sysstat                                                   N/A              10.1.5-4.el7
+ltrace                                                    N/A              0.7.91-7.el7
+bind-libs                                                 N/A              9.9.4-14.el7
+libgcc                                           4.8.2-16.el7          4.8.2-16.2.el7_0
+systemd-libs                                       208-11.el7            208-11.el7_0.4
+dhcp-libs                                        4.2.5-27.el7          4.2.5-27.el7_0.2
+openstack-heat-common                       2014.1-1.5.el7ost       2014.1.2-1.1.el7ost
+ca-certificates                              2013.1.95-71.el7      2014.1.98-70.0.el7_0
+lldpad                                                    N/A            0.9.46-9.el7_0
+libstdc++                                                 N/A
+openstack-dashboard-theme                     2014.1-7.el7ost         2014.1.2-2.el7ost
+librbd1                                                   N/A     0.80.4-1.g67b5193.el7
+kmod-rbd                                                  N/A 3.10-0.1.20140702gitdc9ac62.el7
+elfutils-libs                                             N/A               0.158-3.el7
+libvirt-daemon-driver-network                    1.1.1-29.el7          1.1.1-29.el7_0.3
+libvirt-daemon-driver-interface                  1.1.1-29.el7          1.1.1-29.el7_0.3
+libconfig                                                 N/A               1.4.9-5.el7
+libvirt-daemon-driver-lxc                        1.1.1-29.el7          1.1.1-29.el7_0.3
+pacemaker-libs                                1.1.10-31.el7_0         1.1.10-32.el7_0.1
+pacemaker-cli                                 1.1.10-31.el7_0         1.1.10-32.el7_0.1
+v8                                                        N/A          3.14.5.10-11.el7
+boost-filesystem                                          N/A             1.53.0-18.el7
+gpg-pubkey                          4bd6ec30-4ff1e4fa
+fd431d51-4ae0493b
+17ed316d-4fb96ee8
+2fa658e0-45700c69 5ce2d476-50be41ba
+056e8e56-468e43f2
+2fa658e0-45700c69
+4bd6ec30-4ff1e4fa
+2689b887-42315a9a
+d88e42b4-52371eca
+352c64e5-52ae6884
+fd431d51-4ae0493b
+python-boto                                      2.27.0-1.el7              2.32.1-1.el7
+cloud-utils-growpart                                      N/A               0.27-13.el7
+mod_wsgi                                           3.4-11.el7              3.4-12.el7_0
+qemu-img-rhev                              1.5.3-60.el7ev_0.2          1.5.3-60.el7_0.7
+python-paramiko                               1.11.3-1.el7ost              1.12.4-1.el7
+gpg-pubkey                          4bd6ec30-4ff1e4fa
+fd431d51-4ae0493b
+17ed316d-4fb96ee8
+2fa658e0-45700c69 5ce2d476-50be41ba
+056e8e56-468e43f2
+2fa658e0-45700c69
+4bd6ec30-4ff1e4fa
+2689b887-42315a9a
+d88e42b4-52371eca
+352c64e5-52ae6884
+fd431d51-4ae0493b
+facter                                            2.1.0-1.el7               2.2.0-1.el7
+puppet                                            3.6.2-1.el7               3.7.2-1.el7
+python-psutil                                             N/A               1.2.1-1.el7
+rsyslog-gnutls                                            N/A             7.4.7-7.el7_0
+vim-common                                                N/A             7.4.160-1.el7
+tmux                                                      N/A                 1.8-4.el7
+bash-completion                                           N/A                 2.1-6.el7
+python-msgpack                                0.1.13-3.el7ost               0.4.2-4.el7
+linux-firmware                      20140213-0.3.git4164c23.el7 20140804-0.1.git6bce2b0.el7_0
+glibc                                             2.17-55.el7           2.17-55.el7_0.1
+systemd                                            208-11.el7            208-11.el7_0.4
+nss-sysinit                                      3.15.4-6.el7            3.16.2-7.el7_0
+dhcp-common                                      4.2.5-27.el7          4.2.5-27.el7_0.2
+pacemaker                                     1.1.10-31.el7_0         1.1.10-32.el7_0.1
+libdb                                           5.3.21-17.el7         5.3.21-17.el7_0.1
+selinux-policy                            3.12.1-153.el7_0.10       3.12.1-153.el7_0.11
+python-nova                                   2014.1-7.el7ost         2014.1.2-1.el7ost
+libdb-utils                                     5.3.21-17.el7         5.3.21-17.el7_0.1
+openstack-swift                               1.13.1-2.el7ost           1.13.1-3.el7ost
+dhclient                                         4.2.5-27.el7          4.2.5-27.el7_0.2
+at                                              3.1.13-17.el7         3.1.13-17.el7_0.1
+libgomp                                          4.8.2-16.el7          4.8.2-16.2.el7_0
+libcephfs1                                                N/A     0.80.4-1.g67b5193.el7
+python-itsdangerous                                       N/A                0.23-1.el7
+openstack-ceilometer-common                 2014.1-2.4.el7ost         2014.1.2-1.el7ost
+openstack-ceilometer-compute                2014.1-2.4.el7ost         2014.1.2-1.el7ost
+openstack-swift-proxy                         1.13.1-2.el7ost           1.13.1-3.el7ost
+openstack-glance                              2014.1-4.el7ost         2014.1.2-3.el7ost
+openstack-nova-conductor                      2014.1-7.el7ost         2014.1.2-1.el7ost
+openstack-neutron-openvswitch                2014.1-35.el7ost         2014.1.2-2.el7ost
+openstack-neutron-vpn-agent                  2014.1-35.el7ost         2014.1.2-2.el7ost
+openstack-heat-engine                       2014.1-1.5.el7ost       2014.1.2-1.1.el7ost
+mongodb                                                   N/A            2.4.9-3.el7ost
+haproxy                                     1.5-0.3.dev22.el7             1.5.2-3.el7_0
+ceph                                             0.81.0-5.el7     0.80.4-1.g67b5193.el7
+openssl                                     1.0.1e-34.el7_0.3         1.0.1e-34.el7_0.6
+libvirt-daemon-driver-nodedev                    1.1.1-29.el7          1.1.1-29.el7_0.3
+python-taskflow                                   0.1.2-6.el7              0.3.21-1.el7
+libgfortran                                      4.8.2-16.el7          4.8.2-16.2.el7_0
+openstack-ceilometer-notification           2014.1-2.4.el7ost         2014.1.2-1.el7ost
+openstack-ceilometer-api                    2014.1-2.4.el7ost         2014.1.2-1.el7ost
+gpg-pubkey                          4bd6ec30-4ff1e4fa
+fd431d51-4ae0493b
+17ed316d-4fb96ee8
+2fa658e0-45700c69 5ce2d476-50be41ba
+056e8e56-468e43f2
+2fa658e0-45700c69
+4bd6ec30-4ff1e4fa
+2689b887-42315a9a
+d88e42b4-52371eca
+352c64e5-52ae6884
+fd431d51-4ae0493b
+openstack-swift-container                     1.13.1-2.el7ost           1.13.1-3.el7ost
+openstack-nova-api                            2014.1-7.el7ost         2014.1.2-1.el7ost
+openstack-heat-api                          2014.1-1.5.el7ost       2014.1.2-1.1.el7ost
+mongodb-server                                            N/A            2.4.9-3.el7ost
+policycoreutils-python                           2.2.5-11.el7          2.2.5-11.el7_0.1
+cloud-utils                                               N/A               0.27-10.el7
+gpg-pubkey                          4bd6ec30-4ff1e4fa
+fd431d51-4ae0493b
+17ed316d-4fb96ee8
+2fa658e0-45700c69 5ce2d476-50be41ba
+056e8e56-468e43f2
+2fa658e0-45700c69
+4bd6ec30-4ff1e4fa
+2689b887-42315a9a
+d88e42b4-52371eca
+352c64e5-52ae6884
+fd431d51-4ae0493b
+td-agent                                                  N/A               2.0.3-0.el7
+vim-enhanced                                              N/A             7.4.160-1.el7
+traceroute                                                N/A              2.0.19-5.el7
+qemu-kvm-common-rhev                       1.5.3-60.el7ev_0.2          1.5.3-60.el7_0.7
+glibc-common                                      2.17-55.el7           2.17-55.el7_0.1
+nss                                              3.15.4-6.el7            3.16.2-7.el7_0
+openstack-neutron                            2014.1-35.el7ost         2014.1.2-2.el7ost
+libxml2-python                                    2.9.1-5.el7           2.9.1-5.el7_0.1
+systemd-sysv                                       208-11.el7            208-11.el7_0.4
+libunwind                                        1.1-3.el7ost                 1.1-3.el7
+python-flask                                              N/A              0.10.1-3.el7
+libvirt-daemon-driver-nwfilter                   1.1.1-29.el7          1.1.1-29.el7_0.3
+libvirt-daemon-config-network                    1.1.1-29.el7          1.1.1-29.el7_0.3
+bind-utils                                                N/A              9.9.4-14.el7
+openstack-ceilometer-collector              2014.1-2.4.el7ost         2014.1.2-1.el7ost
+gpg-pubkey                          4bd6ec30-4ff1e4fa
+fd431d51-4ae0493b
+17ed316d-4fb96ee8
+2fa658e0-45700c69 5ce2d476-50be41ba
+056e8e56-468e43f2
+2fa658e0-45700c69
+4bd6ec30-4ff1e4fa
+2689b887-42315a9a
+d88e42b4-52371eca
+352c64e5-52ae6884
+fd431d51-4ae0493b
+openstack-nova-console                        2014.1-7.el7ost         2014.1.2-1.el7ost
+python-ecdsa                                              N/A                0.11-3.el7
+python-keyring                                      3.8-1.el7                 4.0-1.el7
+openstack-neutron-metering-agent             2014.1-35.el7ost         2014.1.2-2.el7ost
+mod_ssl                                                   N/A            2.4.6-18.el7_0
+httpd-tools                                      2.4.6-17.el7            2.4.6-18.el7_0
+openvswitch                                       2.0.0-7.el7           2.1.2-2.el7_0.1
+yum-plugin-priorities                                     N/A           1.1.31-25.el7_0
+nagios-plugins                                            N/A             2.0.1-1.2.el7
+librelp                                                   N/A               1.2.0-3.el7
+crash                                                     N/A           7.0.2-7.el7_0.1
+seabios-bin                                    1.7.2.2-12.el7        1.7.2.2-12.el7_0.1
+openstack-utils                               2014.1-3.el7ost         2014.1-3.2.el7ost
+nss-softokn-freebl                               3.15.4-2.el7            3.16.2-2.el7_0
+python-qpid-common                                 0.28-3.el7                0.28-4.el7
+mesa-libglapi                            9.2.5-5.20131218.el7    9.2.5-6.20131218.el7_0
+mesa-libgbm                              9.2.5-5.20131218.el7    9.2.5-6.20131218.el7_0
+openssl-libs                                1.0.1e-34.el7_0.3         1.0.1e-34.el7_0.6
+python-glance                                 2014.1-4.el7ost         2014.1.2-3.el7ost
+mesa-libGL                               9.2.5-5.20131218.el7    9.2.5-6.20131218.el7_0
+libvirt-python                                   1.1.1-29.el7          1.1.1-29.el7_0.3
+python-werkzeug                                           N/A               0.9.1-1.el7
+kmod-libceph                                              N/A 3.10-0.1.20140702gitdc9ac62.el7
+spice-html5                                               N/A               0.1.4-1.el7
+libvirt-daemon                                   1.1.1-29.el7          1.1.1-29.el7_0.3
+libvirt-daemon-kvm                               1.1.1-29.el7          1.1.1-29.el7_0.3
+openstack-cinder                              2014.1-7.el7ost         2014.1.2-2.el7ost
+gpg-pubkey                          4bd6ec30-4ff1e4fa
+fd431d51-4ae0493b
+17ed316d-4fb96ee8
+2fa658e0-45700c69 5ce2d476-50be41ba
+056e8e56-468e43f2
+2fa658e0-45700c69
+4bd6ec30-4ff1e4fa
+2689b887-42315a9a
+d88e42b4-52371eca
+352c64e5-52ae6884
+fd431d51-4ae0493b
+openstack-swift-object                        1.13.1-2.el7ost           1.13.1-3.el7ost
+rsyslog-mmjsonparse                               7.4.7-6.el7             7.4.7-7.el7_0
+openstack-neutron-ml2                        2014.1-35.el7ost         2014.1.2-2.el7ost
+policycoreutils                                  2.2.5-11.el7          2.2.5-11.el7_0.1
+openstack-heat-api-cfn                      2014.1-1.5.el7ost       2014.1.2-1.1.el7ost
+pysnmp                                         4.2.5-1.el7ost               4.2.5-2.el7
+python-oslo-vmware                                        N/A              0.3-3.el7ost
+rsyslog-relp                                              N/A             7.4.7-7.el7_0
+vim-filesystem                                            N/A             7.4.160-1.el7
+crudini                                          0.3-2.el7ost                 0.4-1.el7
+python-dogpile-cache                           0.5.0-1.el7ost               0.5.4-1.el7
+bash                                             4.2.45-5.el7          4.2.45-5.el7_0.4
+nss-softokn                                      3.15.4-2.el7            3.16.2-2.el7_0
+libxml2                                           2.9.1-5.el7           2.9.1-5.el7_0.1
+openstack-nova-common                         2014.1-7.el7ost         2014.1.2-1.el7ost
+kexec-tools                                               N/A          2.0.4-32.el7_0.5
+subscription-manager                            1.10.14-7.el7           1.10.14-9.el7_0
+libvirt-client                                   1.1.1-29.el7          1.1.1-29.el7_0.3
