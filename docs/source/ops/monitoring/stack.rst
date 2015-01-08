@@ -14,7 +14,7 @@ Uchiwa    Dashboard for sensu  NodeJS      MIT                    http://sensuap
 
 
 RabbitMQ
--------
+--------
 
 RabbitMQ is a robust and scalable AMQP broker - among other protocols.
 
@@ -38,6 +38,6 @@ In Spinal Stack, it is the core monitoring components. Some checks are common to
 Uchiwa
 ------
 
-Uchiwa is the dashboard that let the administrator interact with Sensu. 
+Uchiwa is the dashboard that let the administrator interact with Sensu.
 
 In Spinal Stack, it is the component that will be the entry point for every monitoring related task, be it down-timing an alert, checking the health of the various nodes, etc...
