@@ -1,5 +1,5 @@
-Icehouse I-1.2.0
-================
+Spinal Stack I-1.2.0
+====================
 
 OpenStack version and supported distros
 ---------------------------------------
@@ -75,4 +75,4 @@ Package Diff
 ------------
 
 * `Red Hat 7.0 diff <https://raw.githubusercontent.com/enovance/spinalstack-doc/master/docs/source/changelog/icehouse/i120/openstack-full-RH7.0-I.1.2.0.diff>`_
-* `Debian 7 diff <https://raw.githubusercontent.com/enovance/spinalstack-doc/master/docs/source/changelog/icehouse/i120/openstack-full-RH7.0-I.1.2.0.diff>`_
+* `Debian 7 diff <https://raw.githubusercontent.com/enovance/spinalstack-doc/master/docs/source/changelog/icehouse/i120/openstack-full-D7-I.1.2.0.diff>`_

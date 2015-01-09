@@ -1,0 +1,82 @@
+### New Packages ###
+g++
+libio-socket-ssl-perl
+libnet-ssleay-perl
+linux-headers-3.16.0-0.bpo.4-amd64
+linux-headers-3.16.0-0.bpo.4-common
+linux-headers-amd64
+linux-image-3.16.0-0.bpo.4-amd64
+linux-kbuild-3.16
+ruby-dev
+ruby1.9.1-dev
+
+### Deleted Packages ###
+g++
+gdb
+gdbserver
+linux-headers-3.14-0.bpo.2-amd64
+linux-headers-3.14-0.bpo.2-common
+linux-image-3.14-0.bpo.2-amd64
+linux-kbuild-3.14
+socat
+
+### Version changes ###
+Package name                                 Previous version             Newer version
+-------------------------           ------------------------- -------------------------
+bind9-host                          1:9.8.4.dfsg.P1-6+nmu2+deb7u2 1:9.8.4.dfsg.P1-6+nmu2+deb7u3
+cloud-initramfs-growroot                         0.18.debian5      0.18.debian5~bpo70+1
+cpio                                            2.11+dfsg-0.1      2.11+dfsg-0.1+deb7u1
+curl                                    7.29.0-1~bpo70+1.ceph         7.26.0-1+wheezy11
+dnsutils                            1:9.8.4.dfsg.P1-6+nmu2+deb7u2 1:9.8.4.dfsg.P1-6+nmu2+deb7u3
+g++                                                       N/A                          
+haproxy                                   1.5~dev26-2~bpo70+1           1.5.4-1~bpo70+2
+initscripts                                 2.88dsf-41+deb7u2         2.88dsf-41+deb7u1
+libbind9-80                         1:9.8.4.dfsg.P1-6+nmu2+deb7u2 1:9.8.4.dfsg.P1-6+nmu2+deb7u3
+libcurl3:amd64                          7.29.0-1~bpo70+1.ceph         7.26.0-1+wheezy11
+libcurl3-gnutls:amd64                   7.29.0-1~bpo70+1.ceph         7.26.0-1+wheezy11
+libdbus-1-3:amd64                              1.6.8-1+deb7u4            1.6.8-1+deb7u5
+libdns88                            1:9.8.4.dfsg.P1-6+nmu2+deb7u2 1:9.8.4.dfsg.P1-6+nmu2+deb7u3
+libevent-2.0-5:amd64                          2.0.19-stable-3    2.0.19-stable-3+deb7u1
+libflac8:amd64                                        1.2.1-6            1.2.1-6+deb7u1
+libio-socket-ssl-perl                                     N/A                    1.76-2
+libisc84                            1:9.8.4.dfsg.P1-6+nmu2+deb7u2 1:9.8.4.dfsg.P1-6+nmu2+deb7u3
+libisccc80                          1:9.8.4.dfsg.P1-6+nmu2+deb7u2 1:9.8.4.dfsg.P1-6+nmu2+deb7u3
+libisccfg82                         1:9.8.4.dfsg.P1-6+nmu2+deb7u2 1:9.8.4.dfsg.P1-6+nmu2+deb7u3
+libjasper1:amd64                                   1.900.1-13         1.900.1-13+deb7u2
+liblwres80                          1:9.8.4.dfsg.P1-6+nmu2+deb7u2 1:9.8.4.dfsg.P1-6+nmu2+deb7u3
+libmariadbclient18                      5.5.40+maria-1~wheezy     5.5.41+maria-1~wheezy
+libmysqlclient18                        5.5.40+maria-1~wheezy     5.5.41+maria-1~wheezy
+libnet-ssleay-perl                                        N/A                 1.48-1+b1
+libyaml-0-2:amd64                           0.1.4-3.2~bpo70+1            0.1.4-2+deb7u5
+linux-compiler-gcc-4.6-x86                   3.16.5-1~bpo70+1     3.16.7-ckt2-1~bpo70+1
+linux-headers-3.16.0-0.bpo.4-amd64                        N/A     3.16.7-ckt2-1~bpo70+1
+linux-headers-3.16.0-0.bpo.4-common                       N/A     3.16.7-ckt2-1~bpo70+1
+linux-headers-amd64                                       N/A           3.16+63~bpo70+1
+linux-image-3.16.0-0.bpo.4-amd64                          N/A     3.16.7-ckt2-1~bpo70+1
+linux-image-3.2.0-4-amd64                     3.2.63-2+deb7u1           3.2.63-2+deb7u2
+linux-image-amd64                                      3.2+46           3.16+63~bpo70+1
+linux-kbuild-3.16                                         N/A            3.16-2~bpo70+1
+linux-libc-dev:amd64                          3.2.63-2+deb7u1           3.2.63-2+deb7u2
+mariadb-client                          5.5.40+maria-1~wheezy     5.5.41+maria-1~wheezy
+mariadb-client-5.5                      5.5.40+maria-1~wheezy     5.5.41+maria-1~wheezy
+mariadb-client-core-5.5                 5.5.40+maria-1~wheezy     5.5.41+maria-1~wheezy
+mariadb-common                          5.5.40+maria-1~wheezy     5.5.41+maria-1~wheezy
+mariadb-galera-server                   5.5.40+maria-1~wheezy     5.5.41+maria-1~wheezy
+mariadb-galera-server-5.5               5.5.40+maria-1~wheezy     5.5.41+maria-1~wheezy
+mime-support                                           3.52-1             3.52-1+deb7u1
+mysql-common                            5.5.40+maria-1~wheezy     5.5.41+maria-1~wheezy
+ntp                                         1:4.2.6.p5+dfsg-2  1:4.2.6.p5+dfsg-2+deb7u1
+ntpdate                                     1:4.2.6.p5+dfsg-2  1:4.2.6.p5+dfsg-2+deb7u1
+percona-toolkit                                       2.1.2-1                    2.2.12
+percona-xtrabackup                        2.2.6-5042-1.wheezy       2.2.7-5050-1.wheezy
+python-crypto                                 2.6.1-2~bpo70+1              2.6-4+deb7u3
+python-yaml                                    3.10-4~bpo70+1             3.10-4+deb7u1
+ruby-dev                                                  N/A                   1:1.9.3
+ruby1.9.1-dev                                             N/A      1.9.3.194-8.1+deb7u2
+sensu                                                0.14.0-1                  0.16.0-1
+sysv-rc                                     2.88dsf-41+deb7u2         2.88dsf-41+deb7u1
+sysvinit                                    2.88dsf-41+deb7u2         2.88dsf-41+deb7u1
+sysvinit-utils                              2.88dsf-41+deb7u2         2.88dsf-41+deb7u1
+tcpdump                                               4.3.0-1            4.3.0-1+deb7u1
+unzip                                                   6.0-8              6.0-8+deb7u1
+xtrabackup                                2.2.6-5042-1.wheezy       2.2.7-5050-1.wheezy

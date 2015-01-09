@@ -1,0 +1,38 @@
+Spinal Stack I-1.2.1
+====================
+
+OpenStack version and supported distros
+---------------------------------------
+* Red Hat Enterprise Linux 7: OSP5 (Icehouse)
+* Debian Wheezy: Icehouse 2014.1.2
+
+No new feature
+--------------
+
+Bugs fixed since I.1.2.0
+------------------------
+* eDeploy bug with detection and debug message
+* Puppetfile: fix NFS git commit ID
+* Heat: switch deferred_auth_method to 'password'
+* Keystone: don't specify API version in {public,admin}_endpoints
+* Keystone: update puppet-keystone git ref to fix a bug upstream when compiling the catalog.
+
+eDeploy roles have also been updated.
+
+Components in this release
+--------------------------
+
+* edeploy-roles-I.1.2.1.tar.gz source code of the eDeploy roles built in this release
+* install-server-D7-I.1.2.1.edeploy   binary eDeploy role for the installation server (puppet master,logging server, monitoring server, edeploy server, dnsmasq, serverspec)
+* openstack-full-{D7;RH7.0}-I.1.2.1.edeploy binaries eDeploy roles for OpenStack and Ceph nodes
+* puppet-openstack-cloud-I.1.2.1.tgz puppet modules used to configure the OpenStack and Ceph nodes
+* serverspec-I.1.2.1.tgz serverspec tests to validate deployments
+
+All the sources have been tagged with the tag I.1.2.1 in their respective repositories.
+Documentation can be found on http://spinalstack.enovance.com/en/latest/, fixes are welcome at https://github.com/enovance/spinalstack-doc
+
+Package Diffs
+-------------
+
+* `Red Hat 7.0 diff <https://raw.githubusercontent.com/enovance/spinalstack-doc/master/docs/source/changelog/icehouse/i121/openstack-full-RH7.0-I.1.2.1.diff>`_
+* `Debian 7 diff <https://raw.githubusercontent.com/enovance/spinalstack-doc/master/docs/source/changelog/icehouse/i121/openstack-full-D7-I.1.2.1.diff>`_

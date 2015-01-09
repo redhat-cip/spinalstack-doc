@@ -1,0 +1,34 @@
+### New Packages ###
+g++
+
+### Deleted Packages ###
+g++
+
+### Version changes ###
+Package name                                 Previous version             Newer version
+-------------------------           ------------------------- -------------------------
+curl                                        7.26.0-1+wheezy10     7.29.0-1~bpo70+1.ceph
+facter                                     2.2.0-1puppetlabs1        2.3.0-1puppetlabs1
+file                                            5.11-2+deb7u5             5.11-2+deb7u6
+g++                                                       N/A                          
+initscripts                                 2.88dsf-41+deb7u1         2.88dsf-41+deb7u2
+libcurl3:amd64                              7.26.0-1+wheezy10     7.29.0-1~bpo70+1.ceph
+libcurl3-gnutls:amd64                       7.26.0-1+wheezy10     7.29.0-1~bpo70+1.ceph
+libgcrypt11:amd64                              1.5.0-5+deb7u1            1.5.0-5+deb7u2
+libmagic1:amd64                                 5.11-2+deb7u5             5.11-2+deb7u6
+libnss3:amd64                               2:3.14.5-1+deb7u2         2:3.14.5-1+deb7u3
+libnss3-1d:amd64                            2:3.14.5-1+deb7u2         2:3.14.5-1+deb7u3
+libyaml-0-2:amd64                              0.1.4-2+deb7u4         0.1.4-3.2~bpo70+1
+linux-compiler-gcc-4.6-x86                   3.16.3-2~bpo70+1          3.16.5-1~bpo70+1
+linux-image-3.2.0-4-amd64                            3.2.63-2           3.2.63-2+deb7u1
+linux-libc-dev:amd64                                 3.2.63-2           3.2.63-2+deb7u1
+percona-xtrabackup                        2.2.5-5027-1.wheezy       2.2.6-5042-1.wheezy
+puppet                                     3.7.2-1puppetlabs1        3.7.3-1puppetlabs1
+puppet-common                              3.7.2-1puppetlabs1        3.7.3-1puppetlabs1
+python-crypto                                    2.6-4+deb7u3           2.6.1-2~bpo70+1
+python-yaml                                            3.10-4            3.10-4~bpo70+1
+sysv-rc                                     2.88dsf-41+deb7u1         2.88dsf-41+deb7u2
+sysvinit                                    2.88dsf-41+deb7u1         2.88dsf-41+deb7u2
+sysvinit-utils                              2.88dsf-41+deb7u1         2.88dsf-41+deb7u2
+wget                                          1.13.4-3+deb7u1           1.13.4-3+deb7u2
+xtrabackup                                2.2.5-5027-1.wheezy       2.2.6-5042-1.wheezy
