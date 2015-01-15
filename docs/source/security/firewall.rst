@@ -45,3 +45,20 @@ If you need to create rules before the deployment, you can use "cloud::firewall_
 Or if you need to create rules after the deployment, you can use "cloud::firewall_post_extras".
 
 Also, if you want to purge IPtables rules on all the nodes before applying Spinal Stack rules (and eventually your custom rules), you can set purge_firewall_rules to "true" in your environment file.
+
+Limit OpenStack API requests
+############################
+
+Some OpenStack projects does not have ratelimit middleware so you may want to use IPtables to limit the requests on the endpoints.
+
+Example with Keystone:
+
+.. code-block:: none
+zsh:1: command not found: q
+  ---
+  cloud::identity::firewall_settings:
+    '301 limit keystone API requests':
+        rate_limiting: 50/sec
+
+With this parameter, Keystone API will get 50 requests per second maximum.
+
