@@ -20,7 +20,7 @@ To tell Spinal Stack to enable SElinux, apply the following configuration in you
 .. code-block:: none
 
   selinux_mode: enforcing
-  selinux_directory: /usr/share/spinalstack/selinux/
+  selinux_directory: /usr/share/selinux/custom/
 
 Adding your own configuration
 #############################
