@@ -58,7 +58,7 @@ Example with Keystone:
   ---
   cloud::identity::firewall_settings:
     '301 limit keystone API requests':
-        rate_limiting: 50/sec
+        rate_limiting: '50/sec'
 
 With this parameter, Keystone API will get 50 requests per second maximum.
 
