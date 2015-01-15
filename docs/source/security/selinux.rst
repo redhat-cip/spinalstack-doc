@@ -38,6 +38,7 @@ In advanced deployments, you will need to tweak SElinux policy, and Spinal Stack
     - nis_enabled
     - domain_kernel_load_modules
     - virt_use_execmem
+    - httpd_can_network_connect
   cloud::selinux_modules:
     - systemctl
     - nova-cert
