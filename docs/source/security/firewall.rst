@@ -54,7 +54,7 @@ Some OpenStack projects does not have ratelimit middleware so you may want to us
 Example with Keystone:
 
 .. code-block:: none
-zsh:1: command not found: q
+
   ---
   cloud::identity::firewall_settings:
     '301 limit keystone API requests':
