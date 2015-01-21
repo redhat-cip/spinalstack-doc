@@ -31,8 +31,17 @@ Components in this release
 All the sources have been tagged with the tag I.1.2.1 in their respective repositories.
 Documentation can be found on http://spinalstack.enovance.com/en/latest/, fixes are welcome at https://github.com/enovance/spinalstack-doc
 
-Package Diffs
--------------
+Packages
+--------
 
-* `Red Hat 7.0 diff <https://raw.githubusercontent.com/enovance/spinalstack-doc/master/docs/source/changelog/icehouse/i121/openstack-full-RH7.0-I.1.2.1.diff>`_
-* `Debian 7 diff <https://raw.githubusercontent.com/enovance/spinalstack-doc/master/docs/source/changelog/icehouse/i121/openstack-full-D7-I.1.2.1.diff>`_
+* Red Hat 7.0
+
+  * `Full list of packages for the install-server for Red Hat <https://raw.githubusercontent.com/enovance/spinalstack-doc/master/docs/source/changelog/icehouse/i121/RH7.0-I.1.2.1-install-server.packages.txt>`_
+  * `Full list of packages for the openstack-full for Red Hat <https://raw.githubusercontent.com/enovance/spinalstack-doc/master/docs/source/changelog/icehouse/i121/RH7.0-I.1.2.1-openstack-full.packages.txt>`_
+  * `Diff between I-1.2.0 and I-1.2.1 for Red Hat <https://raw.githubusercontent.com/enovance/spinalstack-doc/master/docs/source/changelog/icehouse/i121/openstack-full-RH7.0-I.1.2.1.diff>`_
+
+* Debian 7
+
+  * `Full list of packages for the install-server for Debian <https://raw.githubusercontent.com/enovance/spinalstack-doc/master/docs/source/changelog/icehouse/i121/D7-I.1.2.1-install-server.packages.txt>`_
+  * `Full list of packages for the openstack-full for Debian <https://raw.githubusercontent.com/enovance/spinalstack-doc/master/docs/source/changelog/icehouse/i121/D7-I.1.2.1-openstack-full.packages.txt>`_
+  * `Diff between I-1.2.0 and I-1.2.1 for Debian <https://raw.githubusercontent.com/enovance/spinalstack-doc/master/docs/source/changelog/icehouse/i121/openstack-full-D7-I.1.2.1.diff>`_
