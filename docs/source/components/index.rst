@@ -10,5 +10,6 @@ This section aims to document how to configure each main component of SpinalStac
    mongodb
    puppetdb
    rabbitmq
+   redis
 
 .. update index
