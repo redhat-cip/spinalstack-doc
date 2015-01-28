@@ -6,8 +6,9 @@ This section aims to document how to configure each main component of SpinalStac
 .. toctree::
    :maxdepth: 5
 
-   puppetdb
    memcached
+   mongodb
+   puppetdb
    rabbitmq
 
 .. update index
