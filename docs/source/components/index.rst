@@ -7,5 +7,6 @@ This section aims to document how to configure each main component of SpinalStac
    :maxdepth: 5
 
    puppetdb
+   memcached
 
 .. update index
