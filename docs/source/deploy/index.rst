@@ -9,6 +9,7 @@ This section aims to document how to perform Spinal Stack deployments.
    introduction
    bootstrap
    configuration
+   components/index
    sanity
    post-deployment
    upgrade

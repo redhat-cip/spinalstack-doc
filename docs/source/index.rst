@@ -12,7 +12,6 @@ Tables of contents
    introduction
    architecture
    deploy/index
-   components/index
    ops/index
    security/index
    dev/index
