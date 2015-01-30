@@ -41,7 +41,7 @@ This role contains all these components:
 
 - eDeploy
 - PXEmngr
-- Puppet Master: running Passenger with Apache2 and PuppetDB on 81 port.
+- PuppetDB: running on port 8080 and a vhost acting as a proxy to terminate the SSL listening on this URL: http://install-server:8081
 - Puppet Dashboard: monitor Puppet nodes using this URL: http://install-server:82
 - Kibana3: View logs in real-time through UI using this URL: http://install-server:8300
 - Jenkins: manage lifecyle of our infrastructure (configuration, sanity and upgrade) using this URL: http://install-server:8282
@@ -61,6 +61,8 @@ Once we have eDeploy working, we can continue to prepare the configuration.
 .. note::
     There is no need to install Puppet, Ansible or any service. They are already present in install-server role.
 
+.. warning::
+    independently of the process used to bootstrap the install-server, a valid pem file should be dropped at /etc/ssl/certs/puppetdb.pem to secure the connection between the nodes and the install server. The use of cloud-init is recommended to realize this action. Without this file, the deployment of Spinal Stack will fail.
 
 Deploy the openstack-full roles
 -------------------------------
