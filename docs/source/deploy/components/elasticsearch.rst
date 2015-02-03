@@ -9,7 +9,7 @@ Configuration
 ===================== =================================================== =================================================
 Configuration         Description                                         Default
 ===================== =================================================== =================================================
-elasticsearch_bind_ip An IP address on which ElasticSearch will listen on 9200
+elasticsearch_bind_ip An IP address on which ElasticSearch will listen on Internal network IP
 ===================== =================================================== =================================================
 
 .. _ElasticSearch: https://www.elasticsearch.org
