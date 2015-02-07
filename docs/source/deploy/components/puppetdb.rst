@@ -34,5 +34,7 @@ Configuration          Description                          Default
 ====================== ==================================== =========================
 puppetdb_server        The PuppetDB server URL              None
 ====================== ==================================== =========================
+puppetdb_pem           The PuppetDB certificate             None
+====================== ==================================== =========================
 
 .. _PuppetDB: https://docs.puppetlabs.com/puppetdb/latest/
