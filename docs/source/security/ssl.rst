@@ -71,4 +71,4 @@ To tell Spinal Stack that nova should be contacted via 'https' on its adminUrl, 
   cloud::identity::ks_nova_admin_proto: https
 
 .. note::
-    Do not enable SSL for Nova Metadata API and Neutron Metadata Agent. This feature will be supported in J.1.0.0.
+    Do not enable SSL for Nova Metadata API and Neutron Metadata Agent. This feature is not supported yet.
