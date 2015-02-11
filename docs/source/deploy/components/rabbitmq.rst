@@ -26,9 +26,8 @@ Upgrade from I.1.3.0 to J.1.0.0
 This is a special note when upgrading from I.1.3.0 to J.1.0.0.
 Due to the new puppetlabs-rabbitmq implementation, a new parameter is now required in the environment file: erlang_cookie.
 
-If you are already running Spinal Stack I.1.3.0 and you want to upgrade to J.1.0.0, you will have to look at the current content of /var/lib/rabbitmq/.erlang.cookie and copy it to erlang_cookie parameter, so your upgrade will work correctly.
-If you miss the parameter, config-tools scripts (configure.sh) will fail to run.
-If you set a cookie in your env, that is different from what you had in I.1.3.0, the upgrade will fail and you'll see an error message in the upgrade Jenkins job.
-These failures are here to prevent any issue during the upgrade and allow you to maintain your cluster up and running.
+If you are already running Spinal Stack I.1.3.0 and you want to upgrade to J.1.0.0, you will have to look at the current content of /var/lib/rabbitmq/.erlang.cookie and copy it to erlang_cookie parameter, so your upgrade will work correctly. If you miss that part, Spinal Stack will take care of re-building the RabbitMQ cluster, but you'll have to expect some downtime.
+
+If you miss the parameter in your env, config-tools scripts (configure.sh) will fail to run. It prevents to install Spinal Stack without cookie so RabbitMQ-server could not work properly.
 
 .. _RabbitMQ: http://www.rabbitmq.com/
