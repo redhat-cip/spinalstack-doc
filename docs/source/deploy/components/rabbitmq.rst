@@ -17,6 +17,7 @@ rabbit_port              Port on which RabbitMQ will listen on                  
 rabbit_ip                Ip address of RabbitMQ interface                         IP of the node it is one
 rabbit                   Boolean to described if RabbitMQ should be load balanced false
 rabbit_bind_options      An array of HAProxy bind options                         Global HAProxy binding options array
+erlang_cookie            Erlang cookie to use                                     No default, the parameter is required
 ======================== ======================================================== =================================================================
 
 .. _RabbitMQ: http://www.rabbitmq.com/
