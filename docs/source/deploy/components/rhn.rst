@@ -18,3 +18,5 @@ rhn_registration RHN Credentials -
   rhn_registration:
     username: joe
     password: secrete
+
+.. _RHN: http://rhn.redhat.com
