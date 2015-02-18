@@ -13,5 +13,6 @@ This section aims to document how to configure each main component of Spinal Sta
    puppetdb
    rabbitmq
    redis
+   rhn
 
 .. update index
