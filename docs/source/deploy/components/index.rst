@@ -14,5 +14,6 @@ This section aims to document how to configure each main component of Spinal Sta
    rabbitmq
    redis
    rhn
+   sudo
 
 .. update index
