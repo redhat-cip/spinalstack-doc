@@ -12,7 +12,7 @@ The upgrade is orchestred by 3 steps:
 
     $ git clone git@github.com:enovance/config-tools.git
     $ cd config-tools
-    $ ./provision.sh -i J.1.0.0 git@my-env-git-repo:spinalstack-env/env-joe.yaml version=D7-J.1.0.0 stable=I.1.3.0
+    $ ./provision.sh -i J.1.1.0 git@my-env-git-repo:spinalstack-env/env-joe.yaml version=RH7.0-J.1.1.0 stable=J.1.0.0
 
 - Run `upgrade` Jenkins job to perform Spinal Stack upgrade. It will automatically:
 

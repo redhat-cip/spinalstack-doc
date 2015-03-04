@@ -158,8 +158,8 @@ From the installation server, run::
 
     $ git clone git@github.com:enovance/config-tools.git
     $ cd config-tools
-    $ git checkout I.1.3.0
-    $ ./provision.sh -i I.1.3.0 git@my-env-git-repo:spinalstack-env/env-joe.yaml version=D7-I.1.3.0
+    $ git checkout J.1.0.0
+    $ ./provision.sh -i J.1.0.0 git@my-env-git-repo:spinalstack-env/env-joe.yaml version=RH7.0-J.1.0.0
 
 Run the configuration
 ---------------------
