@@ -20,7 +20,7 @@ This is an example of usage:
 .. code-block:: none
 
   ---
-  limit_rules:
+  sysctl_rules:
     'net.ipv4.ip_forward':
       value: '1'
     'net.ipv6.conf.all.forwarding':
