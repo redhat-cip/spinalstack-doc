@@ -14,10 +14,7 @@ limit_rules   An hash of limits rules  Refer to the example
 ============= ======================== ====================
 
 By default limit_rules is set to empty.
-
-.. code-block:: none
-
-An deployer can add limits rules rule like this:
+An deployer can add limits rules for MySQL (useful in production) like this:
 
 .. code-block:: none
 
