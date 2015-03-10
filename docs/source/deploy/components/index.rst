@@ -15,5 +15,7 @@ This section aims to document how to configure each main component of Spinal Sta
    redis
    rhn
    sudo
+   limits
+   sysctl
 
 .. update index
