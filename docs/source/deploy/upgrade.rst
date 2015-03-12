@@ -22,4 +22,6 @@ The upgrade is orchestred by 3 steps:
 
 - Run `sanity` Jenkins job to ensure that we still have Spinal Stack working as expected.
 
+If you want to know how upgrades work under the hood, look `how upgrade are automatized` page.
+
 .. _`ansible playbooks`: https://github.com/enovance/edeploy-roles/blob/master/upgrade

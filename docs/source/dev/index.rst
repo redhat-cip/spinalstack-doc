@@ -1,13 +1,15 @@
 Developper guide
 ================
 
-This guide will help anyone who want to contribute to Spinal Stack.
+This section will help anyone who want to contribute to Spinal Stack.
+It has been splitted in sections related to the different steps of Spinal Stack deployment & lifecycle.
 
 .. toctree::
    :maxdepth: 5
 
-   bug
-   contribute
-   feature
+   edeploy
+   puppet
+   sanity
+   upgrade
 
 .. update index
