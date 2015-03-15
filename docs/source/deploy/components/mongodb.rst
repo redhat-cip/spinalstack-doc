@@ -1,7 +1,7 @@
 MongoDB
 ========
 
-MongoDB is a document oriented database. In Spinal Stack it is used as a backend for ceilometer.
+MongoDB_ is a document oriented database. In Spinal Stack it is used as a backend for ceilometer.
 
 Configuration
 -------------

@@ -1,7 +1,7 @@
 Redis
 =====
 
-Redis is an advanced key-value cache and store. In Spinal Stack it is used as a backend for ceilometer.
+Redis_ is an advanced key-value cache and store. In Spinal Stack it is used as a backend for ceilometer.
 
 Configuration
 -------------

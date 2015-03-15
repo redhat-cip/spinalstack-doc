@@ -1,7 +1,7 @@
 RHN
 ===
 
-When deploying Spinal Stack on Red Hat, you need to configure your RHN subscription.
+When deploying Spinal Stack on Red Hat, you need to configure your RHN_ subscription.
 
 Configuration
 -------------

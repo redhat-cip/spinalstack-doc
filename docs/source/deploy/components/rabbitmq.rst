@@ -1,7 +1,7 @@
 RabbitMQ
 ========
 
-RabbitMQ is a message broker software. It enables the various part of Openstack to communicate together.
+RabbitMQ_ is a message broker software. It enables the various part of Openstack to communicate together.
 
 Configuration
 -------------
