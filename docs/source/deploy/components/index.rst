@@ -17,5 +17,6 @@ This section aims to document how to configure each main component of Spinal Sta
    sudo
    limits
    sysctl
+   neutron
 
 .. update index
