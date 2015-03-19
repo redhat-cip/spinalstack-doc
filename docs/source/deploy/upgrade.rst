@@ -4,7 +4,8 @@ Upgrade guide
 Spinal Stack aims to provide continuous integration and continuous delivery.
 Upgrades are fully automated and ensure the minimum of service downtime.
 
-They only work from n to n+1 releases and it's not possible to skip one release.
+.. warning::
+    Spinal Stack upgrades only work from n to n+1. It's not possible to skip a release.
 
 The upgrade is orchestred by 3 steps:
 
