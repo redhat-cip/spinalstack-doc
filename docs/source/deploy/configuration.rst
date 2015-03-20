@@ -21,6 +21,16 @@ To configure Spinal Stack correctly, there are two notions to understand:
     describe the details of our deployment: IP addresses, domain name, passwords, SSH keys, etc.
     This file should not be shared with any other deployment and has to be stored safely.
 
+puppet-openstack-cloud
+----------------------
+
+`puppet-openstack-cloud`_ module is the Spinal Stack composition layer.
+All parameters and details are documented on `this page`_.
+
+.. _`puppet-openstack-cloud`: https://github.com/stackforge/puppet-openstack-cloud
+.. _`this page`: http://enovance.github.io/spinalstack-doc
+
+Before deploying Spinal Stack, you should learn about the composition layer capabilities, so you will have the desired environment in your deployment scenario.
 
 Infrastructure YAML files
 -------------------------
