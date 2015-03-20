@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Hostclass: cloud::image::api
+  
+    &mdash; Documentation by YARD 0.8.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!cloud/image/api.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (a)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../cloud.html" title="cloud (hostclass)">cloud</a></span></span> &raquo; <span class='title'>image</span>
+     &raquo; 
+    <span class="title">api</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="puppet_manifest_list_link"
+        href="../../puppet_manifest_list.html">
+      Puppet Manifest List
+    </a>
+  
+    <a class="full_list_link" id="puppet_plugin_list_link"
+        href="../../puppet_plugin_list.html">
+      Puppet Plugin List
+    </a>
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div class='module_header'>
+  <h1>
+    Puppet Class: api
+  </h1>
+</div>
+
+<dl class="box">
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">manifests/image/api.pp</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+<p>Copyright (C) 2014 eNovance SAS &lt;licensing@enovance.com&gt; Licensed
+under the Apache License, Version 2.0 (the “License”); you may not use this
+file except in compliance with the License. You may obtain a copy of the
+License at</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_http'>http</span><span class='symbol'>:/</span><span class='op'>/</span><span class='id identifier rubyid_www'>www</span><span class='period'>.</span><span class='id identifier rubyid_apache'>apache</span><span class='period'>.</span><span class='id identifier rubyid_org'>org</span><span class='op'>/</span><span class='id identifier rubyid_licenses'>licenses</span><span class='op'>/</span><span class='const'>LICENSE</span><span class='op'>-</span><span class='float'>2.0</span></code></pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License.</p>
+
+<h2 id="label-Class%3A+cloud%3A%3Aimage%3A%3Aapi">Class: cloud::image::api</h2>
+
+<p>Install API Image Server (Glance API)</p>
+
+<h3 id="label-Parameters%3A">Parameters:</h3>
+<dl class="rdoc-list label-list"><dt><strong>glance_db_host</strong>
+<dd>
+<p>(optional) Hostname or IP address to connect to glance database Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>glance_db_user</strong>
+<dd>
+<p>(optional) Username to connect to glance database Defaults to
+&#39;glance&#39;</p>
+</dd><dt><strong>glance_db_password</strong>
+<dd>
+<p>(optional) Password to connect to glance database Defaults to
+&#39;glancepassword&#39;</p>
+</dd><dt><strong>ks_keystone_internal_host</strong>
+<dd>
+<p>(optional) Internal Hostname or IP to connect to Keystone API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_keystone_internal_proto</strong>
+<dd>
+<p>(optional) Protocol used to connect to API. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_glance_internal_host</strong>
+<dd>
+<p>(optional) Internal Hostname or IP to connect to Glance Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_glance_api_internal_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Glance API from internal network Defaults
+to &#39;9292&#39;</p>
+</dd><dt><strong>ks_glance_registry_internal_proto</strong>
+<dd>
+<p>(optional) Protocol used to connect to API. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_glance_registry_internal_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Glance Registry from internal network
+Defaults to &#39;9191&#39;</p>
+</dd><dt><strong>ks_glance_password</strong>
+<dd>
+<p>(optional) Password used by Glance to connect to Keystone API Defaults to
+&#39;glancepassword&#39;</p>
+</dd><dt><strong>rabbit_host</strong>
+<dd>
+<p>(optional) IP or Hostname of one RabbitMQ server. Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>rabbit_password</strong>
+<dd>
+<p>(optional) Password to connect to glance queue. Defaults to
+&#39;rabbitpassword&#39;</p>
+</dd><dt><strong>api_eth</strong>
+<dd>
+<p>(optional) Which interface we bind the Glance API server. Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>openstack_vip</strong>
+<dd>
+<p>(optional) Hostname of IP used to connect to Glance registry Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>glance_rbd_pool</strong>
+<dd>
+<p>(optional) Name of the Ceph pool which which store the glance images
+Defaults to &#39;images&#39;</p>
+</dd><dt><strong>glance_rbd_user</strong>
+<dd>
+<p>(optional) User name used to acces to the glance rbd pool Defaults to
+&#39;glance&#39;</p>
+</dd><dt><strong>verbose</strong>
+<dd>
+<p>(optional) Set log output to verbose output Defaults to true</p>
+</dd><dt><strong>debug</strong>
+<dd>
+<p>(optional) Set log output to debug output Defaults to true</p>
+</dd><dt><strong>use_syslog</strong>
+<dd>
+<p>(optional) Use syslog for logging Defaults to true</p>
+</dd><dt><strong>log_facility</strong>
+<dd>
+<p>(optional) Syslog facility to receive log lines Defaults to
+&#39;LOG_LOCAL0&#39;</p>
+</dd><dt><strong>backend</strong>
+<dd>
+<p>(optionnal) Backend to use to store images Can be &#39;rbd&#39;,
+&#39;file&#39;, &#39;nfs&#39; or &#39;swift&#39; Defaults to &#39;rbd&#39;</p>
+</dd><dt><strong>known_stores</strong>
+<dd>
+<p>(optionnal) Tell to Glance API which backends can be used Can be
+&#39;rbd&#39;, &#39;http&#39;, &#39;file&#39;, or and &#39;swift&#39;.
+Should be an array. Defaults to [&#39;rbd&#39;, &#39;http&#39;]</p>
+</dd><dt><strong>filesystem_store_datadir</strong>
+<dd>
+<p>(optional) Full path of data directory to store the images. Defaults to
+&#39;/var/lib/glance/images/&#39;</p>
+</dd><dt><strong>nfs_device</strong>
+<dd>
+<p>(optionnal) NFS device to mount Example: &#39;nfs.example.com:/vol1&#39;
+Required when running &#39;nfs&#39; backend. Defaults to false</p>
+</dd><dt><strong>nfs_options</strong>
+<dd>
+<p>(optional) NFS mount options Example: &#39;nfsvers=3,noacl&#39; Defaults to
+&#39;defaults&#39;</p>
+</dd><dt><strong>pipeline</strong>
+<dd>
+<p>(optional) Partial name of a pipeline in your paste configuration file with
+the service name removed. Defaults to &#39;keystone&#39;.</p>
+</dd><dt><strong>firewall_settings</strong>
+<dd>
+<p>(optional) Allow to add custom parameters to firewall rules Should be an
+hash. Default to {}</p>
+</dd></dl>
+</p>
+  </div>
+</div>
+<div class="tags">
+  
+  
+  
+</div>
+<h2>Parameter Summary</h2>
+<div class="tags">
+  <ul class="param">
+    <li><span class="name">glance_db_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">glance_db_user </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'glance'</tt></li><li><span class="name">glance_db_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'glancepassword'</tt></li><li><span class="name">ks_keystone_internal_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_keystone_internal_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_glance_internal_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_glance_api_internal_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => '9292'</tt></li><li><span class="name">ks_glance_registry_internal_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => '9191'</tt></li><li><span class="name">ks_glance_registry_internal_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_glance_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'glancepassword'</tt></li><li><span class="name">rabbit_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'rabbit_password'</tt></li><li><span class="name">rabbit_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">api_eth </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">openstack_vip </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">glance_rbd_pool </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'images'</tt></li><li><span class="name">glance_rbd_user </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'glance'</tt></li><li><span class="name">verbose </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">debug </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">log_facility </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'LOG_LOCAL0'</tt></li><li><span class="name">use_syslog </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">backend </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'rbd'</tt></li><li><span class="name">known_stores </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['rbd', 'http']</tt></li><li><span class="name">filesystem_store_datadir </span><span class="type">(<tt>TBD</tt>)</span><tt> => '/var/lib/glance/images/'</tt></li><li><span class="name">nfs_device </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">nfs_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'defaults'</tt></li><li><span class="name">pipeline </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'keystone'</tt></li><li><span class="name">firewall_settings </span><span class="type">(<tt>TBD</tt>)</span><tt> => {}</tt></li>
+  </ul>
+</div>
+</div>
+
+    <div id="footer">
+  Generated on Fri Mar 20 15:58:18 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.4 (ruby-2.1.5).
+</div>
+
+  </body>
+</html>

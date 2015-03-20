@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Hostclass: cloud::compute::hypervisor
+  
+    &mdash; Documentation by YARD 0.8.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!cloud/compute/hypervisor.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (h)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../cloud.html" title="cloud (hostclass)">cloud</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../compute.html" title="cloud::compute (hostclass)">compute</a></span></span>
+     &raquo; 
+    <span class="title">hypervisor</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="puppet_manifest_list_link"
+        href="../../puppet_manifest_list.html">
+      Puppet Manifest List
+    </a>
+  
+    <a class="full_list_link" id="puppet_plugin_list_link"
+        href="../../puppet_plugin_list.html">
+      Puppet Plugin List
+    </a>
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div class='module_header'>
+  <h1>
+    Puppet Class: hypervisor
+  </h1>
+</div>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><span class='object_link'><a href="../params.html" title="cloud::params (hostclass)">cloud::params</a></span></span>
+      <ul class="fullTree">
+        
+          <li class="next"><span class='object_link'><a href="../params.html" title="cloud::params (hostclass)">cloud::params</a></span></li>
+        
+          <li class="next">cloud::compute::hypervisor</li>
+        
+      </ul>
+      <a href="#" class="inheritanceTree">show all</a>
+    </dd>
+    
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">manifests/compute/hypervisor.pp</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+<p>Copyright (C) 2014 eNovance SAS &lt;licensing@enovance.com&gt; Licensed
+under the Apache License, Version 2.0 (the “License”); you may not use this
+file except in compliance with the License. You may obtain a copy of the
+License at</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_http'>http</span><span class='symbol'>:/</span><span class='op'>/</span><span class='id identifier rubyid_www'>www</span><span class='period'>.</span><span class='id identifier rubyid_apache'>apache</span><span class='period'>.</span><span class='id identifier rubyid_org'>org</span><span class='op'>/</span><span class='id identifier rubyid_licenses'>licenses</span><span class='op'>/</span><span class='const'>LICENSE</span><span class='op'>-</span><span class='float'>2.0</span></code></pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License.</p>
+
+<h2 id="label-Class%3A+cloud%3A%3Acompute%3A%3Ahypervisor">Class: cloud::compute::hypervisor</h2>
+
+<p>Hypervisor Compute node</p>
+
+<h3 id="label-Parameters%3A">Parameters:</h3>
+<dl class="rdoc-list label-list"><dt><strong>server_proxyclient_address</strong>
+<dd>
+<p>(optional) The IP address of the server running the console proxy client
+Defaults to &#39;127.0.0.1&#39;</p>
+</dd><dt><strong>libvirt_type</strong>
+<dd>
+<p>(optional) Libvirt domain type. Options are: kvm, lxc, qemu, uml, xen
+Replaces libvirt_type Defaults to &#39;kvm&#39;</p>
+</dd><dt><strong>ks_nova_public_proto</strong>
+<dd>
+<p>(optional) Protocol used to connect to API. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_nova_public_host</strong>
+<dd>
+<p>(optional) Public Hostname or IP to connect to Nova API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>nova_ssh_public_key</strong>
+<dd>
+<p>(optional) Install public key in .ssh/authorized_keys for the
+&#39;nova&#39; user. Note: this parameter use the &#39;content&#39;
+provider of Puppet, in consequence you must provide the entire ssh public
+key in this parameter. Defaults to undef</p>
+</dd><dt><strong>nova_ssh_private_key</strong>
+<dd>
+<p>(optional) Install private key into .ssh/id_rsa. Note: this parameter use
+the &#39;content&#39; provider of Puppet, in consequence you must provide
+the entire ssh privatekey in this parameter. Defaults to undef</p>
+</dd><dt><strong>console</strong>
+<dd>
+<p>(optional) Nova&#39;s console type (spice or novnc) Defaults to
+&#39;novnc&#39;</p>
+</dd><dt><strong>novnc_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Nova vncproxy service. Defaults to
+&#39;6080&#39;</p>
+</dd><dt><strong>spice_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Nova spicehtmlproxy service. Defaults to
+&#39;6082&#39;</p>
+</dd><dt><strong>cinder_rbd_user</strong>
+<dd>
+<p>(optional) The RADOS client name for accessing rbd volumes. Defaults to
+&#39;cinder&#39;</p>
+</dd><dt><strong>nova_rbd_pool</strong>
+<dd>
+<p>(optional) The RADOS pool in which rbd volumes are stored. Defaults to
+&#39;vms&#39;</p>
+</dd><dt><strong>nova_rbd_secret_uuid</strong>
+<dd>
+<p>(optional) The libvirt uuid of the secret for the cinder_rbd_user. Defaults
+to undef</p>
+</dd><dt><strong>vm_rbd</strong>
+<dd>
+<p>(optional) Enable or not ceph capabilities on compute node to store nova
+instances on ceph storage. Default to false.</p>
+</dd><dt><strong>volume_rbd</strong>
+<dd>
+<p>(optional) Enable or not ceph capabilities on compute node to attach cinder
+volumes backend by ceph on nova instances. Default to false.</p>
+</dd><dt><strong>manage_tso</strong>
+<dd>
+<p>(optional) Allow to manage or not TSO issue. Default to true.</p>
+</dd><dt><strong>nfs_enabled</strong>
+<dd>
+<p>(optional) Store (or not) instances on a NFS share. Defaults to false</p>
+</dd><dt><strong>nfs_device</strong>
+<dd>
+<p>(optional) NFS device to mount Example: &#39;nfs.example.com:/vol1&#39;
+Required when nfs_enabled is at true. Defaults to false</p>
+</dd><dt><strong>nfs_options</strong>
+<dd>
+<p>(optional) NFS mount options Example: &#39;nfsvers=3,noacl&#39; Defaults to
+&#39;defaults&#39;</p>
+</dd><dt><strong>filesystem_store_datadir</strong>
+<dd>
+<p>(optional) Full path of data directory to store the instances. Don&#39;t
+modify this parameter if you don&#39;t know what you do. You may have side
+effects (SElinux for example). Defaults to
+&#39;/var/lib/nova/instances&#39;</p>
+</dd><dt><strong>nova_shell</strong>
+<dd>
+<p>(optional) Full path of shell to run for nova user. To disable live
+migration &amp; resize, set it to &#39;/bin/nologin&#39; or false.
+Otherwise, set the value to &#39;/bin/bash&#39;. Need to be a valid shell
+path. Defaults to false</p>
+</dd><dt><strong>ks_console_public_proto</strong>
+<dd>
+<p>(optional) Protocol used to connect to console service. Defaults to false
+(use nova_public_proto)</p>
+</dd><dt><strong>ks_console_public_host</strong>
+<dd>
+<p>(optional) Hostname or IP used to connect to console service. Defaults to
+false (use nova_public_host)</p>
+</dd><dt><strong>firewall_settings</strong>
+<dd>
+<p>(optional) Allow to add custom parameters to firewall rules Should be an
+hash. Default to {}</p>
+</dd></dl>
+</p>
+  </div>
+</div>
+<div class="tags">
+  
+  
+  
+</div>
+<h2>Parameter Summary</h2>
+<div class="tags">
+  <ul class="param">
+    <li><span class="name">server_proxyclient_address </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">libvirt_type </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'kvm'</tt></li><li><span class="name">ks_nova_public_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_nova_public_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">nova_ssh_private_key </span><span class="type">(<tt>TBD</tt>)</span><tt> => undef</tt></li><li><span class="name">nova_ssh_public_key </span><span class="type">(<tt>TBD</tt>)</span><tt> => undef</tt></li><li><span class="name">console </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'novnc'</tt></li><li><span class="name">novnc_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => '6080'</tt></li><li><span class="name">spice_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => '6082'</tt></li><li><span class="name">ks_console_public_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_console_public_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">cinder_rbd_user </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'cinder'</tt></li><li><span class="name">nova_rbd_pool </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'vms'</tt></li><li><span class="name">nova_rbd_secret_uuid </span><span class="type">(<tt>TBD</tt>)</span><tt> => undef</tt></li><li><span class="name">vm_rbd </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">volume_rbd </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">manage_tso </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">nova_shell </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">firewall_settings </span><span class="type">(<tt>TBD</tt>)</span><tt> => {}</tt></li><li><span class="name">nfs_enabled </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">nfs_device </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">nfs_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'defaults'</tt></li><li><span class="name">filesystem_store_datadir </span><span class="type">(<tt>TBD</tt>)</span><tt> => '/var/lib/nova/instances'</tt></li>
+  </ul>
+</div>
+</div>
+
+    <div id="footer">
+  Generated on Fri Mar 20 15:58:18 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.4 (ruby-2.1.5).
+</div>
+
+  </body>
+</html>

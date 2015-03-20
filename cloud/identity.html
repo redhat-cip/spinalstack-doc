@@ -1,0 +1,522 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Hostclass: cloud::identity
+  
+    &mdash; Documentation by YARD 0.8.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!cloud/identity.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (i)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../cloud.html" title="cloud (hostclass)">cloud</a></span></span>
+     &raquo; 
+    <span class="title">identity</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="puppet_manifest_list_link"
+        href="../puppet_manifest_list.html">
+      Puppet Manifest List
+    </a>
+  
+    <a class="full_list_link" id="puppet_plugin_list_link"
+        href="../puppet_plugin_list.html">
+      Puppet Plugin List
+    </a>
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div class='module_header'>
+  <h1>
+    Puppet Class: identity
+  </h1>
+</div>
+
+<dl class="box">
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">manifests/identity.pp</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+<p>Copyright (C) 2014 eNovance SAS &lt;licensing@enovance.com&gt; Licensed
+under the Apache License, Version 2.0 (the “License”); you may not use this
+file except in compliance with the License. You may obtain a copy of the
+License at</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_http'>http</span><span class='symbol'>:/</span><span class='op'>/</span><span class='id identifier rubyid_www'>www</span><span class='period'>.</span><span class='id identifier rubyid_apache'>apache</span><span class='period'>.</span><span class='id identifier rubyid_org'>org</span><span class='op'>/</span><span class='id identifier rubyid_licenses'>licenses</span><span class='op'>/</span><span class='const'>LICENSE</span><span class='op'>-</span><span class='float'>2.0</span></code></pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License.</p>
+
+<h2 id="label-Class%3A+cloud%3A%3Aidentity">Class: cloud::identity</h2>
+
+<p>Install Identity Server (Keystone)</p>
+
+<h3 id="label-Parameters%3A">Parameters:</h3>
+<dl class="rdoc-list label-list"><dt><strong>identity_roles_addons</strong>
+<dd>
+<p>(optional) Extra keystone roles to create Defaults to
+[&#39;SwiftOperator&#39;, &#39;ResellerAdmin&#39;]</p>
+</dd><dt><strong>keystone_db_host</strong>
+<dd>
+<p>(optional) Hostname or IP address to connect to keystone database Defaults
+to &#39;127.0.0.1&#39;</p>
+</dd><dt><strong>keystone_db_user</strong>
+<dd>
+<p>(optional) Username to connect to keystone database Defaults to
+&#39;keystone&#39;</p>
+</dd><dt><strong>keystone_db_password</strong>
+<dd>
+<p>(optional) Password to connect to keystone database Defaults to
+&#39;keystonepassword&#39;</p>
+</dd><dt><strong>memcache_servers</strong>
+<dd>
+<p>(optionnal) Memcached servers used by Keystone. Should be an array.
+Defaults to [&#39;127.0.0.1:11211&#39;]</p>
+</dd><dt><strong>ks_admin_email</strong>
+<dd>
+<p>(optional) Email address of admin user in Keystone Defaults to
+&#39;no-reply@keystone.openstack&#39;</p>
+</dd><dt><strong>ks_admin_password</strong>
+<dd>
+<p>(optional) Password of admin user in Keystone Defaults to
+&#39;adminpassword&#39;</p>
+</dd><dt><strong>ks_admin_tenant</strong>
+<dd>
+<p>(optional) Admin tenant name in Keystone Defaults to &#39;admin&#39;</p>
+</dd><dt><strong>ks_admin_token</strong>
+<dd>
+<p>(required) Admin token used by Keystone.</p>
+</dd><dt><strong>ks_glance_internal_host</strong>
+<dd>
+<p>(optional) Internal Hostname or IP to connect to Glance API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_glance_admin_host</strong>
+<dd>
+<p>(optional) Admin Hostname or IP to connect to Glance API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_glance_public_host</strong>
+<dd>
+<p>(optional) Public Hostname or IP to connect to Glance API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_ceilometer_internal_host</strong>
+<dd>
+<p>(optional) Internal Hostname or IP to connect to Ceilometer API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_ceilometer_admin_host</strong>
+<dd>
+<p>(optional) Admin Hostname or IP to connect to Ceilometer API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_ceilometer_public_host</strong>
+<dd>
+<p>(optional) Public Hostname or IP to connect to Ceilometer API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_keystone_internal_host</strong>
+<dd>
+<p>(optional) Internal Hostname or IP to connect to Keystone API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_keystone_admin_host</strong>
+<dd>
+<p>(optional) Admin Hostname or IP to connect to Keystone API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_keystone_public_host</strong>
+<dd>
+<p>(optional) Public Hostname or IP to connect to Keystone API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_nova_internal_host</strong>
+<dd>
+<p>(optional) Internal Hostname or IP to connect to Nova API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_nova_admin_host</strong>
+<dd>
+<p>(optional) Admin Hostname or IP to connect to Nova API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_nova_public_host</strong>
+<dd>
+<p>(optional) Public Hostname or IP to connect to Nova API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_cinder_internal_host</strong>
+<dd>
+<p>(optional) Internal Hostname or IP to connect to Cinder API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_cinder_admin_host</strong>
+<dd>
+<p>(optional) Admin Hostname or IP to connect to Cinder API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_cinder_public_host</strong>
+<dd>
+<p>(optional) Public Hostname or IP to connect to Cinder API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_trove_internal_host</strong>
+<dd>
+<p>(optional) Internal Hostname or IP to connect to Trove API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_trove_admin_host</strong>
+<dd>
+<p>(optional) Admin Hostname or IP to connect to Trove API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_trove_public_host</strong>
+<dd>
+<p>(optional) Public Hostname or IP to connect to Trove API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_neutron_internal_host</strong>
+<dd>
+<p>(optional) Internal Hostname or IP to connect to Neutron API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_neutron_admin_host</strong>
+<dd>
+<p>(optional) Admin Hostname or IP to connect to Neutron API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_neutron_public_host</strong>
+<dd>
+<p>(optional) Public Hostname or IP to connect to Neutron API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_heat_internal_host</strong>
+<dd>
+<p>(optional) Internal Hostname or IP to connect to Heat API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_heat_admin_host</strong>
+<dd>
+<p>(optional) Admin Hostname or IP to connect to Heat API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_heat_public_host</strong>
+<dd>
+<p>(optional) Public Hostname or IP to connect to Heat API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_swift_internal_host</strong>
+<dd>
+<p>(optional) Internal Hostname or IP to connect to Swift API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_swift_admin_host</strong>
+<dd>
+<p>(optional) Admin Hostname or IP to connect to Swift API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_swift_public_host</strong>
+<dd>
+<p>(optional) Public Hostname or IP to connect to Swift API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_trove_password</strong>
+<dd>
+<p>(optional) Password used by Trove to connect to Keystone API Defaults to
+&#39;trovepassword&#39;</p>
+</dd><dt><strong>ks_ceilometer_password</strong>
+<dd>
+<p>(optional) Password used by Ceilometer to connect to Keystone API Defaults
+to &#39;ceilometerpassword&#39;</p>
+</dd><dt><strong>ks_swift_password</strong>
+<dd>
+<p>(optional) Password used by Swift to connect to Keystone API Defaults to
+&#39;swiftpassword&#39;</p>
+</dd><dt><strong>ks_nova_password</strong>
+<dd>
+<p>(optional) Password used by Nova to connect to Keystone API Defaults to
+&#39;novapassword&#39;</p>
+</dd><dt><strong>ks_neutron_password</strong>
+<dd>
+<p>(optional) Password used by Neutron to connect to Keystone API Defaults to
+&#39;neutronpassword&#39;</p>
+</dd><dt><strong>ks_heat_password</strong>
+<dd>
+<p>(optional) Password used by Heat to connect to Keystone API Defaults to
+&#39;heatpassword&#39;</p>
+</dd><dt><strong>ks_glance_password</strong>
+<dd>
+<p>(optional) Password used by Glance to connect to Keystone API Defaults to
+&#39;glancepassword&#39;</p>
+</dd><dt><strong>ks_cinder_password</strong>
+<dd>
+<p>(optional) Password used by Cinder to connect to Keystone API Defaults to
+&#39;cinderpassword&#39;</p>
+</dd><dt><strong>ks_swift_public_proto</strong>
+<dd>
+<p>(optional) Protocol used to connect to API. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_swift_admin_proto</strong>
+<dd>
+<p>(optional) Protocol for admin endpoint. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_swift_internal_proto</strong>
+<dd>
+<p>(optional) Protocol for public endpoint. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_ceilometer_public_proto</strong>
+<dd>
+<p>(optional) Protocol used to connect to API. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_ceilometer_admin_proto</strong>
+<dd>
+<p>(optional) Protocol for admin endpoint. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_ceilometer_internal_proto</strong>
+<dd>
+<p>(optional) Protocol for public endpoint. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_heat_public_proto</strong>
+<dd>
+<p>(optional) Protocol used to connect to API. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_heat_admin_proto</strong>
+<dd>
+<p>(optional) Protocol for admin endpoint. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_heat_internal_proto</strong>
+<dd>
+<p>(optional) Protocol for public endpoint. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_keystone_public_proto</strong>
+<dd>
+<p>(optional) Protocol for public endpoint. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_keystone_admin_proto</strong>
+<dd>
+<p>(optional) Protocol for admin endpoint. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_keystone_internal_proto</strong>
+<dd>
+<p>(optional) Protocol for public endpoint. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_nova_public_proto</strong>
+<dd>
+<p>(optional) Protocol used to connect to API. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_nova_admin_proto</strong>
+<dd>
+<p>(optional) Protocol for admin endpoint. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_nova_internal_proto</strong>
+<dd>
+<p>(optional) Protocol for public endpoint. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_neutron_public_proto</strong>
+<dd>
+<p>(optional) Protocol used to connect to API. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_neutron_admin_proto</strong>
+<dd>
+<p>(optional) Protocol for admin endpoint. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_neutron_internal_proto</strong>
+<dd>
+<p>(optional) Protocol for public endpoint. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_trove_public_proto</strong>
+<dd>
+<p>(optional) Protocol used to connect to API. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_trove_admin_proto</strong>
+<dd>
+<p>(optional) Protocol for admin endpoint. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_trove_internal_proto</strong>
+<dd>
+<p>(optional) Protocol for public endpoint. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_glance_public_proto</strong>
+<dd>
+<p>(optional) Protocol used to connect to API. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_glance_admin_proto</strong>
+<dd>
+<p>(optional) Protocol for admin endpoint. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_glance_internal_proto</strong>
+<dd>
+<p>(optional) Protocol for public endpoint. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_cinder_public_proto</strong>
+<dd>
+<p>(optional) Protocol used to connect to API. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_cinder_admin_proto</strong>
+<dd>
+<p>(optional) Protocol for admin endpoint. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_cinder_internal_proto</strong>
+<dd>
+<p>(optional) Protocol for public endpoint. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_ceilometer_public_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Ceilometer API from public network
+Defaults to &#39;8777&#39;</p>
+</dd><dt><strong>ks_keystone_internal_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Keystone API from internal network
+Defaults to &#39;5000&#39;</p>
+</dd><dt><strong>ks_keystone_public_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Keystone API from public network Defaults
+to &#39;5000&#39;</p>
+</dd><dt><strong>ks_keystone_admin_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Keystone API from admin network Defaults
+to &#39;35357&#39;</p>
+</dd><dt><strong>ks_swift_public_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Swift API from public network Defaults to
+&#39;8080&#39;</p>
+</dd><dt><strong>ks_trove_public_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Trove API from public network Defaults to
+&#39;8779&#39;</p>
+</dd><dt><strong>ks_nova_public_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Nova API from public network Defaults to
+&#39;8774&#39;</p>
+</dd><dt><strong>ks_ec2_public_port</strong>
+<dd>
+<p>(optional) TCP port to connect to EC2 API from public network Defaults to
+&#39;8773&#39;</p>
+</dd><dt><strong>ks_swift_dispersion_password</strong>
+<dd>
+<p>(optional) Password of the dispersion tenant, used for
+swift-dispersion-report and swift-dispersion-populate tools. Defaults to
+&#39;dispersion&#39;</p>
+</dd><dt><strong>ks_cinder_public_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Cinder API from public network Defaults
+to &#39;8776&#39;</p>
+</dd><dt><strong>ks_neutron_public_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Neutron API from public network Defaults
+to &#39;9696&#39;</p>
+</dd><dt><strong>ks_heat_public_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Heat API from public network Defaults to
+&#39;8004&#39;</p>
+</dd><dt><strong>ks_heat_cfn_public_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Heat API from public network Defaults to
+&#39;8000&#39;</p>
+</dd><dt><strong>ks_glance_api_public_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Glance API from public network Defaults
+to &#39;9292&#39;</p>
+</dd><dt><strong>api_eth</strong>
+<dd>
+<p>(optional) Which interface we bind the Keystone server. Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>region</strong>
+<dd>
+<p>(optional) OpenStack Region Name Defaults to &#39;RegionOne&#39;</p>
+</dd><dt><strong>verbose</strong>
+<dd>
+<p>(optional) Set log output to verbose output Defaults to true</p>
+</dd><dt><strong>debug</strong>
+<dd>
+<p>(optional) Set log output to debug output Defaults to true</p>
+</dd><dt><strong>use_syslog</strong>
+<dd>
+<p>(optional) Use syslog for logging Defaults to true</p>
+</dd><dt><strong>log_facility</strong>
+<dd>
+<p>(optional) Syslog facility to receive log lines Defaults to
+&#39;LOG_LOCAL0&#39;</p>
+</dd><dt><strong>token_driver</strong>
+<dd>
+<p>(optional) Driver to store tokens Defaults to
+&#39;keystone.token.persistence.backends.sql.Token&#39;</p>
+</dd><dt><strong>token_expiration</strong>
+<dd>
+<p>(optional) Amount of time a token should remain valid (in seconds) Defaults
+to &#39;3600&#39; (1 hour)</p>
+</dd><dt><strong>cinder_enabled</strong>
+<dd>
+<p>(optional) Enable or not Cinder (Block Storage Service) Defaults to true</p>
+</dd><dt><strong>trove_enabled</strong>
+<dd>
+<p>(optional) Enable or not Trove (Database as a Service) Experimental
+feature. Defaults to false</p>
+</dd><dt><strong>swift_enabled</strong>
+<dd>
+<p>(optional) Enable or not OpenStack Swift (Stockage as a Service) Defaults
+to true</p>
+</dd><dt><strong>ks_token_expiration</strong>
+<dd>
+<p>(optional) Amount of time a token should remain valid (seconds). Defaults
+to 3600 (1 hour).</p>
+</dd><dt><strong>firewall_settings</strong>
+<dd>
+<p>(optional) Allow to add custom parameters to firewall rules Should be an
+hash. Default to {}</p>
+</dd></dl>
+</p>
+  </div>
+</div>
+<div class="tags">
+  
+  
+  
+</div>
+<h2>Parameter Summary</h2>
+<div class="tags">
+  <ul class="param">
+    <li><span class="name">swift_enabled </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">cinder_enabled </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">trove_enabled </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">identity_roles_addons </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['SwiftOperator', 'ResellerAdmin']</tt></li><li><span class="name">keystone_db_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">keystone_db_user </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'keystone'</tt></li><li><span class="name">keystone_db_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'keystonepassword'</tt></li><li><span class="name">memcache_servers </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['127.0.0.1:11211']</tt></li><li><span class="name">ks_admin_email </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'no-reply@keystone.openstack'</tt></li><li><span class="name">ks_admin_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'adminpassword'</tt></li><li><span class="name">ks_admin_tenant </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'admin'</tt></li><li><span class="name">ks_admin_token </span><span class="type">(<tt>TBD</tt>)</span><tt> => undef</tt></li><li><span class="name">ks_ceilometer_admin_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_ceilometer_internal_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_ceilometer_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'ceilometerpassword'</tt></li><li><span class="name">ks_ceilometer_public_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_ceilometer_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 8777</tt></li><li><span class="name">ks_ceilometer_public_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_ceilometer_admin_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_ceilometer_internal_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_cinder_admin_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_cinder_internal_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_cinder_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'cinderpassword'</tt></li><li><span class="name">ks_cinder_public_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_cinder_public_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_cinder_admin_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_cinder_internal_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_cinder_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 8776</tt></li><li><span class="name">ks_glance_admin_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_glance_internal_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_glance_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'glancepassword'</tt></li><li><span class="name">ks_glance_public_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_glance_public_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_glance_internal_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_glance_admin_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_glance_api_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 9292</tt></li><li><span class="name">ks_heat_admin_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_heat_internal_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_heat_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'heatpassword'</tt></li><li><span class="name">ks_heat_public_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_heat_public_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_heat_admin_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_heat_internal_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_heat_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 8004</tt></li><li><span class="name">ks_heat_cfn_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 8000</tt></li><li><span class="name">ks_keystone_admin_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_keystone_admin_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 35357</tt></li><li><span class="name">ks_keystone_internal_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_keystone_internal_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 5000</tt></li><li><span class="name">ks_keystone_public_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_keystone_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 5000</tt></li><li><span class="name">ks_keystone_public_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_neutron_admin_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_keystone_admin_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_keystone_internal_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_neutron_internal_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_neutron_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'neutronpassword'</tt></li><li><span class="name">ks_neutron_public_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_neutron_public_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_neutron_admin_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_neutron_internal_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_neutron_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 9696</tt></li><li><span class="name">ks_nova_admin_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_nova_internal_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_nova_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'novapassword'</tt></li><li><span class="name">ks_nova_public_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_nova_public_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_nova_internal_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_nova_admin_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_nova_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 8774</tt></li><li><span class="name">ks_ec2_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 8773</tt></li><li><span class="name">ks_swift_dispersion_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'dispersion'</tt></li><li><span class="name">ks_swift_internal_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_swift_admin_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_swift_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'swiftpassword'</tt></li><li><span class="name">ks_swift_public_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_swift_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 8080</tt></li><li><span class="name">ks_swift_public_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_swift_admin_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_swift_internal_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_trove_admin_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_trove_internal_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_trove_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'trovepassword'</tt></li><li><span class="name">ks_trove_public_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_trove_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 8779</tt></li><li><span class="name">ks_trove_public_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_trove_admin_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_trove_internal_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">api_eth </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">region </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'RegionOne'</tt></li><li><span class="name">verbose </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">debug </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">log_facility </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'LOG_LOCAL0'</tt></li><li><span class="name">use_syslog </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">ks_token_expiration </span><span class="type">(<tt>TBD</tt>)</span><tt> => 3600</tt></li><li><span class="name">token_driver </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'keystone.token.persistence.backends.sql.Token'</tt></li><li><span class="name">firewall_settings </span><span class="type">(<tt>TBD</tt>)</span><tt> => {}</tt></li>
+  </ul>
+</div>
+</div>
+
+    <div id="footer">
+  Generated on Fri Mar 20 15:58:18 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.4 (ruby-2.1.5).
+</div>
+
+  </body>
+</html>

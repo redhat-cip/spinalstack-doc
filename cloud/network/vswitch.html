@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Hostclass: cloud::network::vswitch
+  
+    &mdash; Documentation by YARD 0.8.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!cloud/network/vswitch.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (v)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../cloud.html" title="cloud (hostclass)">cloud</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../network.html" title="cloud::network (hostclass)">network</a></span></span>
+     &raquo; 
+    <span class="title">vswitch</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="puppet_manifest_list_link"
+        href="../../puppet_manifest_list.html">
+      Puppet Manifest List
+    </a>
+  
+    <a class="full_list_link" id="puppet_plugin_list_link"
+        href="../../puppet_plugin_list.html">
+      Puppet Plugin List
+    </a>
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div class='module_header'>
+  <h1>
+    Puppet Class: vswitch
+  </h1>
+</div>
+
+<dl class="box">
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">manifests/network/vswitch.pp</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+<p>Copyright (C) 2014 eNovance SAS &lt;licensing@enovance.com&gt; Licensed
+under the Apache License, Version 2.0 (the “License”); you may not use this
+file except in compliance with the License. You may obtain a copy of the
+License at</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_http'>http</span><span class='symbol'>:/</span><span class='op'>/</span><span class='id identifier rubyid_www'>www</span><span class='period'>.</span><span class='id identifier rubyid_apache'>apache</span><span class='period'>.</span><span class='id identifier rubyid_org'>org</span><span class='op'>/</span><span class='id identifier rubyid_licenses'>licenses</span><span class='op'>/</span><span class='const'>LICENSE</span><span class='op'>-</span><span class='float'>2.0</span></code></pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License. Network vswitch class</p>
+
+<h3 id="label-Parameters%3A">Parameters:</h3>
+<dl class="rdoc-list label-list"><dt><strong>driver</strong>
+<dd>
+<p>(optional) Neutron vswitch driver Supported values: &#39;ml2_ovs&#39;,
+&#39;ml2_lb&#39;, &#39;n1kv_vem&#39;. Note: &#39;n1kv_vem&#39; currently
+works only on Red Hat systems. Defaults to &#39;ml2_ovs&#39;</p>
+</dd><dt><strong>external_int</strong>
+<dd>
+<p>(optionnal) Network interface to bind the external provider network
+Defaults to &#39;eth1&#39;.</p>
+</dd><dt><strong>external_bridge</strong>
+<dd>
+<p>(optionnal) OVS bridge used to bind external provider network Defaults to
+&#39;br-pub&#39;.</p>
+</dd><dt><strong>manage_ext_network</strong>
+<dd>
+<p>(optionnal) Manage or not external network with provider network API
+Defaults to false.</p>
+</dd><dt><strong>tunnel_eth</strong>
+<dd>
+<p>(optional) Interface IP used to build the tunnels Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt>*tunnel_typeis
+<dd>
+<p>(optional) List of types of tunnels to use when utilizing tunnels Defaults
+to [&#39;gre&#39;]</p>
+</dd><dt><strong>provider_bridge_mappings</strong>
+<dd>
+<p>(optional) List of &lt;physical_network&gt;:&lt;bridge&gt;</p>
+</dd><dt><strong>enable_distributed_routing</strong>
+<dd>
+<p>(optional) Enable support for distributed routing on L2 agent. Defaults to
+false.</p>
+</dd><dt><strong>n1kv_vsm_ip</strong>
+<dd>
+<p>(required) N1KV VSM (Virtual Supervisor Module) VM&#39;s IP. Defaults to
+127.0.0.1</p>
+</dd><dt><strong>n1kv_vsm_domainid</strong>
+<dd>
+<p>(required) N1KV VSM DomainID. Defaults to 1000</p>
+</dd><dt><strong>host_mgmt_intf</strong>
+<dd>
+<p>(required) Management Interface of node where VEM will be installed.
+Defaults to eth1</p>
+</dd><dt><strong>uplink_profile</strong>
+<dd>
+<p>(optional) Uplink Interfaces that will be managed by VEM. The uplink</p>
+
+<pre class="code ruby"><code class="ruby">port-profile that configures these interfaces should also be specified.</code></pre>
+
+<p>(format)</p>
+
+<pre class="code ruby"><code class="ruby">$uplink_profile = { &#39;eth1&#39; =&gt; &#39;profile1&#39;,
+                    &#39;eth2&#39; =&gt; &#39;profile2&#39;
+                   },
+</code></pre>
+
+<p>Defaults to empty</p>
+</dd><dt><strong>vtep_config</strong>
+<dd>
+<p>(optional) Virtual tunnel interface configuration.</p>
+
+<pre class="code ruby"><code class="ruby">Eg:VxLAN tunnel end-points.</code></pre>
+
+<p>(format) $vtep_config = { &#39;vtep1&#39; =&gt; { &#39;profile&#39; =&gt;
+&#39;virtprof1&#39;,</p>
+
+<pre class="code ruby"><code class="ruby">               &#39;ipmode&#39;  =&gt; &#39;dhcp&#39;
+             },
+  &#39;vtep2&#39; =&gt; { &#39;profile&#39;   =&gt; &#39;virtprof2&#39;,
+               &#39;ipmode&#39;    =&gt; &#39;static&#39;,
+               &#39;ipaddress&#39; =&gt; &#39;192.168.1.1&#39;,
+               &#39;netmask&#39;   =&gt; &#39;255.255.255.0&#39;
+             }
+},
+</code></pre>
+
+<p>Defaults to empty</p>
+</dd><dt><strong>node_type</strong>
+<dd>
+<p>(optional). Specify the type of node: &#39;compute&#39; (or)
+&#39;network&#39;. Defaults to &#39;compute&#39;</p>
+</dd></dl>
+
+<p>All the above parameter values will be used in the config file: n1kv.conf</p>
+<dl class="rdoc-list label-list"><dt><strong>vteps_in_same_subnet</strong>
+<dd>
+<p>(optional) The VXLAN tunnel interfaces created on VEM can belong to same
+IP-subnet. In such case, set this parameter to true. This results in below
+&#39;sysctl:ipv4&#39; values to be modified.</p>
+
+<pre class="code ruby"><code class="ruby">rp_filter (reverse path filtering) set to 2(Loose).Default is 1(Strict)
+arp_ignore (arp reply mode) set to 1:reply only if target ip matches
+                           that of incoming interface. Default is 0</code></pre>
+
+<p>Please refer Linux Documentation for detailed description <a
+href="http://lxr.free-electrons.com/source/Documentation/networking/ip-sysctl.txt">lxr.free-electrons.com/source/Documentation/networking/ip-sysctl.txt</a>
+If the tunnel interfaces are not in same subnet set this parameter to
+false. Note that setting to false causes no change in the sysctl settings
+and does not revert the changes made if it was originally set to true on a
+previous catalog run. Defaults to false</p>
+</dd><dt><strong>n1kv_source</strong>
+<dd>
+<p>(optional)</p>
+
+<pre class="code ruby"><code class="ruby">n1kv_source ==&gt; VEM package location. One of below
+  A)URL of yum repository that hosts VEM package.
+  B)VEM RPM/DPKG file name, If present locally in &#39;files&#39; folder
+  C)If not specified, assumes that VEM image is available in
+    default enabled repositories.
+</code></pre>
+
+<p>Defaults to empty</p>
+</dd><dt><strong>n1kv_version</strong>
+<dd>
+<p>(optional). Specify VEM package version to be installed.</p>
+
+<pre class="code ruby"><code class="ruby">Not applicable if &#39;n1kv_source&#39; is a file. (Option-B above)</code></pre>
+
+<p>Defaults to &#39;present&#39;</p>
+</dd><dt><strong>tunnel_types</strong>
+<dd>
+<p>(optional) List of types of tunnels to use when utilizing tunnels.
+Supported tunnel types are: vxlan. Defaults to [&#39;gre&#39;]</p>
+</dd><dt><strong>n1kv_vsm_domain_id</strong>
+<dd>
+<p>(optional) N1000 KV Domain ID (does nothing?) Defaults to 1000</p>
+</dd><dt><strong>firewall_settings</strong>
+<dd>
+<p>(optional) Allow to add custom parameters to firewall rules Should be an
+hash. Default to {}</p>
+</dd></dl>
+</p>
+  </div>
+</div>
+<div class="tags">
+  
+  
+  
+</div>
+<h2>Parameter Summary</h2>
+<div class="tags">
+  <ul class="param">
+    <li><span class="name">driver </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'ml2_ovs'</tt></li><li><span class="name">manage_ext_network </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">external_int </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'eth1'</tt></li><li><span class="name">external_bridge </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'br-pub'</tt></li><li><span class="name">firewall_settings </span><span class="type">(<tt>TBD</tt>)</span><tt> => {}</tt></li><li><span class="name">tunnel_types </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['gre']</tt></li><li><span class="name">tunnel_eth </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">provider_bridge_mappings </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['public:br-pub']</tt></li><li><span class="name">enable_distributed_routing </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">n1kv_vsm_ip </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">n1kv_vsm_domain_id </span><span class="type">(<tt>TBD</tt>)</span><tt> => 1000</tt></li><li><span class="name">host_mgmt_intf </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'eth1'</tt></li><li><span class="name">uplink_profile </span><span class="type">(<tt>TBD</tt>)</span><tt> => {}</tt></li><li><span class="name">vtep_config </span><span class="type">(<tt>TBD</tt>)</span><tt> => {}</tt></li><li><span class="name">node_type </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'compute'</tt></li><li><span class="name">vteps_in_same_subnet </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">n1kv_source </span><span class="type">(<tt>TBD</tt>)</span><tt> => ''</tt></li><li><span class="name">n1kv_version </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'present'</tt></li>
+  </ul>
+</div>
+</div>
+
+    <div id="footer">
+  Generated on Fri Mar 20 15:58:18 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.4 (ruby-2.1.5).
+</div>
+
+  </body>
+</html>

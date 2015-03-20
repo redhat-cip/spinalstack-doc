@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Hostclass: cloud
+  
+    &mdash; Documentation by YARD 0.8.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!cloud.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (c)</a> &raquo;
+    
+    
+    <span class="title">cloud</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="puppet_manifest_list_link"
+        href="puppet_manifest_list.html">
+      Puppet Manifest List
+    </a>
+  
+    <a class="full_list_link" id="puppet_plugin_list_link"
+        href="puppet_plugin_list.html">
+      Puppet Plugin List
+    </a>
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div class='module_header'>
+  <h1>
+    Puppet Class: cloud
+  </h1>
+</div>
+
+<dl class="box">
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">manifests/init.pp</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+<p>Copyright (C) 2014 eNovance SAS &lt;licensing@enovance.com&gt; Licensed
+under the Apache License, Version 2.0 (the “License”); you may not use this
+file except in compliance with the License. You may obtain a copy of the
+License at</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_http'>http</span><span class='symbol'>:/</span><span class='op'>/</span><span class='id identifier rubyid_www'>www</span><span class='period'>.</span><span class='id identifier rubyid_apache'>apache</span><span class='period'>.</span><span class='id identifier rubyid_org'>org</span><span class='op'>/</span><span class='id identifier rubyid_licenses'>licenses</span><span class='op'>/</span><span class='const'>LICENSE</span><span class='op'>-</span><span class='float'>2.0</span></code></pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License.</p>
+
+<h2 id="label-Class%3A+cloud">Class: cloud</h2>
+
+<p>Installs the system requirements</p>
+
+<h3 id="label-Parameters%3A">Parameters:</h3>
+<dl class="rdoc-list label-list"><dt><strong>rhn_registration</strong>
+<dd>
+<p>(optional) The RedHat network authentication token Defaults to undef</p>
+</dd><dt><strong>root_password</strong>
+<dd>
+<p>(optional) Unix root password Defaults to &#39;root&#39;</p>
+</dd><dt><strong>dns_ips</strong>
+<dd>
+<p>(optional) Hostname or IP of the Domain Name Server (dns) used Should by an
+array. Defaults to google public dns [&#39;8.8.8.8&#39;, &#39;8.8.4.4&#39;]</p>
+</dd><dt><strong>site_domain</strong>
+<dd>
+<p>(optional) Domain name (used for search and domain fields of resolv.conf
+configuration file Defaults to &#39;mydomain&#39;</p>
+</dd><dt><strong>motd_title</strong>
+<dd>
+<p>(optional) A string used in the top of the server&#39;s motd Defaults to
+&#39;eNovance IT Operations&#39;</p>
+</dd><dt><strong>selinux_mode</strong>
+<dd>
+<p>(optional) SELinux mode the system should be in Defaults to
+&#39;permissive&#39; Possible values : disabled, permissive, enforcing</p>
+</dd><dt><strong>selinux_directory</strong>
+<dd>
+<p>(optional) Path where to find the SELinux modules Defaults to
+&#39;/usr/share/selinux&#39;</p>
+</dd><dt><strong>selinux_booleans</strong>
+<dd>
+<p>(optional) Set of booleans to persistently enables SELinux booleans are the
+one getsebool -a returns Defaults [] Example: [&#39;rsync_full_access&#39;,
+&#39;haproxy_connect_any&#39;]</p>
+</dd><dt><strong>selinux_modules</strong>
+<dd>
+<p>(optional) Set of modules to load on the system Defaults [] Example:
+[&#39;module1&#39;, &#39;module2&#39;] Note: Those module should be in the
+$directory path</p>
+</dd><dt><strong>limits</strong>
+<dd>
+<p>(optional) Set of limits to set in /etc/security/limits.d/ Defaults {}
+Example:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mysql_nofile</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ensure</span><span class='tstring_end'>&#39;</span></span>     <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>present</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>user</span><span class='tstring_end'>&#39;</span></span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mysql</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>limit_type</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>nofile</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>both</span><span class='tstring_end'>&#39;</span></span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>16384</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+<span class='rbrace'>}</span>
+</code></pre>
+</dd><dt><strong>sysctl</strong>
+<dd>
+<p>(optional) Set of sysctl values to set. Defaults {} Example:</p>
+
+<pre class="code ruby"><code class="ruby">{
+  &#39;net.ipv4.ip_forward&#39; =&gt; {
+     &#39;value&#39; =&gt; &#39;1&#39;,
+  },
+  &#39;net.ipv6.conf.all.forwarding =&gt; {
+     &#39;value&#39; =&gt; &#39;1&#39;,
+  },
+}
+</code></pre>
+</dd><dt><strong>manage_firewall</strong>
+<dd>
+<p>(optional) Completely enable or disable firewall settings (false means
+disabled, and true means enabled) Defaults to false</p>
+</dd><dt><strong>firewall_rules</strong>
+<dd>
+<p>(optional) Allow to add custom firewall rules Should be an hash. Default to
+{}</p>
+</dd><dt><strong>purge_firewall_rules</strong>
+<dd>
+<p>(optional) Boolean, purge all firewall resources Defaults to false</p>
+</dd><dt><strong>firewall_pre_extras</strong>
+<dd>
+<p>(optional) Allow to add custom parameters to firewall rules (pre stage)
+Should be an hash. Default to {}</p>
+</dd><dt><strong>firewall_post_extras</strong>
+<dd>
+<p>(optional) Allow to add custom parameters to firewall rules (post stage)
+Should be an hash. Default to {}</p>
+</dd></dl>
+</p>
+  </div>
+</div>
+<div class="tags">
+  
+  
+  
+</div>
+<h2>Parameter Summary</h2>
+<div class="tags">
+  <ul class="param">
+    <li><span class="name">rhn_registration </span><span class="type">(<tt>TBD</tt>)</span><tt> => undef</tt></li><li><span class="name">root_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'root'</tt></li><li><span class="name">dns_ips </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['8.8.8.8', '8.8.4.4']</tt></li><li><span class="name">site_domain </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'mydomain'</tt></li><li><span class="name">motd_title </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'eNovance IT Operations'</tt></li><li><span class="name">selinux_mode </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'permissive'</tt></li><li><span class="name">selinux_directory </span><span class="type">(<tt>TBD</tt>)</span><tt> => '/usr/share/selinux'</tt></li><li><span class="name">selinux_booleans </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">selinux_modules </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">limits </span><span class="type">(<tt>TBD</tt>)</span><tt> => {}</tt></li><li><span class="name">sysctl </span><span class="type">(<tt>TBD</tt>)</span><tt> => {}</tt></li><li><span class="name">manage_firewall </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">firewall_rules </span><span class="type">(<tt>TBD</tt>)</span><tt> => {}</tt></li><li><span class="name">purge_firewall_rules </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">firewall_pre_extras </span><span class="type">(<tt>TBD</tt>)</span><tt> => {}</tt></li><li><span class="name">firewall_post_extras </span><span class="type">(<tt>TBD</tt>)</span><tt> => {}</tt></li>
+  </ul>
+</div>
+</div>
+
+    <div id="footer">
+  Generated on Fri Mar 20 15:58:17 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.4 (ruby-2.1.5).
+</div>
+
+  </body>
+</html>

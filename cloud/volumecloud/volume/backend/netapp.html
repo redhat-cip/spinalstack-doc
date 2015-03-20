@@ -1,0 +1,435 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Definedtype: cloud::volumecloud::volume::backend::netapp
+  
+    &mdash; Documentation by YARD 0.8.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="../../../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../../../';
+  framesUrl = "../../../../frames.html#!cloud/volumecloud/volume/backend/netapp.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../../../_index.html">Index (n)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../../cloud.html" title="cloud (hostclass)">cloud</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../../volume.html" title="cloud::volume (hostclass)">volume</a></span></span> &raquo; <span class='title'>backend</span>
+     &raquo; 
+    <span class="title">netapp</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="puppet_manifest_list_link"
+        href="../../../../puppet_manifest_list.html">
+      Puppet Manifest List
+    </a>
+  
+    <a class="full_list_link" id="puppet_plugin_list_link"
+        href="../../../../puppet_plugin_list.html">
+      Puppet Plugin List
+    </a>
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Definedtype: cloud::volumecloud::volume::backend::netapp
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">manifests/volume/backend/netapp.pp</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Copyright (C) 2014 eNovance SAS &lt;licensing@enovance.com&gt; Licensed
+under the Apache License, Version 2.0 (the “License”); you may not use this
+file except in compliance with the License. You may obtain a copy of the
+License at</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_http'>http</span><span class='symbol'>:/</span><span class='op'>/</span><span class='id identifier rubyid_www'>www</span><span class='period'>.</span><span class='id identifier rubyid_apache'>apache</span><span class='period'>.</span><span class='id identifier rubyid_org'>org</span><span class='op'>/</span><span class='id identifier rubyid_licenses'>licenses</span><span class='op'>/</span><span class='const'>LICENSE</span><span class='op'>-</span><span class='float'>2.0</span></code></pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License. Configure NetApp backend for Cinder</p>
+
+<h3 id="label-Parameters">Parameters</h3>
+<dl class="rdoc-list label-list"><dt><strong>netapp_login</strong>
+<dd>
+<p>(required) Administrative user account name used to access the storage
+system or proxy server.</p>
+</dd><dt><strong>netapp_password</strong>
+<dd>
+<p>(required) Password for the administrative user account specified in the
+netapp_login parameter.</p>
+</dd><dt><strong>netapp_server_hostname</strong>
+<dd>
+<p>(required) The hostname (or IP address) for the storage system or proxy
+server.</p>
+</dd><dt><strong>netapp_server_port</strong>
+<dd>
+<p>(optional) The TCP port to use for communication with ONTAPI on the storage
+system. Traditionally, port 80 is used for HTTP and port 443 is used for
+HTTPS; however, this value should be changed if an alternate port has been
+configured on the storage system or proxy server. Defaults to 80</p>
+</dd><dt><strong>netapp_size_multiplier</strong>
+<dd>
+<p>(optional) The quantity to be multiplied by the requested volume size to
+ensure enough space is available on the virtual storage server (Vserver) to
+fulfill the volume creation request. Defaults to 1.2</p>
+</dd><dt><strong>netapp_storage_family</strong>
+<dd>
+<p>(optional) The storage family type used on the storage system; valid values
+are ontap_7mode for using Data ONTAP operating in 7-Mode or ontap_cluster
+for using clustered Data ONTAP, or eseries for NetApp E-Series. Defaults to
+ontap_cluster</p>
+</dd><dt><strong>netapp_storage_protocol</strong>
+<dd>
+<p>(optional) The storage protocol to be used on the data path with the
+storage system; valid values are iscsi or nfs. Defaults to nfs</p>
+</dd><dt><strong>netapp_transport_type</strong>
+<dd>
+<p>(optional) The transport protocol used when communicating with ONTAPI on
+the storage system or proxy server. Valid values are http or https.
+Defaults to http</p>
+</dd><dt><strong>netapp_vfiler</strong>
+<dd>
+<p>(optional) The vFiler unit on which provisioning of block storage volumes
+will be done. This parameter is only used by the driver when connecting to
+an instance with a storage family of Data ONTAP operating in 7-Mode and the
+storage protocol selected is iSCSI. Only use this parameter when utilizing
+the MultiStore feature on the NetApp storage system. Defaults to &#39;&#39;</p>
+</dd><dt><strong>netapp_volume_list</strong>
+<dd>
+<p>(optional) This parameter is only utilized when the storage protocol is
+configured to use iSCSI. This parameter is used to restrict provisioning to
+the specified controller volumes. Specify the value of this parameter to be
+a comma separated list of NetApp controller volume names to be used for
+provisioning. Defaults to &#39;&#39;</p>
+</dd><dt><strong>netapp_vserver</strong>
+<dd>
+<p>(optional) This parameter specifies the virtual storage server (Vserver)
+name on the storage cluster on which provisioning of block storage volumes
+should occur. If using the NFS storage protocol, this parameter is
+mandatory for storage service catalog support (utilized by Cinder volume
+type extra_specs support). If this parameter is specified, the exports
+belonging to the Vserver will only be used for provisioning in the future.
+Block storage volumes on exports not belonging to the Vserver specified by
+this parameter will continue to function normally. Defaults to &#39;&#39;</p>
+</dd><dt><strong>expiry_thres_minutes</strong>
+<dd>
+<p>(optional) This parameter specifies the threshold for last access time for
+images in the NFS image cache. When a cache cleaning cycle begins, images
+in the cache that have not been accessed in the last M minutes, where M is
+the value of this parameter, will be deleted from the cache to create free
+space on the NFS share. Defaults to 720</p>
+</dd><dt><strong>thres_avl_size_perc_start</strong>
+<dd>
+<p>(optional) If the percentage of available space for an NFS share has
+dropped below the value specified by this parameter, the NFS image cache
+will be cleaned. Defaults to 20</p>
+</dd><dt><strong>thres_avl_size_perc_stop</strong>
+<dd>
+<p>(optional) When the percentage of available space on an NFS share has
+reached the percentage specified by this parameter, the driver will stop
+clearing files from the NFS image cache that have not been accessed in the
+last M minutes, where M is the value of the expiry_thres_minutes parameter.
+Defaults to 60</p>
+</dd><dt><strong>nfs_shares_config</strong>
+<dd>
+<p>(optional) File with the list of available NFS shares Defaults to
+&#39;&#39;</p>
+</dd></dl>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Parameter Summary<small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+<ul class="summary">
+  
+    <li>
+      <a href="#">
+        <span class="summary_signature">
+          -
+          <strong>netapp_login</strong>
+          
+        </span>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="#">
+        <span class="summary_signature">
+          -
+          <strong>netapp_password</strong>
+          
+        </span>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="#">
+        <span class="summary_signature">
+          -
+          <strong>netapp_server_hostname</strong>
+          
+        </span>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="#">
+        <span class="summary_signature">
+          -
+          <strong>volume_backend_name</strong>
+          
+            
+            => $name
+          
+        </span>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="#">
+        <span class="summary_signature">
+          -
+          <strong>netapp_server_port</strong>
+          
+            
+            => &#39;80&#39;
+          
+        </span>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="#">
+        <span class="summary_signature">
+          -
+          <strong>netapp_size_multiplier</strong>
+          
+            
+            => &#39;1.2&#39;
+          
+        </span>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="#">
+        <span class="summary_signature">
+          -
+          <strong>netapp_storage_family</strong>
+          
+            
+            => &#39;ontap_cluster&#39;
+          
+        </span>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="#">
+        <span class="summary_signature">
+          -
+          <strong>netapp_storage_protocol</strong>
+          
+            
+            => &#39;nfs&#39;
+          
+        </span>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="#">
+        <span class="summary_signature">
+          -
+          <strong>netapp_transport_type</strong>
+          
+            
+            => &#39;http&#39;
+          
+        </span>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="#">
+        <span class="summary_signature">
+          -
+          <strong>netapp_vfiler</strong>
+          
+            
+            => &#39;&#39;
+          
+        </span>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="#">
+        <span class="summary_signature">
+          -
+          <strong>netapp_volume_list</strong>
+          
+            
+            => &#39;&#39;
+          
+        </span>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="#">
+        <span class="summary_signature">
+          -
+          <strong>netapp_vserver</strong>
+          
+            
+            => &#39;&#39;
+          
+        </span>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="#">
+        <span class="summary_signature">
+          -
+          <strong>expiry_thres_minutes</strong>
+          
+            
+            => &#39;720&#39;
+          
+        </span>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="#">
+        <span class="summary_signature">
+          -
+          <strong>thres_avl_size_perc_start</strong>
+          
+            
+            => &#39;20&#39;
+          
+        </span>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="#">
+        <span class="summary_signature">
+          -
+          <strong>thres_avl_size_perc_stop</strong>
+          
+            
+            => &#39;60&#39;
+          
+        </span>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="#">
+        <span class="summary_signature">
+          -
+          <strong>nfs_shares_config</strong>
+          
+            
+            => &#39;&#39;
+          
+        </span>
+        
+      </a>
+    </li>
+  
+</ul>
+</div>
+
+    <div id="footer">
+  Generated on Fri Feb 13 15:18:42 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.4 (ruby-2.1.5).
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,571 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Hostclass: cloud::loadbalancer
+  
+    &mdash; Documentation by YARD 0.8.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!cloud/loadbalancer.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (l)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../cloud.html" title="cloud (hostclass)">cloud</a></span></span>
+     &raquo; 
+    <span class="title">loadbalancer</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="puppet_manifest_list_link"
+        href="../puppet_manifest_list.html">
+      Puppet Manifest List
+    </a>
+  
+    <a class="full_list_link" id="puppet_plugin_list_link"
+        href="../puppet_plugin_list.html">
+      Puppet Plugin List
+    </a>
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div class='module_header'>
+  <h1>
+    Puppet Class: loadbalancer
+  </h1>
+</div>
+
+<dl class="box">
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">manifests/loadbalancer.pp</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+<p>Copyright (C) 2014 eNovance SAS &lt;licensing@enovance.com&gt; Licensed
+under the Apache License, Version 2.0 (the “License”); you may not use this
+file except in compliance with the License. You may obtain a copy of the
+License at</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_http'>http</span><span class='symbol'>:/</span><span class='op'>/</span><span class='id identifier rubyid_www'>www</span><span class='period'>.</span><span class='id identifier rubyid_apache'>apache</span><span class='period'>.</span><span class='id identifier rubyid_org'>org</span><span class='op'>/</span><span class='id identifier rubyid_licenses'>licenses</span><span class='op'>/</span><span class='const'>LICENSE</span><span class='op'>-</span><span class='float'>2.0</span></code></pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License.</p>
+
+<h2 id="label-Class%3A+cloud%3A%3Aloadbalancer">Class: cloud::loadbalancer</h2>
+
+<p>Install Load-Balancer node (HAproxy + Keepalived)</p>
+
+<h3 id="label-Parameters%3A">Parameters:</h3>
+<dl class="rdoc-list label-list"><dt><strong>keepalived_vrrp_interface</strong>
+<dd>
+<p>(optional) Networking interface to bind the vrrp traffic. Defaults to false
+(disabled)</p>
+</dd><dt><strong>keepalived_public_interface</strong>
+<dd>
+<p>(optional) Networking interface to bind the VIP connected to public
+network. Defaults to &#39;eth0&#39;</p>
+</dd><dt><strong>keepalived_internal_interface</strong>
+<dd>
+<p>(optional) Networking interface to bind the VIP connected to internal
+network. keepalived_internal_ipvs should be configured to enable the
+internal VIP. Defaults to &#39;eth1&#39;</p>
+</dd><dt><strong>keepalived_public_ipvs</strong>
+<dd>
+<p>(optional) IP address of the VIP connected to public network. Should be an
+array. Defaults to [&#39;127.0.0.1&#39;]</p>
+</dd><dt><strong>keepalived_internal_ipvs</strong>
+<dd>
+<p>(optional) IP address of the VIP connected to internal network. Should be
+an array. Defaults to false (disabled)</p>
+</dd><dt><strong>keepalived_auth_type</strong>
+<dd>
+<p>(optional) Authentication method. Supported methods are simple Passwd
+(PASS) or IPSEC AH (AH). Defaults to undef</p>
+</dd><dt><strong>keepalived_auth_pass</strong>
+<dd>
+<p>(optional) Authentication password. Password string (up to 8 characters).
+Defaults to undef</p>
+</dd><dt><strong>swift_api</strong>
+<dd>
+<p>(optional) Enable or not Swift public binding. If true, both public and
+internal will attempt to be created except if vip_internal_ip is set to
+false. If set to [&#39;10.0.0.1&#39;], only IP in the array (or in the
+string) will be configured in the pool. They must be part of keepalived_ip
+options. If set to false, no binding will be configure Defaults to true</p>
+</dd><dt><strong>ceilometer_api</strong>
+<dd>
+<p>(optional) Enable or not Ceilometer public binding. If true, both public
+and internal will attempt to be created except if vip_internal_ip is set to
+false. If set to [&#39;10.0.0.1&#39;], only IP in the array (or in the
+string) will be configured in the pool. They must be part of keepalived_ip
+options. If set to false, no binding will be configure Defaults to true</p>
+</dd><dt><strong>cinder_api</strong>
+<dd>
+<p>(optional) Enable or not Cinder public binding. If true, both public and
+internal will attempt to be created except if vip_internal_ip is set to
+false. If set to [&#39;10.0.0.1&#39;], only IP in the array (or in the
+string) will be configured in the pool. They must be part of keepalived_ip
+options. If set to false, no binding will be configure Defaults to true</p>
+</dd><dt><strong>glance_api</strong>
+<dd>
+<p>(optional) Enable or not Glance API public binding. If true, both public
+and internal will attempt to be created except if vip_internal_ip is set to
+false. If set to [&#39;10.0.0.1&#39;], only IP in the array (or in the
+string) will be configured in the pool. They must be part of keepalived_ip
+options. If set to false, no binding will be configure Defaults to true</p>
+</dd><dt><strong>glance_registry</strong>
+<dd>
+<p>(optional) Enable or not Glance Registry public binding. If true, both
+public and internal will attempt to be created except if vip_internal_ip is
+set to false. If set to [&#39;10.0.0.1&#39;], only IP in the array (or in
+the string) will be configured in the pool. They must be part of
+keepalived_ip options. If set to false, no binding will be configure
+Defaults to true</p>
+</dd><dt><strong>neutron_api</strong>
+<dd>
+<p>(optional) Enable or not Neutron public binding. If true, both public and
+internal will attempt to be created except if vip_internal_ip is set to
+false. If set to [&#39;10.0.0.1&#39;], only IP in the array (or in the
+string) will be configured in the pool. They must be part of keepalived_ip
+options. If set to false, no binding will be configure Defaults to true</p>
+</dd><dt><strong>heat_api</strong>
+<dd>
+<p>(optional) Enable or not Heat public binding. If true, both public and
+internal will attempt to be created except if vip_internal_ip is set to
+false. If set to [&#39;10.0.0.1&#39;], only IP in the array (or in the
+string) will be configured in the pool. They must be part of keepalived_ip
+options. If set to false, no binding will be configure Defaults to true</p>
+</dd><dt><strong>heat_cfn_api</strong>
+<dd>
+<p>(optional) Enable or not Heat CFN public binding. If true, both public and
+internal will attempt to be created except if vip_internal_ip is set to
+false. If set to [&#39;10.0.0.1&#39;], only IP in the array (or in the
+string) will be configured in the pool. They must be part of keepalived_ip
+options. If set to false, no binding will be configure Defaults to true</p>
+</dd><dt><strong>heat_cloudwatch_api</strong>
+<dd>
+<p>(optional) Enable or not Heat Cloudwatch public binding. If true, both
+public and internal will attempt to be created except if vip_internal_ip is
+set to false. If set to [&#39;10.0.0.1&#39;], only IP in the array (or in
+the string) will be configured in the pool. They must be part of
+keepalived_ip options. If set to false, no binding will be configure
+Defaults to true</p>
+</dd><dt><strong>nova_api</strong>
+<dd>
+<p>(optional) Enable or not Nova public binding. If true, both public and
+internal will attempt to be created except if vip_internal_ip is set to
+false. If set to [&#39;10.0.0.1&#39;], only IP in the array (or in the
+string) will be configured in the pool. They must be part of keepalived_ip
+options. If set to false, no binding will be configure Defaults to true</p>
+</dd><dt><strong>trove_api</strong>
+<dd>
+<p>(optional) Enable or not Trove public binding. If true, both public and
+internal will attempt to be created except if vip_internal_ip is set to
+false. If set to [&#39;10.0.0.1&#39;], only IP in the array (or in the
+string) will be configured in the pool. They must be part of keepalived_ip
+options. If set to false, no binding will be configure Defaults to true</p>
+</dd><dt><strong>horizon</strong>
+<dd>
+<p>(optional) Enable or not Horizon public binding. If true, both public and
+internal will attempt to be created except if vip_internal_ip is set to
+false. If set to [&#39;10.0.0.1&#39;], only IP in the array (or in the
+string) will be configured in the pool. They must be part of keepalived_ip
+options. If set to false, no binding will be configure Defaults to true</p>
+</dd><dt><strong>horizon_ssl</strong>
+<dd>
+<p>(optional) Enable or not Horizon SSL public binding. If true, both public
+and internal will attempt to be created except if vip_internal_ip is set to
+false. If set to [&#39;10.0.0.1&#39;], only IP in the array (or in the
+string) will be configured in the pool. They must be part of keepalived_ip
+options. If set to false, no binding will be configure Defaults to true</p>
+</dd><dt><strong>ec2_api</strong>
+<dd>
+<p>(optional) Enable or not EC2 public binding. If true, both public and
+internal will attempt to be created except if vip_internal_ip is set to
+false. If set to [&#39;10.0.0.1&#39;], only IP in the array (or in the
+string) will be configured in the pool. They must be part of keepalived_ip
+options. If set to false, no binding will be configure Defaults to true</p>
+</dd><dt><strong>spice</strong>
+<dd>
+<p>(optional) Enable or not spice binding. If true, both public and internal
+will attempt to be created except if vip_internal_ip is set to false. If
+set to [&#39;10.0.0.1&#39;], only IP in the array (or in the string) will
+be configured in the pool. They must be part of keepalived_ip options. If
+set to false, no binding will be configure. Defaults to false</p>
+</dd><dt><strong>novnc</strong>
+<dd>
+<p>(optional) Enable or not novnc binding. If true, both public and internal
+will attempt to be created except if vip_internal_ip is set to false. If
+set to [&#39;10.0.0.1&#39;], only IP in the array (or in the string) will
+be configured in the pool. They must be part of keepalived_ip options. If
+set to false, no binding will be configure. Defaults to true</p>
+</dd><dt><strong>elasticsearch</strong>
+<dd>
+<p>(optional) Enable or not ElasticSearch binding. If true, both public and
+internal will attempt to be created except if vip_internal_ip is set to
+false. If set to [&#39;10.0.0.1&#39;], only IP in the array (or in the
+string) will be configured in the pool. They must be part of keepalived_ip
+options. If set to false, no binding will be configure. Defaults to true</p>
+</dd><dt><strong>kibana</strong>
+<dd>
+<p>(optional) Enable or not kibana binding. If true, both public and internal
+will attempt to be created except if vip_internal_ip is set to false. If
+set to [&#39;10.0.0.1&#39;], only IP in the array (or in the string) will
+be configured in the pool. They must be part of keepalived_ip options. If
+set to false, no binding will be configure. Defaults to true</p>
+</dd><dt><strong>redis</strong>
+<dd>
+<p>(optional) Enable or not redis binding. If true, both public and internal
+will attempt to be created except if vip_internal_ip is set to false. If
+set to [&#39;10.0.0.1&#39;], only IP in the array (or in the string) will
+be configured in the pool. They must be part of keepalived_ip options. If
+set to false, no binding will be configure. Defaults to true</p>
+</dd><dt><strong>metadata_api</strong>
+<dd>
+<p>(optional) Enable or not Metadata public binding. If true, both public and
+internal will attempt to be created except if vip_internal_ip is set to
+false. If set to [&#39;10.0.0.1&#39;], only IP in the array (or in the
+string) will be configured in the pool. They must be part of keepalived_ip
+options. If set to false, no binding will be configure Defaults to true</p>
+</dd><dt><strong>keystone_api</strong>
+<dd>
+<p>(optional) Enable or not Keystone public binding. If true, both public and
+internal will attempt to be created except if vip_internal_ip is set to
+false. If set to [&#39;10.0.0.1&#39;], only IP in the array (or in the
+string) will be configured in the pool. They must be part of keepalived_ip
+options. If set to false, no binding will be configure Defaults to true</p>
+</dd><dt><strong>rabbitmq</strong>
+<dd>
+<p>(optional) Enable or not RabbitMQ binding. If true, both public and
+internal will attempt to be created except if vip_internal_ip is set to
+false. If set to [&#39;10.0.0.1&#39;], only IP in the array (or in the
+string) will be configured in the pool. They must be part of keepalived_ip
+options. If set to false, no binding will be configure. Defaults to false</p>
+</dd><dt><strong>sensu_dashboard</strong>
+<dd>
+<p>(optional) Enable or not sensu_dashboard binding. If true, both public and
+internal will attempt to be created except if vip_internal_ip is set to
+false. If set to [&#39;10.0.0.1&#39;], only IP in the array (or in the
+string) will be configured in the pool. They must be part of keepalived_ip
+options. If set to false, no binding will be configure. Defaults to true</p>
+</dd><dt><strong>sensu_api</strong>
+<dd>
+<p>(optional) Enable or not sensu_api binding. If true, both public and
+internal will attempt to be created except if vip_internal_ip is set to
+false. If set to [&#39;10.0.0.1&#39;], only IP in the array (or in the
+string) will be configured in the pool. They must be part of keepalived_ip
+options. If set to false, no binding will be configure. Defaults to true</p>
+</dd><dt><strong>keystone_api_admin</strong>
+<dd>
+<p>(optional) Enable or not Keystone admin binding. If true, both public and
+internal will attempt to be created except if vip_internal_ip is set to
+false. If set to [&#39;10.0.0.1&#39;], only IP in the array (or in the
+string) will be configured in the pool. They must be part of keepalived_ip
+options. If set to false, no binding will be configure Defaults to true</p>
+</dd><dt><strong>haproxy_auth</strong>
+<dd>
+<p>(optional) The HTTP sytle basic credentials (using login:password form)
+Defaults to &#39;admin:changeme&#39;</p>
+</dd><dt><strong>keepalived_state</strong>
+<dd>
+<p>(optional) TODO Defaults to &#39;BACKUP&#39;</p>
+</dd><dt><strong>keepalived_priority</strong>
+<dd>
+<p>(optional) TODO Defaults to &#39;50&#39;</p>
+</dd><dt><strong>ceilometer_bind_options</strong>
+<dd>
+<p>(optional) A hash of options that are inserted into the HAproxy listening
+service configuration block. Defaults to []</p>
+</dd><dt><strong>cinder_bind_options</strong>
+<dd>
+<p>(optional) A hash of options that are inserted into the HAproxy listening
+service configuration block. Defaults to []</p>
+</dd><dt><strong>ec2_bind_options</strong>
+<dd>
+<p>(optional) A hash of options that are inserted into the HAproxy listening
+service configuration block. Defaults to []</p>
+</dd><dt><strong>glance_api_bind_options</strong>
+<dd>
+<p>(optional) A hash of options that are inserted into the HAproxy listening
+service configuration block. Defaults to []</p>
+</dd><dt><strong>glance_registry_bind_options</strong>
+<dd>
+<p>(optional) A hash of options that are inserted into the HAproxy listening
+service configuration block. Defaults to []</p>
+</dd><dt><strong>heat_cfn_bind_options</strong>
+<dd>
+<p>(optional) A hash of options that are inserted into the HAproxy listening
+service configuration block. Defaults to []</p>
+</dd><dt><strong>heat_cloudwatch_bind_options</strong>
+<dd>
+<p>(optional) A hash of options that are inserted into the HAproxy listening
+service configuration block. Defaults to []</p>
+</dd><dt><strong>heat_api_bind_options</strong>
+<dd>
+<p>(optional) A hash of options that are inserted into the HAproxy listening
+service configuration block. Defaults to []</p>
+</dd><dt><strong>keystone_bind_options</strong>
+<dd>
+<p>(optional) A hash of options that are inserted into the HAproxy listening
+service configuration block. Defaults to []</p>
+</dd><dt><strong>keystone_admin_bind_options</strong>
+<dd>
+<p>(optional) A hash of options that are inserted into the HAproxy listening
+service configuration block. Defaults to []</p>
+</dd><dt><strong>metadata_bind_options</strong>
+<dd>
+<p>(optional) A hash of options that are inserted into the HAproxy listening
+service configuration block. Defaults to []</p>
+</dd><dt><strong>neutron_bind_options</strong>
+<dd>
+<p>(optional) A hash of options that are inserted into the HAproxy listening
+service configuration block. Defaults to []</p>
+</dd><dt><strong>nova_bind_options</strong>
+<dd>
+<p>(optional) A hash of options that are inserted into the HAproxy listening
+service configuration block. Defaults to []</p>
+</dd><dt><strong>trove_bind_options</strong>
+<dd>
+<p>(optional) A hash of options that are inserted into the HAproxy listening
+service configuration block. Defaults to []</p>
+</dd><dt><strong>swift_bind_options</strong>
+<dd>
+<p>(optional) A hash of options that are inserted into the HAproxy listening
+service configuration block. Defaults to []</p>
+</dd><dt><strong>spice_bind_options</strong>
+<dd>
+<p>(optional) A hash of options that are inserted into the HAproxy listening
+service configuration block. Defaults to []</p>
+</dd><dt><strong>novnc_bind_options</strong>
+<dd>
+<p>(optional) A hash of options that are inserted into the HAproxy listening
+service configuration block. Defaults to []</p>
+</dd><dt><strong>horizon_bind_options</strong>
+<dd>
+<p>(optional) A hash of options that are inserted into the HAproxy listening
+service configuration block. Defaults to []</p>
+</dd><dt><strong>horizon_ssl_bind_options</strong>
+<dd>
+<p>(optional) A hash of options that are inserted into the HAproxy listening
+service configuration block. Defaults to []</p>
+</dd><dt><strong>rabbitmq_bind_options</strong>
+<dd>
+<p>(optional) A hash of options that are inserted into the HAproxy listening
+service configuration block. Defaults to []</p>
+</dd><dt><strong>elasticsearch_bind_options</strong>
+<dd>
+<p>(optional) A hash of options that are inserted into the HAproxy listening
+service configuration block. Defaults to []</p>
+</dd><dt><strong>kibana_bind_options</strong>
+<dd>
+<p>(optional) A hash of options that are inserted into the HAproxy listening
+service configuration block. Defaults to []</p>
+</dd><dt><strong>sensu_dashboard_bind_options</strong>
+<dd>
+<p>(optional) A hash of options that are inserted into the HAproxy listening
+service configuration block. Defaults to []</p>
+</dd><dt><strong>sensu_api_bind_options</strong>
+<dd>
+<p>(optional) A hash of options that are inserted into the HAproxy listening
+service configuration block. Defaults to []</p>
+</dd><dt><strong>redis_bind_options</strong>
+<dd>
+<p>(optional) A hash of options that are inserted into the HAproxy listening
+service configuration block. Defaults to []</p>
+</dd><dt><strong>galera_bind_options</strong>
+<dd>
+<p>(optional) A hash of options that are inserted into the HAproxy listening
+service configuration block. Defaults to []</p>
+</dd><dt><strong>ks_ceilometer_public_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Ceilometer API from public network
+Defaults to &#39;8777&#39;</p>
+</dd><dt><strong>ks_cinder_public_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Cinder API from public network Defaults
+to &#39;8776&#39;</p>
+</dd><dt><strong>ks_ec2_public_port</strong>
+<dd>
+<p>(optional) TCP port to connect to EC2 API from public network Defaults to
+&#39;8773&#39;</p>
+</dd><dt><strong>ks_glance_api_public_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Glance API from public network Defaults
+to &#39;9292&#39;</p>
+</dd><dt><strong>ks_glance_registry_internal_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Glance API from public network Defaults
+to &#39;9191&#39;</p>
+</dd><dt><strong>ks_heat_cfn_public_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Heat API from public network Defaults to
+&#39;8000&#39;</p>
+</dd><dt><strong>ks_heat_cloudwatch_public_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Heat API from public network Defaults to
+&#39;8003&#39;</p>
+</dd><dt><strong>ks_heat_public_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Heat API from public network Defaults to
+&#39;8004&#39;</p>
+</dd><dt><strong>ks_keystone_admin_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Keystone Admin API from public network
+Defaults to &#39;35357&#39;</p>
+</dd><dt><strong>ks_keystone_public_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Keystone API from public network Defaults
+to &#39;5000&#39;</p>
+</dd><dt><strong>ks_metadata_public_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Keystone metadata API from public network
+Defaults to &#39;8775&#39;</p>
+</dd><dt><strong>ks_swift_public_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Swift API from public network Defaults to
+&#39;8080&#39;</p>
+</dd><dt><strong>ks_trove_public_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Trove API from public network Defaults to
+&#39;8779&#39;</p>
+</dd><dt><strong>ks_nova_public_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Nova API from public network Defaults to
+&#39;8774&#39;</p>
+</dd><dt><strong>ks_neutron_public_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Neutron API from public network Defaults
+to &#39;9696&#39;</p>
+</dd><dt><strong>horizon_port</strong>
+<dd>
+<p>(optional) Port used to connect to OpenStack Dashboard Defaults to
+&#39;80&#39;</p>
+</dd><dt><strong>horizon_ssl_port</strong>
+<dd>
+<p>(optional) Port used to connect to OpenStack Dashboard using SSL Defaults
+to &#39;443&#39;</p>
+</dd><dt><strong>spice_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Nova spicehtmlproxy service. Defaults to
+&#39;6082&#39;</p>
+</dd><dt><strong>novnc_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Nova vncproxy service. Defaults to
+&#39;6080&#39;</p>
+</dd><dt><strong>rabbitmq_port</strong>
+<dd>
+<p>(optional) Port of RabbitMQ service. Defaults to &#39;5672&#39;</p>
+</dd><dt><strong>elasticsearch_port</strong>
+<dd>
+<p>(optional) Port of ElasticSearch service. Defaults to &#39;9200&#39;</p>
+</dd><dt><strong>kibana_port</strong>
+<dd>
+<p>(optional) Port of Kibana service. Defaults to &#39;8300&#39;</p>
+</dd><dt><strong>sensu_dashboard_port</strong>
+<dd>
+<p>(optional) Port of Sensu Dashboard service. Defaults to &#39;3000&#39;</p>
+</dd><dt><strong>sensu_api_port</strong>
+<dd>
+<p>(optional) Port of Sensu API service. Defaults to &#39;4568&#39;</p>
+</dd><dt><strong>redis_port</strong>
+<dd>
+<p>(optional) Port of redis service. Defaults to &#39;6379&#39;</p>
+</dd><dt><strong>vip_public_ip</strong>
+<dd>
+<p>(optional) Array or string for public VIP Should be part of
+keepalived_public_ips Defaults to &#39;127.0.0.2&#39;</p>
+</dd><dt><strong>vip_internal_ip</strong>
+<dd>
+<p>(optional) Array or string for internal VIP Should be part of
+keepalived_internal_ips Defaults to false</p>
+</dd><dt><strong>vip_monitor_ip</strong>
+<dd>
+<p>(optional) Array or string for monitor VIP Defaults to false</p>
+</dd><dt><strong>galera_ip</strong>
+<dd>
+<p>(optional) An array of Galera IP Defaults to [&#39;127.0.0.1&#39;]</p>
+</dd><dt><strong>galera_slave</strong>
+<dd>
+<p>(optional) A boolean to configure galera slave Defaults to false</p>
+</dd><dt><strong>firewall_settings</strong>
+<dd>
+<p>(optional) Allow to add custom parameters to firewall rules Should be an
+hash. Default to {}</p>
+</dd></dl>
+</p>
+  </div>
+</div>
+<div class="tags">
+  
+  
+  
+</div>
+<h2>Parameter Summary</h2>
+<div class="tags">
+  <ul class="param">
+    <li><span class="name">swift_api </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">ceilometer_api </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">cinder_api </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">glance_api </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">glance_registry </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">neutron_api </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">heat_api </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">heat_cfn_api </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">heat_cloudwatch_api </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">nova_api </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">ec2_api </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">metadata_api </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">keystone_api </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">keystone_api_admin </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">trove_api </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">horizon </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">horizon_ssl </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">rabbitmq </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">spice </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">novnc </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">elasticsearch </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">kibana </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">sensu_dashboard </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">sensu_api </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">redis </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">haproxy_auth </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'admin:changeme'</tt></li><li><span class="name">keepalived_state </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'BACKUP'</tt></li><li><span class="name">keepalived_priority </span><span class="type">(<tt>TBD</tt>)</span><tt> => '50'</tt></li><li><span class="name">keepalived_vrrp_interface </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">keepalived_public_interface </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'eth0'</tt></li><li><span class="name">keepalived_public_ipvs </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['127.0.0.1']</tt></li><li><span class="name">keepalived_internal_interface </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'eth1'</tt></li><li><span class="name">keepalived_internal_ipvs </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">keepalived_auth_type </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">keepalived_auth_pass </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">ceilometer_bind_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">cinder_bind_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">ec2_bind_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">glance_api_bind_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">glance_registry_bind_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">heat_cfn_bind_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">heat_cloudwatch_bind_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">heat_api_bind_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">keystone_bind_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">keystone_admin_bind_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">metadata_bind_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">neutron_bind_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">nova_bind_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">trove_bind_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">swift_bind_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">spice_bind_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">novnc_bind_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">horizon_bind_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">horizon_ssl_bind_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">rabbitmq_bind_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">galera_bind_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">elasticsearch_bind_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">kibana_bind_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">sensu_dashboard_bind_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">sensu_api_bind_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">redis_bind_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => []</tt></li><li><span class="name">ks_ceilometer_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 8777</tt></li><li><span class="name">ks_cinder_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 8776</tt></li><li><span class="name">ks_ec2_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 8773</tt></li><li><span class="name">ks_glance_api_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 9292</tt></li><li><span class="name">ks_glance_registry_internal_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 9191</tt></li><li><span class="name">ks_heat_cfn_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 8000</tt></li><li><span class="name">ks_heat_cloudwatch_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 8003</tt></li><li><span class="name">ks_heat_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 8004</tt></li><li><span class="name">ks_keystone_admin_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 35357</tt></li><li><span class="name">ks_keystone_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 5000</tt></li><li><span class="name">ks_metadata_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 8775</tt></li><li><span class="name">ks_neutron_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 9696</tt></li><li><span class="name">ks_nova_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 8774</tt></li><li><span class="name">ks_swift_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 8080</tt></li><li><span class="name">ks_trove_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 8779</tt></li><li><span class="name">rabbitmq_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 5672</tt></li><li><span class="name">horizon_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 80</tt></li><li><span class="name">horizon_ssl_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 443</tt></li><li><span class="name">spice_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 6082</tt></li><li><span class="name">novnc_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 6080</tt></li><li><span class="name">elasticsearch_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 9200</tt></li><li><span class="name">kibana_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 8300</tt></li><li><span class="name">sensu_dashboard_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 3000</tt></li><li><span class="name">sensu_api_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 4568</tt></li><li><span class="name">redis_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 6379</tt></li><li><span class="name">vip_public_ip </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['127.0.0.1']</tt></li><li><span class="name">vip_internal_ip </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">vip_monitor_ip </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">galera_ip </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['127.0.0.1']</tt></li><li><span class="name">galera_slave </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">firewall_settings </span><span class="type">(<tt>TBD</tt>)</span><tt> => {}</tt></li>
+  </ul>
+</div>
+</div>
+
+    <div id="footer">
+  Generated on Fri Mar 20 15:58:18 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.4 (ruby-2.1.5).
+</div>
+
+  </body>
+</html>

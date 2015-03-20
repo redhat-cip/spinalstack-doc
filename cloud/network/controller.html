@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Hostclass: cloud::network::controller
+  
+    &mdash; Documentation by YARD 0.8.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!cloud/network/controller.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (c)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../cloud.html" title="cloud (hostclass)">cloud</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../network.html" title="cloud::network (hostclass)">network</a></span></span>
+     &raquo; 
+    <span class="title">controller</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="puppet_manifest_list_link"
+        href="../../puppet_manifest_list.html">
+      Puppet Manifest List
+    </a>
+  
+    <a class="full_list_link" id="puppet_plugin_list_link"
+        href="../../puppet_plugin_list.html">
+      Puppet Plugin List
+    </a>
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div class='module_header'>
+  <h1>
+    Puppet Class: controller
+  </h1>
+</div>
+
+<dl class="box">
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">manifests/network/controller.pp</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+<p>Copyright (C) 2014 eNovance SAS &lt;licensing@enovance.com&gt; Licensed
+under the Apache License, Version 2.0 (the “License”); you may not use this
+file except in compliance with the License. You may obtain a copy of the
+License at</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_http'>http</span><span class='symbol'>:/</span><span class='op'>/</span><span class='id identifier rubyid_www'>www</span><span class='period'>.</span><span class='id identifier rubyid_apache'>apache</span><span class='period'>.</span><span class='id identifier rubyid_org'>org</span><span class='op'>/</span><span class='id identifier rubyid_licenses'>licenses</span><span class='op'>/</span><span class='const'>LICENSE</span><span class='op'>-</span><span class='float'>2.0</span></code></pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License. Network Controller node (API + Scheduler)</p>
+
+<h3 id="label-Parameters%3A">Parameters:</h3>
+<dl class="rdoc-list label-list"><dt><strong>neutron_db_host</strong>
+<dd>
+<p>(optional) Host where user should be allowed all privileges for database.
+Defaults to 127.0.0.1</p>
+</dd><dt><strong>neutron_db_user</strong>
+<dd>
+<p>(optional) Name of neutron DB user. Defaults to trove</p>
+</dd><dt><strong>neutron_db_password</strong>
+<dd>
+<p>(optional) Password that will be used for the neutron db user. Defaults to
+&#39;neutronpassword&#39;</p>
+</dd><dt><strong>ks_neutron_password</strong>
+<dd>
+<p>(optional) Password used by Neutron to connect to Keystone API Defaults to
+&#39;neutronpassword&#39;</p>
+</dd><dt><strong>ks_keystone_admin_host</strong>
+<dd>
+<p>(optional) Admin Hostname or IP to connect to Keystone API Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_keystone_admin_proto</strong>
+<dd>
+<p>(optional) Protocol for admin endpoint. Could be &#39;http&#39; or
+&#39;https&#39;. Defaults to &#39;http&#39;</p>
+</dd><dt><strong>ks_keystone_public_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Keystone API from public network Defaults
+to &#39;5000&#39;</p>
+</dd><dt><strong>ks_neutron_public_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Neutron API from public network Defaults
+to &#39;9696&#39;</p>
+</dd><dt><strong>api_eth</strong>
+<dd>
+<p>(optional) Which interface we bind the Neutron server. Defaults to
+&#39;127.0.0.1&#39;</p>
+</dd><dt><strong>ks_admin_tenant</strong>
+<dd>
+<p>(optional) Admin tenant name in Keystone Defaults to &#39;admin&#39;</p>
+</dd><dt><strong>nova_url</strong>
+<dd>
+<p>(optional) URL for connection to nova (Only supports one nova region
+currently). Defaults to &#39;<a
+href="http://127.0.0.1:8774/v2">127.0.0.1:8774/v2</a>&#39;</p>
+</dd><dt><strong>nova_admin_auth_url</strong>
+<dd>
+<p>(optional) Authorization URL for connection to nova in admin context.
+Defaults to &#39;<a
+href="http://127.0.0.1:5000/v2.0">127.0.0.1:5000/v2.0</a>&#39;</p>
+</dd><dt><strong>nova_admin_username</strong>
+<dd>
+<p>(optional) Username for connection to nova in admin context Defaults to
+&#39;nova&#39;</p>
+</dd><dt><strong>nova_admin_tenant_name</strong>
+<dd>
+<p>(optional) The name of the admin nova tenant Defaults to &#39;services&#39;</p>
+</dd><dt><strong>nova_admin_password</strong>
+<dd>
+<p>(optional) Password for connection to nova in admin context. Defaults to
+&#39;novapassword&#39;</p>
+</dd><dt><strong>nova_region_name</strong>
+<dd>
+<p>(optional) Name of nova region to use. Useful if keystone manages more than
+one region. Defaults to &#39;RegionOne&#39;</p>
+</dd><dt><strong>manage_ext_network</strong>
+<dd>
+<p>(optionnal) Manage or not external network with provider network API
+Defaults to false.</p>
+</dd><dt><strong>firewall_settings</strong>
+<dd>
+<p>(optional) Allow to add custom parameters to firewall rules Should be an
+hash. Default to {}</p>
+</dd><dt><strong>tenant_network_types</strong>
+<dd>
+<p>(optional) Handled tenant network types Defaults to [&#39;gre&#39;]
+Possible value [&#39;local&#39;, &#39;flat&#39;, &#39;vlan&#39;,
+&#39;gre&#39;, &#39;vxlan&#39;]</p>
+</dd><dt><strong>type_drivers</strong>
+<dd>
+<p>(optional) Drivers to load Defaults to [&#39;gre&#39;, &#39;vlan&#39;,
+&#39;flat&#39;] Possible value [&#39;local&#39;, &#39;flat&#39;,
+&#39;vlan&#39;, &#39;gre&#39;, &#39;vxlan&#39;]</p>
+</dd><dt><strong>plugin</strong>
+<dd>
+<p>(optional) Neutron plugin name Supported values: &#39;ml2&#39;,
+&#39;n1kv&#39;. Defaults to &#39;ml2&#39;</p>
+</dd><dt><strong>l3_ha</strong>
+<dd>
+<p>(optional) Enable L3 agent HA Defaults to false.</p>
+</dd><dt><strong>router_distributed</strong>
+<dd>
+<p>(optional) Create distributed tenant routers by default Right now, DVR is
+not compatible with l3_ha Defaults to false</p>
+</dd><dt><strong>ks_keystone_admin_port</strong>
+<dd>
+<p>(optional) TCP port to connect to Keystone API from admin network Defaults
+to &#39;35357&#39;</p>
+</dd><dt><strong>provider_vlan_ranges</strong>
+<dd>
+<p>(optionnal) VLAN range for provider networks Defaults to
+[&#39;physnet1:1000:2999&#39;]</p>
+</dd><dt><strong>flat_networks</strong>
+<dd>
+<p>(optionnal) List of physical_network names with which flat networks can be
+created. Use * to allow flat networks with arbitrary physical_network
+names. Should be an array. Default to [&#39;public&#39;].</p>
+</dd><dt><strong>n1kv_vsm_ip</strong>
+<dd>
+<p>(required) N1KV VSM (Virtual Supervisor Module) VM&#39;s IP. Defaults to
+127.0.0.1</p>
+</dd><dt><strong>n1kv_vsm_password</strong>
+<dd>
+<p>(required) N1KV VSM (Virtual Supervisor Module) password. Defaults to
+secrete</p>
+</dd><dt><strong>tunnel_id_ranges</strong>
+<dd>
+<p>(optional) GRE tunnel id ranges. used by he ml2 plugin List of
+colon-separated id ranges Defaults to [&#39;1:10000&#39;]</p>
+</dd><dt><strong>vni_ranges</strong>
+<dd>
+<p>(optional) VxLan Network ID range. used by the ml2 plugin List of
+colon-separated id ranges Defautls to [&#39;1:10000&#39;]</p>
+</dd><dt><strong>mechanism_drivers</strong>
+<dd>
+<p>(optional) Neutron mechanism drivers to run List of drivers. Note: if l3-ha
+is True, do not include l2population (not compatible in Juno). Defaults to
+[&#39;linuxbridge&#39;, &#39;openvswitch&#39;,&#39;l2population&#39;]</p>
+</dd></dl>
+</p>
+  </div>
+</div>
+<div class="tags">
+  
+  
+  
+</div>
+<h2>Parameter Summary</h2>
+<div class="tags">
+  <ul class="param">
+    <li><span class="name">neutron_db_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">neutron_db_user </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'neutron'</tt></li><li><span class="name">neutron_db_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'neutronpassword'</tt></li><li><span class="name">ks_neutron_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'neutronpassword'</tt></li><li><span class="name">ks_keystone_admin_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_keystone_admin_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_keystone_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 5000</tt></li><li><span class="name">ks_neutron_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 9696</tt></li><li><span class="name">api_eth </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_admin_tenant </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'admin'</tt></li><li><span class="name">nova_url </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http://127.0.0.1:8774/v2'</tt></li><li><span class="name">nova_admin_auth_url </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http://127.0.0.1:5000/v2.0'</tt></li><li><span class="name">nova_admin_username </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'nova'</tt></li><li><span class="name">nova_admin_tenant_name </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'services'</tt></li><li><span class="name">nova_admin_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'novapassword'</tt></li><li><span class="name">nova_region_name </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'RegionOne'</tt></li><li><span class="name">manage_ext_network </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">firewall_settings </span><span class="type">(<tt>TBD</tt>)</span><tt> => {}</tt></li><li><span class="name">flat_networks </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['public']</tt></li><li><span class="name">tenant_network_types </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['gre']</tt></li><li><span class="name">type_drivers </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['gre', 'vlan', 'flat']</tt></li><li><span class="name">provider_vlan_ranges </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['physnet1:1000:2999']</tt></li><li><span class="name">plugin </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'ml2'</tt></li><li><span class="name">mechanism_drivers </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['linuxbridge', 'openvswitch','l2population']</tt></li><li><span class="name">l3_ha </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">router_distributed </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">n1kv_vsm_ip </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">n1kv_vsm_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'secrete'</tt></li><li><span class="name">ks_keystone_admin_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 35357</tt></li><li><span class="name">tunnel_id_ranges </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['1:10000']</tt></li><li><span class="name">vni_ranges </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['1:10000']</tt></li>
+  </ul>
+</div>
+</div>
+
+    <div id="footer">
+  Generated on Fri Mar 20 15:58:18 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.4 (ruby-2.1.5).
+</div>
+
+  </body>
+</html>
