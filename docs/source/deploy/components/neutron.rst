@@ -17,6 +17,9 @@ enable_distributed_routing                  Enable/disable DVR_              fal
 =========================================== ================================ =======
 
 .. warning::
+    The upgrade process makes it possible to enable L3 HA if it was previously disabled on your setup, except if you've activated the L2 population mechanism driver. If you really need to activate L3 HA on your setup, we recommend you either doing a fresh install or disabling the L2 population driver.
+
+.. warning::
     In OpenStack Juno, DVR & VRRP can't work together. That means you can't enable neutron_l3_ha_enabled and enable_distributed_routing in the same time. If you try to do it, Puppet will fail to avoid any configuration error.
 
 .. warning::
