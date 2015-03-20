@@ -28,7 +28,7 @@ Spinal Stack is released with all OpenStack core projects.
 service               component  backends/drivers     notes
 ===================== ========== ==================== ===================================
 load-balancer         HAproxy    -                    SSL termination support
-clustering            Pacemaker  Corosync             manage ceilometer-agent-central
+clustering            Pacemaker  Corosync             -
 cache                 Memcached  -                    used by Horizon & service group API
 dashboard             Horizon    -                    SSL support
 database              MySQL      Galera               MariaDB packages
