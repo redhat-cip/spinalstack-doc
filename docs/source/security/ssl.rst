@@ -11,8 +11,14 @@ Put an image here, with rows showing which part is https ans which part is not
 Configuration
 -------------
 
+Certificates
+############
+
+Vendor Certificate
+******************
+
 Generate the PEM file
-#####################
+:::::::::::::::::::::
 
 Before moving forward with the SSL configuration, the operator needs to have a valid pem file.
 
@@ -22,6 +28,51 @@ There are two cases possible in order to generate a proper pem file :
 
 * The operator has no SSL chain file : The correct pem file is the concatenation, in this exact order of : private key + certificate authority
 
+Self-Signed Certificate
+***********************
+
+There are some limitations with a self-signed certificate. Most of openstack-client commands should use '''--insecure'''. Whithin the spinalstack deployment you must trust your certification authority on all the servers (openstack and install-server).
+
+Generate CA and certificates
+::::::::::::::::::::::::::::
+
+.. code:: bash
+
+   mkdir self-signed-cert && cd self-signed-cert
+   # change theses values to match your requirements
+   # country, 2 letters
+   country="my_country"
+   location="my_town"
+   organisation="my_organisation"
+   domain="my_domain.com"
+
+   # generate the CA
+   openssl req -days 3650 -out ca.pem -new -x509 -subj /C=$country/L=$location/O=$organisation
+
+   # generate a private key for your servers
+   openssl genrsa -out star_$domain.key 2048
+
+   # create csr
+   openssl req -key star_$domain.key -new -out star_$domain.req -subj /C=FR/L=Location/O=redhat/CN=*$domain
+   echo '00' > file.srl
+
+   # generate the crt file
+   openssl x509 -req -in star_$domain.req -CA ca.pem -CAkey privkey.pem -CAserial file.srl -out star_$domain.crt
+
+   # generate the pem file for haproxy
+   cat star_$domain.key star_$domain.crt > star_$domain.pem
+
+   # you can rename star_my_domain.com.* star_my_domain_com.* if needed
+
+Trust the CA
+::::::::::::
+
+You have to add the ca on install-server and all the others servers, for Redhat systems:
+
+.. code:: bash
+
+  cp ca.pem /etc/pki/ca-trust/source/anchors/
+  update-ca-trust
 
 Configure HAProxy
 #################
