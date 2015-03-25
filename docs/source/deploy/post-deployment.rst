@@ -106,7 +106,7 @@ Initiale br-pub: Public Network
 
 Create a public network on br-pub, the default provider network::
 
-    neutron net-create public --shared --router:external=True
+    neutron net-create public --router:external=True
     neutron subnet-create public --name ext-subnet --allocation-pool start=$ALLOCATION_PUBLIC_POOL_START,end=ALLOCATION_PUBLIC_POOL_END --disable-dhcp --gateway $ALLOCATION_PUBLIC_POOL_GW 193.191.68
 
 
