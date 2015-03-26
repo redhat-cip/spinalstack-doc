@@ -15,6 +15,7 @@ Tables of contents
    ops/index
    security/index
    dev/index
+   ha/index
    troubleshooting/index
    changelog/index
    advisories/index
