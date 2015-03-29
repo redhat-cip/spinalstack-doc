@@ -1,6 +1,23 @@
 Neutron
 =======
 
+Floating IP network
+-------------------
+
+=========================================== ================================ =======
+Configuration                               Description                      Default
+=========================================== ================================ =======
+floating_network_name                       Name of floating IP network      unset
+floating_network_subnet                     IP Subnet of floating IP network unset
+floating_network_start                      First IP of floating IP subnet   unset
+floating_network_end                        Last IP of floating IP subnet    unset
+floating_network_gateway                    Gateway of floating IP subnet    unset
+=========================================== ================================ =======
+
+If floating_network_name is defined, we require all floating_* parameters defined below.
+The Sanity process will ensure that the floating IP network is created, in order for Javelin to spawn servers and test connectivity.
+If none of these parameters are defined, Javelin won't create server resources during Sanity process.
+
 
 L3 Agent HA
 -----------
