@@ -53,7 +53,7 @@ Generate CA and certificates
    openssl genrsa -out star_$domain.key 2048
 
    # create csr
-   openssl req -key star_$domain.key -new -out star_$domain.req -subj /C=$country/L=$location/O=$organisation/CN=*$domain
+   openssl req -key star_$domain.key -new -out star_$domain.req -subj /C=$country/L=$location/O=$organisation/CN=*.$domain
    echo '00' > file.srl
 
    # generate the crt file
