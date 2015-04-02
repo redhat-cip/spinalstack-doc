@@ -140,4 +140,4 @@ More info
 For more information on Tempest, you should read:
 
 - the Spinal Stack Tempest configuration file, located at: `/usr/share/openstack-tempest-<version>/etc/tempest.conf`, where <version> stands for the OpenStack version in use ('icehouse' or 'juno' for instance).
-- the `[upstream Tempest documentation] <http://docs.openstack.org/developer/tempest/index.htm>`_
+- the `[upstream Tempest documentation] <http://docs.openstack.org/developer/tempest/>`_
