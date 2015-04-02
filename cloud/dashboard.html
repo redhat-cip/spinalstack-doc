@@ -6,7 +6,7 @@
 <title>
   Hostclass: cloud::dashboard
   
-    &mdash; Documentation by YARD 0.8.7.4
+    &mdash; Documentation by YARD 0.8.7.6
   
 </title>
 
@@ -92,96 +92,95 @@
   <div class="discussion">
     <p>
 <p>Copyright (C) 2014 eNovance SAS &lt;licensing@enovance.com&gt; Licensed
-under the Apache License, Version 2.0 (the “License”); you may not use this
+under the Apache License, Version 2.0 (the "License"); you may not use this
 file except in compliance with the License. You may obtain a copy of the
 License at</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_http'>http</span><span class='symbol'>:/</span><span class='op'>/</span><span class='id identifier rubyid_www'>www</span><span class='period'>.</span><span class='id identifier rubyid_apache'>apache</span><span class='period'>.</span><span class='id identifier rubyid_org'>org</span><span class='op'>/</span><span class='id identifier rubyid_licenses'>licenses</span><span class='op'>/</span><span class='const'>LICENSE</span><span class='op'>-</span><span class='float'>2.0</span></code></pre>
 
 <p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
 WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations
 under the License.</p>
 
-<h2 id="label-Class%3A+cloud%3A%3Adashboard">Class: cloud::dashboard</h2>
+<h2>Class: cloud::dashboard</h2>
 
 <p>Installs the OpenStack Dashboard (Horizon)</p>
 
-<h3 id="label-Parameters%3A">Parameters:</h3>
-<dl class="rdoc-list label-list"><dt><strong>ks_keystone_internal_host</strong>
+<h3>Parameters:</h3>
+<dl class="rdoc-list"><dt><b>ks_keystone_internal_host</b></dt>
 <dd>
-<p>(optional) Internal address for endpoint. Defaults to &#39;127.0.0.1&#39;</p>
-</dd><dt><strong>secret_key</strong>
+<p>(optional) Internal address for endpoint. Defaults to '127.0.0.1'</p>
+</dd><dt><b>secret_key</b></dt>
 <dd>
 <p>(optional) Secret key. This is used by Django to provide cryptographic
 signing, and should be set to a unique, unpredictable value. Defaults to
-&#39;secrete&#39;</p>
-</dd><dt><strong>horizon_port</strong>
+'secrete'</p>
+</dd><dt><b>horizon_port</b></dt>
 <dd>
-<p>(optional) Port used to connect to OpenStack Dashboard Defaults to
-&#39;80&#39;</p>
-</dd><dt><strong>horizon_ssl_port</strong>
+<p>(optional) Port used to connect to OpenStack Dashboard Defaults to '80'</p>
+</dd><dt><b>horizon_ssl_port</b></dt>
 <dd>
 <p>(optional) Port used to connect to OpenStack Dashboard using SSL Defaults
-to &#39;443&#39;</p>
-</dd><dt><strong>api_eth</strong>
+to '443'</p>
+</dd><dt><b>api_eth</b></dt>
 <dd>
 <p>(optional) Which interface we bind the Horizon server. Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>servername</strong>
+'127.0.0.1'</p>
+</dd><dt><b>servername</b></dt>
 <dd>
 <p>(optional) DNS name used to connect to OpenStack Dashboard. Default value
 fqdn.</p>
-</dd><dt><strong>listen_ssl</strong>
+</dd><dt><b>listen_ssl</b></dt>
 <dd>
 <p>(optional) Enable SSL on OpenStack Dashboard vhost It requires SSL files
 (keys and certificates) Defaults false</p>
-</dd><dt><strong>keystone_proto</strong>
+</dd><dt><b>keystone_proto</b></dt>
 <dd>
 <p>(optional) Protocol (http or https) of keystone endpoint. Defaults to
-&#39;http&#39;</p>
-</dd><dt><strong>keystone_host</strong>
+'http'</p>
+</dd><dt><b>keystone_host</b></dt>
 <dd>
-<p>(optional) IP / Host of keystone endpoint. Defaults &#39;127.0.0.1&#39;</p>
-</dd><dt><strong>keystone_port</strong>
+<p>(optional) IP / Host of keystone endpoint. Defaults '127.0.0.1'</p>
+</dd><dt><b>keystone_port</b></dt>
 <dd>
-<p>(optional) TCP port of keystone endpoint. Defaults to &#39;5000&#39;</p>
-</dd><dt><strong>debug</strong>
+<p>(optional) TCP port of keystone endpoint. Defaults to '5000'</p>
+</dd><dt><b>debug</b></dt>
 <dd>
 <p>(optional) Enable debug or not. Defaults to true</p>
-</dd><dt><strong>horizon_cert</strong>
+</dd><dt><b>horizon_cert</b></dt>
 <dd>
 <p>(required with listen_ssl) Certificate to use for SSL support.</p>
-</dd><dt><strong>horizon_key</strong>
+</dd><dt><b>horizon_key</b></dt>
 <dd>
 <p>(required with listen_ssl) Private key to use for SSL support.</p>
-</dd><dt><strong>horizon_ca</strong>
+</dd><dt><b>horizon_ca</b></dt>
 <dd>
 <p>(required with listen_ssl) CA certificate to use for SSL support.</p>
-</dd><dt><strong>ssl_forward</strong>
+</dd><dt><b>ssl_forward</b></dt>
 <dd>
 <p>(optional) Forward HTTPS proto in the headers Useful when activating SSL
 binding on HAproxy and not in Horizon. Defaults to false</p>
-</dd><dt><strong>os_endpoint_type</strong>
+</dd><dt><b>os_endpoint_type</b></dt>
 <dd>
 <p>(optional) endpoint type to use for the endpoints in the Keystone service
-catalog. Defaults to &#39;undef&#39;.</p>
-</dd><dt><strong>allowed_hosts</strong>
+catalog. Defaults to 'undef'.</p>
+</dd><dt><b>allowed_hosts</b></dt>
 <dd>
 <p>(optional) List of hosts which will be set as value of ALLOWED_HOSTS
 parameter in settings_local.py. This is used by Django for security
 reasons. Can be set to * in environments where security is deemed
 unimportant. Defaults to ::fqdn.</p>
-</dd><dt><strong>vhost_extra_params</strong>
+</dd><dt><b>vhost_extra_params</b></dt>
 <dd>
 <p>(optionnal) extra parameter to pass to the apache::vhost class Defaults to
 {}</p>
-</dd><dt><strong>neutron_extra_options</strong>
+</dd><dt><b>neutron_extra_options</b></dt>
 <dd>
 <p>(optional) Enable optional services provided by neutron Useful when using
 cisco n1kv plugin, vpnaas or fwaas. Default to {}</p>
-</dd><dt><strong>firewall_settings</strong>
+</dd><dt><b>firewall_settings</b></dt>
 <dd>
 <p>(optional) Allow to add custom parameters to firewall rules Should be an
 hash. Default to {}</p>
@@ -203,9 +202,9 @@ hash. Default to {}</p>
 </div>
 
     <div id="footer">
-  Generated on Fri Mar 20 15:58:18 2015 by
+  Generated on Thu Apr  2 23:41:46 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.5).
+  0.8.7.6 (ruby-1.9.3).
 </div>
 
   </body>

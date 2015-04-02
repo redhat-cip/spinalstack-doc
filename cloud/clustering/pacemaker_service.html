@@ -6,7 +6,7 @@
 <title>
   Definedtype: cloud::clustering::pacemaker_service
   
-    &mdash; Documentation by YARD 0.8.7.4
+    &mdash; Documentation by YARD 0.8.7.6
   
 </title>
 
@@ -98,65 +98,64 @@
   <div class="discussion">
     <p>
 <p>Copyright (C) 2015 Red Hat Inc. Licensed under the Apache License, Version
-2.0 (the “License”); you may not use this file except in compliance with
+2.0 (the "License"); you may not use this file except in compliance with
 the License. You may obtain a copy of the License at</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_http'>http</span><span class='symbol'>:/</span><span class='op'>/</span><span class='id identifier rubyid_www'>www</span><span class='period'>.</span><span class='id identifier rubyid_apache'>apache</span><span class='period'>.</span><span class='id identifier rubyid_org'>org</span><span class='op'>/</span><span class='id identifier rubyid_licenses'>licenses</span><span class='op'>/</span><span class='const'>LICENSE</span><span class='op'>-</span><span class='float'>2.0</span></code></pre>
 
 <p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
 WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations
 under the License. Configure a service to be controlled by Pacemaker</p>
 
-<h3 id="label-Parameters">Parameters</h3>
-<dl class="rdoc-list label-list"><dt><strong>service_name</strong>
+<h3>Parameters</h3>
+<dl class="rdoc-list"><dt><b>service_name</b></dt>
 <dd>
 <p>(optional) Name of the service to be put under Pacemaker control Defaults
 to $name</p>
-</dd><dt><strong>primitive_class</strong>
+</dd><dt><b>primitive_class</b></dt>
 <dd>
-<p>(optional) Pacemaker primitive class Defaults to &#39;systemd&#39;</p>
-</dd><dt><strong>primitive_provider</strong>
+<p>(optional) Pacemaker primitive class Defaults to 'systemd'</p>
+</dd><dt><b>primitive_provider</b></dt>
 <dd>
 <p>(optional) Pacemaker primitive provider for OCF scripts Examples:
-&#39;ocf&#39;,&#39;heartbeat&#39; Defaults to false</p>
-</dd><dt><strong>primitive_type</strong>
+'ocf','heartbeat' Defaults to false</p>
+</dd><dt><b>primitive_type</b></dt>
 <dd>
 <p>(optional) The type of the primitive: OCF file name, or operating
 system-native service if using systemd, upstart or lsb as primitive_class
 Defaults to $service_name</p>
-</dd><dt><strong>clone</strong>
+</dd><dt><b>clone</b></dt>
 <dd>
 <p>(optional) Create a cloned resource Defaults to false</p>
-</dd><dt><strong>colocated_services</strong>
+</dd><dt><b>colocated_services</b></dt>
 <dd>
 <p>(optional) A list of resources that should be colocated with this one
-Example: [“service2”,“service3”] Defaults to []</p>
-</dd><dt><strong>start_after</strong>
+Example: ["service2","service3"] Defaults to []</p>
+</dd><dt><b>start_after</b></dt>
 <dd>
 <p>(optional) A list of resources that should be started before this resource
 can be started. This will create a set of order constraints where every
 resourece in $start_after should be started before this resource can start
-Example: [“service2”,“service3”] Defaults to []</p>
-</dd><dt><strong>requires</strong>
+Example: ["service2","service3"] Defaults to []</p>
+</dd><dt><b>requires</b></dt>
 <dd>
 <p>(optional) A list of required Puppet resources Defaults to []</p>
 </dd></dl>
 
 <p>Example:</p>
 
-<pre class="code ruby"><code class="ruby">cloud::clustering::pacemaker_service { &#39;openstack-glance-api&#39; :
-  service_name       =&gt; &#39;openstack-glance-api&#39;,
-  primitive_class    =&gt; &#39;systemd&#39;,
+<pre class="code ruby"><code class="ruby">cloud::clustering::pacemaker_service { 'openstack-glance-api' :
+  service_name       =&gt; 'openstack-glance-api',
+  primitive_class    =&gt; 'systemd',
   primitive_provider =&gt; false,
-  primitive_type     =&gt; &#39;openstack-glance-api&#39;,
+  primitive_type     =&gt; 'openstack-glance-api',
   clone              =&gt; false,
   colocated_services =&gt; [&quot;openstack-keystone&quot;],
   start_after        =&gt; [&quot;openstack-keystone&quot;],
-  requires           =&gt; Package[&#39;openstack-glance&#39;],
-}
-</code></pre>
+  requires           =&gt; Package['openstack-glance'],
+}</code></pre>
 </p>
   </div>
 </div>
@@ -174,9 +173,9 @@ Example: [“service2”,“service3”] Defaults to []</p>
 </div>
 
     <div id="footer">
-  Generated on Fri Mar 20 15:58:18 2015 by
+  Generated on Thu Apr  2 23:41:47 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.5).
+  0.8.7.6 (ruby-1.9.3).
 </div>
 
   </body>

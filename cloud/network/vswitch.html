@@ -6,7 +6,7 @@
 <title>
   Hostclass: cloud::network::vswitch
   
-    &mdash; Documentation by YARD 0.8.7.4
+    &mdash; Documentation by YARD 0.8.7.6
   
 </title>
 
@@ -92,63 +92,62 @@
   <div class="discussion">
     <p>
 <p>Copyright (C) 2014 eNovance SAS &lt;licensing@enovance.com&gt; Licensed
-under the Apache License, Version 2.0 (the “License”); you may not use this
+under the Apache License, Version 2.0 (the "License"); you may not use this
 file except in compliance with the License. You may obtain a copy of the
 License at</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_http'>http</span><span class='symbol'>:/</span><span class='op'>/</span><span class='id identifier rubyid_www'>www</span><span class='period'>.</span><span class='id identifier rubyid_apache'>apache</span><span class='period'>.</span><span class='id identifier rubyid_org'>org</span><span class='op'>/</span><span class='id identifier rubyid_licenses'>licenses</span><span class='op'>/</span><span class='const'>LICENSE</span><span class='op'>-</span><span class='float'>2.0</span></code></pre>
 
 <p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
 WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations
 under the License. Network vswitch class</p>
 
-<h3 id="label-Parameters%3A">Parameters:</h3>
-<dl class="rdoc-list label-list"><dt><strong>driver</strong>
+<h3>Parameters:</h3>
+<dl class="rdoc-list"><dt><b>driver</b></dt>
 <dd>
-<p>(optional) Neutron vswitch driver Supported values: &#39;ml2_ovs&#39;,
-&#39;ml2_lb&#39;, &#39;n1kv_vem&#39;. Note: &#39;n1kv_vem&#39; currently
-works only on Red Hat systems. Defaults to &#39;ml2_ovs&#39;</p>
-</dd><dt><strong>external_int</strong>
+<p>(optional) Neutron vswitch driver Supported values: 'ml2_ovs', 'ml2_lb',
+'n1kv_vem'. Note: 'n1kv_vem' currently works only on Red Hat systems.
+Defaults to 'ml2_ovs'</p>
+</dd><dt><b>external_int</b></dt>
 <dd>
 <p>(optionnal) Network interface to bind the external provider network
-Defaults to &#39;eth1&#39;.</p>
-</dd><dt><strong>external_bridge</strong>
+Defaults to 'eth1'.</p>
+</dd><dt><b>external_bridge</b></dt>
 <dd>
 <p>(optionnal) OVS bridge used to bind external provider network Defaults to
-&#39;br-pub&#39;.</p>
-</dd><dt><strong>manage_ext_network</strong>
+'br-pub'.</p>
+</dd><dt><b>manage_ext_network</b></dt>
 <dd>
 <p>(optionnal) Manage or not external network with provider network API
 Defaults to false.</p>
-</dd><dt><strong>tunnel_eth</strong>
+</dd><dt><b>tunnel_eth</b></dt>
 <dd>
-<p>(optional) Interface IP used to build the tunnels Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt>*tunnel_typeis
+<p>(optional) Interface IP used to build the tunnels Defaults to '127.0.0.1'</p>
+</dd><dt>*tunnel_typeis</dt>
 <dd>
 <p>(optional) List of types of tunnels to use when utilizing tunnels Defaults
-to [&#39;gre&#39;]</p>
-</dd><dt><strong>provider_bridge_mappings</strong>
+to ['gre']</p>
+</dd><dt><b>provider_bridge_mappings</b></dt>
 <dd>
 <p>(optional) List of &lt;physical_network&gt;:&lt;bridge&gt;</p>
-</dd><dt><strong>enable_distributed_routing</strong>
+</dd><dt><b>enable_distributed_routing</b></dt>
 <dd>
 <p>(optional) Enable support for distributed routing on L2 agent. Defaults to
 false.</p>
-</dd><dt><strong>n1kv_vsm_ip</strong>
+</dd><dt><b>n1kv_vsm_ip</b></dt>
 <dd>
-<p>(required) N1KV VSM (Virtual Supervisor Module) VM&#39;s IP. Defaults to
+<p>(required) N1KV VSM (Virtual Supervisor Module) VM's IP. Defaults to
 127.0.0.1</p>
-</dd><dt><strong>n1kv_vsm_domainid</strong>
+</dd><dt><b>n1kv_vsm_domainid</b></dt>
 <dd>
 <p>(required) N1KV VSM DomainID. Defaults to 1000</p>
-</dd><dt><strong>host_mgmt_intf</strong>
+</dd><dt><b>host_mgmt_intf</b></dt>
 <dd>
 <p>(required) Management Interface of node where VEM will be installed.
 Defaults to eth1</p>
-</dd><dt><strong>uplink_profile</strong>
+</dd><dt><b>uplink_profile</b></dt>
 <dd>
 <p>(optional) Uplink Interfaces that will be managed by VEM. The uplink</p>
 
@@ -156,44 +155,41 @@ Defaults to eth1</p>
 
 <p>(format)</p>
 
-<pre class="code ruby"><code class="ruby">$uplink_profile = { &#39;eth1&#39; =&gt; &#39;profile1&#39;,
-                    &#39;eth2&#39; =&gt; &#39;profile2&#39;
-                   },
-</code></pre>
+<pre class="code ruby"><code class="ruby">$uplink_profile = { 'eth1' =&gt; 'profile1',
+                    'eth2' =&gt; 'profile2'
+                   },</code></pre>
 
 <p>Defaults to empty</p>
-</dd><dt><strong>vtep_config</strong>
+</dd><dt><b>vtep_config</b></dt>
 <dd>
 <p>(optional) Virtual tunnel interface configuration.</p>
 
 <pre class="code ruby"><code class="ruby">Eg:VxLAN tunnel end-points.</code></pre>
 
-<p>(format) $vtep_config = { &#39;vtep1&#39; =&gt; { &#39;profile&#39; =&gt;
-&#39;virtprof1&#39;,</p>
+<p>(format) $vtep_config = { 'vtep1' =&gt; { 'profile' =&gt; 'virtprof1',</p>
 
-<pre class="code ruby"><code class="ruby">               &#39;ipmode&#39;  =&gt; &#39;dhcp&#39;
+<pre class="code ruby"><code class="ruby">               'ipmode'  =&gt; 'dhcp'
              },
-  &#39;vtep2&#39; =&gt; { &#39;profile&#39;   =&gt; &#39;virtprof2&#39;,
-               &#39;ipmode&#39;    =&gt; &#39;static&#39;,
-               &#39;ipaddress&#39; =&gt; &#39;192.168.1.1&#39;,
-               &#39;netmask&#39;   =&gt; &#39;255.255.255.0&#39;
+  'vtep2' =&gt; { 'profile'   =&gt; 'virtprof2',
+               'ipmode'    =&gt; 'static',
+               'ipaddress' =&gt; '192.168.1.1',
+               'netmask'   =&gt; '255.255.255.0'
              }
-},
-</code></pre>
+},</code></pre>
 
 <p>Defaults to empty</p>
-</dd><dt><strong>node_type</strong>
+</dd><dt><b>node_type</b></dt>
 <dd>
-<p>(optional). Specify the type of node: &#39;compute&#39; (or)
-&#39;network&#39;. Defaults to &#39;compute&#39;</p>
+<p>(optional). Specify the type of node: 'compute' (or) 'network'. Defaults to
+'compute'</p>
 </dd></dl>
 
 <p>All the above parameter values will be used in the config file: n1kv.conf</p>
-<dl class="rdoc-list label-list"><dt><strong>vteps_in_same_subnet</strong>
+<dl class="rdoc-list"><dt><b>vteps_in_same_subnet</b></dt>
 <dd>
 <p>(optional) The VXLAN tunnel interfaces created on VEM can belong to same
 IP-subnet. In such case, set this parameter to true. This results in below
-&#39;sysctl:ipv4&#39; values to be modified.</p>
+'sysctl:ipv4' values to be modified.</p>
 
 <pre class="code ruby"><code class="ruby">rp_filter (reverse path filtering) set to 2(Loose).Default is 1(Strict)
 arp_ignore (arp reply mode) set to 1:reply only if target ip matches
@@ -205,33 +201,32 @@ If the tunnel interfaces are not in same subnet set this parameter to
 false. Note that setting to false causes no change in the sysctl settings
 and does not revert the changes made if it was originally set to true on a
 previous catalog run. Defaults to false</p>
-</dd><dt><strong>n1kv_source</strong>
+</dd><dt><b>n1kv_source</b></dt>
 <dd>
 <p>(optional)</p>
 
 <pre class="code ruby"><code class="ruby">n1kv_source ==&gt; VEM package location. One of below
   A)URL of yum repository that hosts VEM package.
-  B)VEM RPM/DPKG file name, If present locally in &#39;files&#39; folder
+  B)VEM RPM/DPKG file name, If present locally in 'files' folder
   C)If not specified, assumes that VEM image is available in
-    default enabled repositories.
-</code></pre>
+    default enabled repositories.</code></pre>
 
 <p>Defaults to empty</p>
-</dd><dt><strong>n1kv_version</strong>
+</dd><dt><b>n1kv_version</b></dt>
 <dd>
 <p>(optional). Specify VEM package version to be installed.</p>
 
-<pre class="code ruby"><code class="ruby">Not applicable if &#39;n1kv_source&#39; is a file. (Option-B above)</code></pre>
+<pre class="code ruby"><code class="ruby">Not applicable if 'n1kv_source' is a file. (Option-B above)</code></pre>
 
-<p>Defaults to &#39;present&#39;</p>
-</dd><dt><strong>tunnel_types</strong>
+<p>Defaults to 'present'</p>
+</dd><dt><b>tunnel_types</b></dt>
 <dd>
 <p>(optional) List of types of tunnels to use when utilizing tunnels.
-Supported tunnel types are: vxlan. Defaults to [&#39;gre&#39;]</p>
-</dd><dt><strong>n1kv_vsm_domain_id</strong>
+Supported tunnel types are: vxlan. Defaults to ['gre']</p>
+</dd><dt><b>n1kv_vsm_domain_id</b></dt>
 <dd>
 <p>(optional) N1000 KV Domain ID (does nothing?) Defaults to 1000</p>
-</dd><dt><strong>firewall_settings</strong>
+</dd><dt><b>firewall_settings</b></dt>
 <dd>
 <p>(optional) Allow to add custom parameters to firewall rules Should be an
 hash. Default to {}</p>
@@ -253,9 +248,9 @@ hash. Default to {}</p>
 </div>
 
     <div id="footer">
-  Generated on Fri Mar 20 15:58:18 2015 by
+  Generated on Thu Apr  2 23:41:47 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.5).
+  0.8.7.6 (ruby-1.9.3).
 </div>
 
   </body>

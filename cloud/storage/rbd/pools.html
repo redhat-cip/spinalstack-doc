@@ -6,7 +6,7 @@
 <title>
   Hostclass: cloud::storage::rbd::pools
   
-    &mdash; Documentation by YARD 0.8.7.4
+    &mdash; Documentation by YARD 0.8.7.6
   
 </title>
 
@@ -92,60 +92,60 @@
   <div class="discussion">
     <p>
 <p>Copyright (C) 2013 eNovance SAS &lt;licensing@enovance.com&gt; Licensed
-under the Apache License, Version 2.0 (the “License”); you may not use this
+under the Apache License, Version 2.0 (the "License"); you may not use this
 file except in compliance with the License. You may obtain a copy of the
 License at</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_http'>http</span><span class='symbol'>:/</span><span class='op'>/</span><span class='id identifier rubyid_www'>www</span><span class='period'>.</span><span class='id identifier rubyid_apache'>apache</span><span class='period'>.</span><span class='id identifier rubyid_org'>org</span><span class='op'>/</span><span class='id identifier rubyid_licenses'>licenses</span><span class='op'>/</span><span class='const'>LICENSE</span><span class='op'>-</span><span class='float'>2.0</span></code></pre>
 
 <p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
 WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations
 under the License.</p>
 
-<h2 id="label-Class%3A+cloud%3A%3Astorage%3A%3Arbd%3A%3Apools">Class: cloud::storage::rbd::pools</h2>
+<h2>Class: cloud::storage::rbd::pools</h2>
 
 <p>Configure Ceph RBD pools (images,volumes,backup,nova)</p>
 
-<h3 id="label-Parameters%3A">Parameters:</h3>
-<dl class="rdoc-list label-list"><dt><strong>setup_pools</strong>
+<h3>Parameters:</h3>
+<dl class="rdoc-list"><dt><b>setup_pools</b></dt>
 <dd>
 <p>(optional) Create or not Ceph pools Defaults to false</p>
-</dd><dt><strong>glance_rbd_pool</strong>
+</dd><dt><b>glance_rbd_pool</b></dt>
 <dd>
 <p>(optional) Name of the Ceph pool which which store the glance images
-Defaults to &#39;images&#39;</p>
-</dd><dt><strong>glance_rbd_user</strong>
+Defaults to 'images'</p>
+</dd><dt><b>glance_rbd_user</b></dt>
 <dd>
 <p>(optional) User name used to acces to the glance rbd pool Defaults to
-&#39;glance&#39;</p>
-</dd><dt><strong>ceph_fsid</strong>
+'glance'</p>
+</dd><dt><b>ceph_fsid</b></dt>
 <dd>
-<p>The cluster&#39;s fsid.</p>
+<p>The cluster's fsid.</p>
 </dd></dl>
 
 <pre class="code ruby"><code class="ruby">Mandatory. Get one with `uuidgen -r`.</code></pre>
-<dl class="rdoc-list label-list"><dt><strong>cinder_backup_pool</strong>
+<dl class="rdoc-list"><dt><b>cinder_backup_pool</b></dt>
 <dd>
 <p>(optional) Name of the Ceph pool which which store the cinder backups
-Defaults to &#39;volumes&#39;</p>
-</dd><dt><strong>cinder_backup_user</strong>
+Defaults to 'volumes'</p>
+</dd><dt><b>cinder_backup_user</b></dt>
 <dd>
 <p>(optional) User name used to acces to the backup rbd pool Defaults to
-&#39;cinder&#39;</p>
-</dd><dt><strong>cinder_rbd_pool</strong>
+'cinder'</p>
+</dd><dt><b>cinder_rbd_pool</b></dt>
 <dd>
 <p>(optional) Name of the Ceph pool which which store the cinder images
-Defaults to &#39;volumes&#39;</p>
-</dd><dt><strong>cinder_rbd_user</strong>
+Defaults to 'volumes'</p>
+</dd><dt><b>cinder_rbd_user</b></dt>
 <dd>
 <p>(optional) User name used to acces to the cinder rbd pool Defaults to
-&#39;cinder&#39;</p>
-</dd><dt><strong>nova_rbd_pool</strong>
+'cinder'</p>
+</dd><dt><b>nova_rbd_pool</b></dt>
 <dd>
 <p>(optional) The RADOS pool in which rbd volumes are stored. Defaults to
-&#39;vms&#39;</p>
+'vms'</p>
 </dd></dl>
 </p>
   </div>
@@ -164,9 +164,9 @@ Defaults to &#39;volumes&#39;</p>
 </div>
 
     <div id="footer">
-  Generated on Fri Mar 20 15:58:18 2015 by
+  Generated on Thu Apr  2 23:41:47 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.5).
+  0.8.7.6 (ruby-1.9.3).
 </div>
 
   </body>

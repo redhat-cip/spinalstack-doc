@@ -6,7 +6,7 @@
 <title>
   Hostclass: cloud::compute::hypervisor
   
-    &mdash; Documentation by YARD 0.8.7.4
+    &mdash; Documentation by YARD 0.8.7.6
   
 </title>
 
@@ -106,117 +106,113 @@
   <div class="discussion">
     <p>
 <p>Copyright (C) 2014 eNovance SAS &lt;licensing@enovance.com&gt; Licensed
-under the Apache License, Version 2.0 (the “License”); you may not use this
+under the Apache License, Version 2.0 (the "License"); you may not use this
 file except in compliance with the License. You may obtain a copy of the
 License at</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_http'>http</span><span class='symbol'>:/</span><span class='op'>/</span><span class='id identifier rubyid_www'>www</span><span class='period'>.</span><span class='id identifier rubyid_apache'>apache</span><span class='period'>.</span><span class='id identifier rubyid_org'>org</span><span class='op'>/</span><span class='id identifier rubyid_licenses'>licenses</span><span class='op'>/</span><span class='const'>LICENSE</span><span class='op'>-</span><span class='float'>2.0</span></code></pre>
 
 <p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
 WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations
 under the License.</p>
 
-<h2 id="label-Class%3A+cloud%3A%3Acompute%3A%3Ahypervisor">Class: cloud::compute::hypervisor</h2>
+<h2>Class: cloud::compute::hypervisor</h2>
 
 <p>Hypervisor Compute node</p>
 
-<h3 id="label-Parameters%3A">Parameters:</h3>
-<dl class="rdoc-list label-list"><dt><strong>server_proxyclient_address</strong>
+<h3>Parameters:</h3>
+<dl class="rdoc-list"><dt><b>server_proxyclient_address</b></dt>
 <dd>
 <p>(optional) The IP address of the server running the console proxy client
-Defaults to &#39;127.0.0.1&#39;</p>
-</dd><dt><strong>libvirt_type</strong>
+Defaults to '127.0.0.1'</p>
+</dd><dt><b>libvirt_type</b></dt>
 <dd>
 <p>(optional) Libvirt domain type. Options are: kvm, lxc, qemu, uml, xen
-Replaces libvirt_type Defaults to &#39;kvm&#39;</p>
-</dd><dt><strong>ks_nova_public_proto</strong>
+Replaces libvirt_type Defaults to 'kvm'</p>
+</dd><dt><b>ks_nova_public_proto</b></dt>
 <dd>
-<p>(optional) Protocol used to connect to API. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_nova_public_host</strong>
+<p>(optional) Protocol used to connect to API. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_nova_public_host</b></dt>
 <dd>
 <p>(optional) Public Hostname or IP to connect to Nova API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>nova_ssh_public_key</strong>
+'127.0.0.1'</p>
+</dd><dt><b>nova_ssh_public_key</b></dt>
 <dd>
-<p>(optional) Install public key in .ssh/authorized_keys for the
-&#39;nova&#39; user. Note: this parameter use the &#39;content&#39;
-provider of Puppet, in consequence you must provide the entire ssh public
-key in this parameter. Defaults to undef</p>
-</dd><dt><strong>nova_ssh_private_key</strong>
+<p>(optional) Install public key in .ssh/authorized_keys for the 'nova' user.
+Note: this parameter use the 'content' provider of Puppet, in consequence
+you must provide the entire ssh public key in this parameter. Defaults to
+undef</p>
+</dd><dt><b>nova_ssh_private_key</b></dt>
 <dd>
 <p>(optional) Install private key into .ssh/id_rsa. Note: this parameter use
-the &#39;content&#39; provider of Puppet, in consequence you must provide
-the entire ssh privatekey in this parameter. Defaults to undef</p>
-</dd><dt><strong>console</strong>
+the 'content' provider of Puppet, in consequence you must provide the
+entire ssh privatekey in this parameter. Defaults to undef</p>
+</dd><dt><b>console</b></dt>
 <dd>
-<p>(optional) Nova&#39;s console type (spice or novnc) Defaults to
-&#39;novnc&#39;</p>
-</dd><dt><strong>novnc_port</strong>
+<p>(optional) Nova's console type (spice or novnc) Defaults to 'novnc'</p>
+</dd><dt><b>novnc_port</b></dt>
 <dd>
-<p>(optional) TCP port to connect to Nova vncproxy service. Defaults to
-&#39;6080&#39;</p>
-</dd><dt><strong>spice_port</strong>
+<p>(optional) TCP port to connect to Nova vncproxy service. Defaults to '6080'</p>
+</dd><dt><b>spice_port</b></dt>
 <dd>
 <p>(optional) TCP port to connect to Nova spicehtmlproxy service. Defaults to
-&#39;6082&#39;</p>
-</dd><dt><strong>cinder_rbd_user</strong>
+'6082'</p>
+</dd><dt><b>cinder_rbd_user</b></dt>
 <dd>
 <p>(optional) The RADOS client name for accessing rbd volumes. Defaults to
-&#39;cinder&#39;</p>
-</dd><dt><strong>nova_rbd_pool</strong>
+'cinder'</p>
+</dd><dt><b>nova_rbd_pool</b></dt>
 <dd>
 <p>(optional) The RADOS pool in which rbd volumes are stored. Defaults to
-&#39;vms&#39;</p>
-</dd><dt><strong>nova_rbd_secret_uuid</strong>
+'vms'</p>
+</dd><dt><b>nova_rbd_secret_uuid</b></dt>
 <dd>
 <p>(optional) The libvirt uuid of the secret for the cinder_rbd_user. Defaults
 to undef</p>
-</dd><dt><strong>vm_rbd</strong>
+</dd><dt><b>vm_rbd</b></dt>
 <dd>
 <p>(optional) Enable or not ceph capabilities on compute node to store nova
 instances on ceph storage. Default to false.</p>
-</dd><dt><strong>volume_rbd</strong>
+</dd><dt><b>volume_rbd</b></dt>
 <dd>
 <p>(optional) Enable or not ceph capabilities on compute node to attach cinder
 volumes backend by ceph on nova instances. Default to false.</p>
-</dd><dt><strong>manage_tso</strong>
+</dd><dt><b>manage_tso</b></dt>
 <dd>
 <p>(optional) Allow to manage or not TSO issue. Default to true.</p>
-</dd><dt><strong>nfs_enabled</strong>
+</dd><dt><b>nfs_enabled</b></dt>
 <dd>
 <p>(optional) Store (or not) instances on a NFS share. Defaults to false</p>
-</dd><dt><strong>nfs_device</strong>
+</dd><dt><b>nfs_device</b></dt>
 <dd>
-<p>(optional) NFS device to mount Example: &#39;nfs.example.com:/vol1&#39;
-Required when nfs_enabled is at true. Defaults to false</p>
-</dd><dt><strong>nfs_options</strong>
+<p>(optional) NFS device to mount Example: 'nfs.example.com:/vol1' Required
+when nfs_enabled is at true. Defaults to false</p>
+</dd><dt><b>nfs_options</b></dt>
 <dd>
-<p>(optional) NFS mount options Example: &#39;nfsvers=3,noacl&#39; Defaults to
-&#39;defaults&#39;</p>
-</dd><dt><strong>filesystem_store_datadir</strong>
+<p>(optional) NFS mount options Example: 'nfsvers=3,noacl' Defaults to
+'defaults'</p>
+</dd><dt><b>filesystem_store_datadir</b></dt>
 <dd>
-<p>(optional) Full path of data directory to store the instances. Don&#39;t
-modify this parameter if you don&#39;t know what you do. You may have side
-effects (SElinux for example). Defaults to
-&#39;/var/lib/nova/instances&#39;</p>
-</dd><dt><strong>nova_shell</strong>
+<p>(optional) Full path of data directory to store the instances. Don't modify
+this parameter if you don't know what you do. You may have side effects
+(SElinux for example). Defaults to '/var/lib/nova/instances'</p>
+</dd><dt><b>nova_shell</b></dt>
 <dd>
 <p>(optional) Full path of shell to run for nova user. To disable live
-migration &amp; resize, set it to &#39;/bin/nologin&#39; or false.
-Otherwise, set the value to &#39;/bin/bash&#39;. Need to be a valid shell
-path. Defaults to false</p>
-</dd><dt><strong>ks_console_public_proto</strong>
+migration &amp; resize, set it to '/bin/nologin' or false. Otherwise, set
+the value to '/bin/bash'. Need to be a valid shell path. Defaults to false</p>
+</dd><dt><b>ks_console_public_proto</b></dt>
 <dd>
 <p>(optional) Protocol used to connect to console service. Defaults to false
 (use nova_public_proto)</p>
-</dd><dt><strong>ks_console_public_host</strong>
+</dd><dt><b>ks_console_public_host</b></dt>
 <dd>
 <p>(optional) Hostname or IP used to connect to console service. Defaults to
 false (use nova_public_host)</p>
-</dd><dt><strong>firewall_settings</strong>
+</dd><dt><b>firewall_settings</b></dt>
 <dd>
 <p>(optional) Allow to add custom parameters to firewall rules Should be an
 hash. Default to {}</p>
@@ -238,9 +234,9 @@ hash. Default to {}</p>
 </div>
 
     <div id="footer">
-  Generated on Fri Mar 20 15:58:18 2015 by
+  Generated on Thu Apr  2 23:41:47 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.5).
+  0.8.7.6 (ruby-1.9.3).
 </div>
 
   </body>

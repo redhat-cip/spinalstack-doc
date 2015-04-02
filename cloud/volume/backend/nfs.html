@@ -6,7 +6,7 @@
 <title>
   Definedtype: cloud::volume::backend::nfs
   
-    &mdash; Documentation by YARD 0.8.7.4
+    &mdash; Documentation by YARD 0.8.7.6
   
 </title>
 
@@ -98,47 +98,47 @@
   <div class="discussion">
     <p>
 <p>Copyright (C) 2014 eNovance SAS &lt;licensing@enovance.com&gt; Licensed
-under the Apache License, Version 2.0 (the “License”); you may not use this
+under the Apache License, Version 2.0 (the "License"); you may not use this
 file except in compliance with the License. You may obtain a copy of the
 License at</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_http'>http</span><span class='symbol'>:/</span><span class='op'>/</span><span class='id identifier rubyid_www'>www</span><span class='period'>.</span><span class='id identifier rubyid_apache'>apache</span><span class='period'>.</span><span class='id identifier rubyid_org'>org</span><span class='op'>/</span><span class='id identifier rubyid_licenses'>licenses</span><span class='op'>/</span><span class='const'>LICENSE</span><span class='op'>-</span><span class='float'>2.0</span></code></pre>
 
 <p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
 WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations
 under the License. Configure NFS backend for Cinder</p>
 
-<h3 id="label-Parameters">Parameters</h3>
-<dl class="rdoc-list label-list"><dt><strong>nfs_servers</strong>
+<h3>Parameters</h3>
+<dl class="rdoc-list"><dt><b>nfs_servers</b></dt>
 <dd>
-<p>(required) Array of NFS servers in the form &#39;ipaddress:/share&#39;</p>
-</dd><dt><strong>nfs_mount_options</strong>
+<p>(required) Array of NFS servers in the form 'ipaddress:/share'</p>
+</dd><dt><b>nfs_mount_options</b></dt>
 <dd>
 <p>(optional) Mount options passed to the nfs client. See section of the nfs
 man page for details. Defaults to undef</p>
-</dd><dt><strong>nfs_disk_util</strong>
+</dd><dt><b>nfs_disk_util</b></dt>
 <dd>
 <p>(optional) Use du or df for free space calculation Defaults to undef</p>
-</dd><dt><strong>nfs_sparsed_volumes</strong>
+</dd><dt><b>nfs_sparsed_volumes</b></dt>
 <dd>
 <p>(optional) Create volumes as sparsed files which take no space. If set to
-&#39;false&#39; volume is created as regular file. In such case volume
-creation takes a lot of time. Defaults to undef</p>
-</dd><dt><strong>nfs_mount_point_base</strong>
+'false' volume is created as regular file. In such case volume creation
+takes a lot of time. Defaults to undef</p>
+</dd><dt><b>nfs_mount_point_base</b></dt>
 <dd>
 <p>(optional) Base dir containing mount points for nfs shares. Defaults to
 undef</p>
-</dd><dt><strong>nfs_shares_config</strong>
+</dd><dt><b>nfs_shares_config</b></dt>
 <dd>
 <p>(optional) File with the list of available NFS shares. Defaults to
-&#39;/etc/cinder/shares.conf&#39;</p>
-</dd><dt><strong>nfs_used_ratio</strong>
+'/etc/cinder/shares.conf'</p>
+</dd><dt><b>nfs_used_ratio</b></dt>
 <dd>
 <p>(optional) Percent of ACTUAL usage of the underlying volume before no new
 volumes can be allocated to the volume destination. Defaults to 0.95</p>
-</dd><dt><strong>nfs_oversub_ratio</strong>
+</dd><dt><b>nfs_oversub_ratio</b></dt>
 <dd>
 <p>(optional) This will compare the allocated to available space on the volume
 destination.  If the ratio exceeds this number, the destination will no
@@ -161,9 +161,9 @@ longer be valid. Defaults to 1.0</p>
 </div>
 
     <div id="footer">
-  Generated on Fri Mar 20 15:58:18 2015 by
+  Generated on Thu Apr  2 23:41:47 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.5).
+  0.8.7.6 (ruby-1.9.3).
 </div>
 
   </body>

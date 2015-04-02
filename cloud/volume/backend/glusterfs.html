@@ -6,7 +6,7 @@
 <title>
   Definedtype: cloud::volume::backend::glusterfs
   
-    &mdash; Documentation by YARD 0.8.7.4
+    &mdash; Documentation by YARD 0.8.7.6
   
 </title>
 
@@ -98,39 +98,39 @@
   <div class="discussion">
     <p>
 <p>Copyright (C) 2014 eNovance SAS &lt;licensing@enovance.com&gt; Licensed
-under the Apache License, Version 2.0 (the “License”); you may not use this
+under the Apache License, Version 2.0 (the "License"); you may not use this
 file except in compliance with the License. You may obtain a copy of the
 License at</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_http'>http</span><span class='symbol'>:/</span><span class='op'>/</span><span class='id identifier rubyid_www'>www</span><span class='period'>.</span><span class='id identifier rubyid_apache'>apache</span><span class='period'>.</span><span class='id identifier rubyid_org'>org</span><span class='op'>/</span><span class='id identifier rubyid_licenses'>licenses</span><span class='op'>/</span><span class='const'>LICENSE</span><span class='op'>-</span><span class='float'>2.0</span></code></pre>
 
 <p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
 WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations
 under the License. Configure GlusterFS backend for Cinder</p>
 
-<h3 id="label-Parameters">Parameters</h3>
-<dl class="rdoc-list label-list"><dt><strong>glusterfs_shares</strong>
+<h3>Parameters</h3>
+<dl class="rdoc-list"><dt><b>glusterfs_shares</b></dt>
 <dd>
 <p>(required) An array of GlusterFS volume locations. Must be an array even if
 there is only one volume.</p>
-</dd><dt><strong>volume_backend_name</strong>
+</dd><dt><b>volume_backend_name</b></dt>
 <dd>
 <p>(optional) Allows for the volume_backend_name to be separate of $name.
 Defaults to: $name</p>
-</dd><dt><strong>glusterfs_sparsed_volumes</strong>
+</dd><dt><b>glusterfs_sparsed_volumes</b></dt>
 <dd>
 <p>(optional) Whether or not to use sparse (thin) volumes. Defaults to undef
-which uses the driver&#39;s default of “true”.</p>
-</dd><dt><strong>glusterfs_mount_point_base</strong>
+which uses the driver's default of "true".</p>
+</dd><dt><b>glusterfs_mount_point_base</b></dt>
 <dd>
 <p>(optional) Where to mount the Gluster volumes. Defaults to undef which uses
-the driver&#39;s default of “$state_path/mnt”.</p>
-</dd><dt><strong>glusterfs_shares_config</strong>
+the driver's default of "$state_path/mnt".</p>
+</dd><dt><b>glusterfs_shares_config</b></dt>
 <dd>
 <p>(optional) The config file to store the given $glusterfs_shares. Defaults
-to &#39;/etc/cinder/shares.conf&#39;</p>
+to '/etc/cinder/shares.conf'</p>
 </dd></dl>
 </p>
   </div>
@@ -149,9 +149,9 @@ to &#39;/etc/cinder/shares.conf&#39;</p>
 </div>
 
     <div id="footer">
-  Generated on Fri Mar 20 15:58:18 2015 by
+  Generated on Thu Apr  2 23:41:47 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.5).
+  0.8.7.6 (ruby-1.9.3).
 </div>
 
   </body>

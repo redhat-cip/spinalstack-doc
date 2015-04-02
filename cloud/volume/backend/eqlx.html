@@ -6,7 +6,7 @@
 <title>
   Definedtype: cloud::volume::backend::eqlx
   
-    &mdash; Documentation by YARD 0.8.7.4
+    &mdash; Documentation by YARD 0.8.7.6
   
 </title>
 
@@ -98,58 +98,56 @@
   <div class="discussion">
     <p>
 <p>Copyright (C) 2014 eNovance SAS &lt;licensing@enovance.com&gt; Licensed
-under the Apache License, Version 2.0 (the “License”); you may not use this
+under the Apache License, Version 2.0 (the "License"); you may not use this
 file except in compliance with the License. You may obtain a copy of the
 License at</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_http'>http</span><span class='symbol'>:/</span><span class='op'>/</span><span class='id identifier rubyid_www'>www</span><span class='period'>.</span><span class='id identifier rubyid_apache'>apache</span><span class='period'>.</span><span class='id identifier rubyid_org'>org</span><span class='op'>/</span><span class='id identifier rubyid_licenses'>licenses</span><span class='op'>/</span><span class='const'>LICENSE</span><span class='op'>-</span><span class='float'>2.0</span></code></pre>
 
 <p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
 WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations
 under the License. Configure Dell EqualLogic backend for Cinder</p>
 
-<h3 id="label-Parameters">Parameters</h3>
-<dl class="rdoc-list label-list"><dt><strong>san_ip</strong>
+<h3>Parameters</h3>
+<dl class="rdoc-list"><dt><b>san_ip</b></dt>
 <dd>
 <p>(required) The IP address of the Dell EqualLogic array.</p>
-</dd><dt><strong>san_login</strong>
+</dd><dt><b>san_login</b></dt>
 <dd>
 <p>(required) The account to use for issuing SSH commands.</p>
-</dd><dt><strong>san_password</strong>
+</dd><dt><b>san_password</b></dt>
 <dd>
 <p>(required) The password for the specified SSH account.</p>
-</dd><dt><strong>san_thin_provision</strong>
+</dd><dt><b>san_thin_provision</b></dt>
 <dd>
 <p>(optional) Whether or not to use thin provisioning for volumes. Defaults to
 true</p>
-</dd><dt><strong>volume_backend_name</strong>
+</dd><dt><b>volume_backend_name</b></dt>
 <dd>
 <p>(optional) The backend name. Defaults to the name of the resource</p>
-</dd><dt><strong>eqlx_group_name</strong>
+</dd><dt><b>eqlx_group_name</b></dt>
 <dd>
-<p>(optional) The CLI prompt message without &#39;&gt;&#39;. Defaults to
-&#39;group-0&#39;</p>
-</dd><dt><strong>eqlx_pool</strong>
+<p>(optional) The CLI prompt message without '&gt;'. Defaults to 'group-0'</p>
+</dd><dt><b>eqlx_pool</b></dt>
 <dd>
-<p>(optional) The pool in which volumes will be created. Defaults to
-&#39;default&#39;</p>
-</dd><dt><strong>eqlx_use_chap</strong>
+<p>(optional) The pool in which volumes will be created. Defaults to 'default'</p>
+</dd><dt><b>eqlx_use_chap</b></dt>
 <dd>
 <p>(optional) Use CHAP authentification for targets? Defaults to false</p>
-</dd><dt><strong>eqlx_chap_login</strong>
+</dd><dt><b>eqlx_chap_login</b></dt>
 <dd>
-<p>(optional) An existing CHAP account name. Defaults to &#39;chapadmin&#39;</p>
-</dd><dt><strong>eqlx_chap_password</strong>
+<p>(optional) An existing CHAP account name. Defaults to 'chapadmin'</p>
+</dd><dt><b>eqlx_chap_password</b></dt>
 <dd>
 <p>(optional) The password for the specified CHAP account name. Defaults to
-&#39;12345&#39;</p>
-</dd><dt><strong>eqlx_cli_timeout</strong>
+'12345'</p>
+</dd><dt><b>eqlx_cli_timeout</b></dt>
 <dd>
 <p>(optional) The timeout for the Group Manager cli command execution.
 Defaults to 30 seconds</p>
-</dd><dt><strong>eqlx_cli_max_retries</strong>
+</dd><dt><b>eqlx_cli_max_retries</b></dt>
 <dd>
 <p>(optional) The maximum retry count for reconnection. Defaults to 5</p>
 </dd></dl>
@@ -170,9 +168,9 @@ Defaults to 30 seconds</p>
 </div>
 
     <div id="footer">
-  Generated on Fri Mar 20 15:58:18 2015 by
+  Generated on Thu Apr  2 23:41:47 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.5).
+  0.8.7.6 (ruby-1.9.3).
 </div>
 
   </body>

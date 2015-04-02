@@ -6,7 +6,7 @@
 <title>
   Hostclass: cloud::identity
   
-    &mdash; Documentation by YARD 0.8.7.4
+    &mdash; Documentation by YARD 0.8.7.6
   
 </title>
 
@@ -92,406 +92,403 @@
   <div class="discussion">
     <p>
 <p>Copyright (C) 2014 eNovance SAS &lt;licensing@enovance.com&gt; Licensed
-under the Apache License, Version 2.0 (the “License”); you may not use this
+under the Apache License, Version 2.0 (the "License"); you may not use this
 file except in compliance with the License. You may obtain a copy of the
 License at</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_http'>http</span><span class='symbol'>:/</span><span class='op'>/</span><span class='id identifier rubyid_www'>www</span><span class='period'>.</span><span class='id identifier rubyid_apache'>apache</span><span class='period'>.</span><span class='id identifier rubyid_org'>org</span><span class='op'>/</span><span class='id identifier rubyid_licenses'>licenses</span><span class='op'>/</span><span class='const'>LICENSE</span><span class='op'>-</span><span class='float'>2.0</span></code></pre>
 
 <p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
 WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations
 under the License.</p>
 
-<h2 id="label-Class%3A+cloud%3A%3Aidentity">Class: cloud::identity</h2>
+<h2>Class: cloud::identity</h2>
 
 <p>Install Identity Server (Keystone)</p>
 
-<h3 id="label-Parameters%3A">Parameters:</h3>
-<dl class="rdoc-list label-list"><dt><strong>identity_roles_addons</strong>
+<h3>Parameters:</h3>
+<dl class="rdoc-list"><dt><b>identity_roles_addons</b></dt>
 <dd>
-<p>(optional) Extra keystone roles to create Defaults to
-[&#39;SwiftOperator&#39;, &#39;ResellerAdmin&#39;]</p>
-</dd><dt><strong>keystone_db_host</strong>
+<p>(optional) Extra keystone roles to create Defaults to ['SwiftOperator',
+'ResellerAdmin']</p>
+</dd><dt><b>keystone_db_host</b></dt>
 <dd>
 <p>(optional) Hostname or IP address to connect to keystone database Defaults
-to &#39;127.0.0.1&#39;</p>
-</dd><dt><strong>keystone_db_user</strong>
+to '127.0.0.1'</p>
+</dd><dt><b>keystone_db_user</b></dt>
 <dd>
-<p>(optional) Username to connect to keystone database Defaults to
-&#39;keystone&#39;</p>
-</dd><dt><strong>keystone_db_password</strong>
+<p>(optional) Username to connect to keystone database Defaults to 'keystone'</p>
+</dd><dt><b>keystone_db_password</b></dt>
 <dd>
 <p>(optional) Password to connect to keystone database Defaults to
-&#39;keystonepassword&#39;</p>
-</dd><dt><strong>memcache_servers</strong>
+'keystonepassword'</p>
+</dd><dt><b>memcache_servers</b></dt>
 <dd>
 <p>(optionnal) Memcached servers used by Keystone. Should be an array.
-Defaults to [&#39;127.0.0.1:11211&#39;]</p>
-</dd><dt><strong>ks_admin_email</strong>
+Defaults to ['127.0.0.1:11211']</p>
+</dd><dt><b>ks_admin_email</b></dt>
 <dd>
 <p>(optional) Email address of admin user in Keystone Defaults to
-&#39;no-reply@keystone.openstack&#39;</p>
-</dd><dt><strong>ks_admin_password</strong>
+'no-reply@keystone.openstack'</p>
+</dd><dt><b>ks_admin_password</b></dt>
 <dd>
-<p>(optional) Password of admin user in Keystone Defaults to
-&#39;adminpassword&#39;</p>
-</dd><dt><strong>ks_admin_tenant</strong>
+<p>(optional) Password of admin user in Keystone Defaults to 'adminpassword'</p>
+</dd><dt><b>ks_admin_tenant</b></dt>
 <dd>
-<p>(optional) Admin tenant name in Keystone Defaults to &#39;admin&#39;</p>
-</dd><dt><strong>ks_admin_token</strong>
+<p>(optional) Admin tenant name in Keystone Defaults to 'admin'</p>
+</dd><dt><b>ks_admin_token</b></dt>
 <dd>
 <p>(required) Admin token used by Keystone.</p>
-</dd><dt><strong>ks_glance_internal_host</strong>
+</dd><dt><b>ks_glance_internal_host</b></dt>
 <dd>
 <p>(optional) Internal Hostname or IP to connect to Glance API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_glance_admin_host</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_glance_admin_host</b></dt>
 <dd>
 <p>(optional) Admin Hostname or IP to connect to Glance API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_glance_public_host</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_glance_public_host</b></dt>
 <dd>
 <p>(optional) Public Hostname or IP to connect to Glance API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_ceilometer_internal_host</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_ceilometer_internal_host</b></dt>
 <dd>
 <p>(optional) Internal Hostname or IP to connect to Ceilometer API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_ceilometer_admin_host</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_ceilometer_admin_host</b></dt>
 <dd>
 <p>(optional) Admin Hostname or IP to connect to Ceilometer API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_ceilometer_public_host</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_ceilometer_public_host</b></dt>
 <dd>
 <p>(optional) Public Hostname or IP to connect to Ceilometer API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_keystone_internal_host</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_keystone_internal_host</b></dt>
 <dd>
 <p>(optional) Internal Hostname or IP to connect to Keystone API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_keystone_admin_host</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_keystone_admin_host</b></dt>
 <dd>
 <p>(optional) Admin Hostname or IP to connect to Keystone API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_keystone_public_host</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_keystone_public_host</b></dt>
 <dd>
 <p>(optional) Public Hostname or IP to connect to Keystone API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_nova_internal_host</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_nova_internal_host</b></dt>
 <dd>
 <p>(optional) Internal Hostname or IP to connect to Nova API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_nova_admin_host</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_nova_admin_host</b></dt>
 <dd>
 <p>(optional) Admin Hostname or IP to connect to Nova API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_nova_public_host</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_nova_public_host</b></dt>
 <dd>
 <p>(optional) Public Hostname or IP to connect to Nova API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_cinder_internal_host</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_cinder_internal_host</b></dt>
 <dd>
 <p>(optional) Internal Hostname or IP to connect to Cinder API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_cinder_admin_host</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_cinder_admin_host</b></dt>
 <dd>
 <p>(optional) Admin Hostname or IP to connect to Cinder API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_cinder_public_host</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_cinder_public_host</b></dt>
 <dd>
 <p>(optional) Public Hostname or IP to connect to Cinder API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_trove_internal_host</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_trove_internal_host</b></dt>
 <dd>
 <p>(optional) Internal Hostname or IP to connect to Trove API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_trove_admin_host</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_trove_admin_host</b></dt>
 <dd>
 <p>(optional) Admin Hostname or IP to connect to Trove API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_trove_public_host</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_trove_public_host</b></dt>
 <dd>
 <p>(optional) Public Hostname or IP to connect to Trove API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_neutron_internal_host</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_neutron_internal_host</b></dt>
 <dd>
 <p>(optional) Internal Hostname or IP to connect to Neutron API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_neutron_admin_host</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_neutron_admin_host</b></dt>
 <dd>
 <p>(optional) Admin Hostname or IP to connect to Neutron API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_neutron_public_host</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_neutron_public_host</b></dt>
 <dd>
 <p>(optional) Public Hostname or IP to connect to Neutron API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_heat_internal_host</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_heat_internal_host</b></dt>
 <dd>
 <p>(optional) Internal Hostname or IP to connect to Heat API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_heat_admin_host</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_heat_admin_host</b></dt>
 <dd>
 <p>(optional) Admin Hostname or IP to connect to Heat API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_heat_public_host</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_heat_public_host</b></dt>
 <dd>
 <p>(optional) Public Hostname or IP to connect to Heat API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_swift_internal_host</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_swift_internal_host</b></dt>
 <dd>
 <p>(optional) Internal Hostname or IP to connect to Swift API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_swift_admin_host</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_swift_admin_host</b></dt>
 <dd>
 <p>(optional) Admin Hostname or IP to connect to Swift API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_swift_public_host</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_swift_public_host</b></dt>
 <dd>
 <p>(optional) Public Hostname or IP to connect to Swift API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_trove_password</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_trove_password</b></dt>
 <dd>
 <p>(optional) Password used by Trove to connect to Keystone API Defaults to
-&#39;trovepassword&#39;</p>
-</dd><dt><strong>ks_ceilometer_password</strong>
+'trovepassword'</p>
+</dd><dt><b>ks_ceilometer_password</b></dt>
 <dd>
 <p>(optional) Password used by Ceilometer to connect to Keystone API Defaults
-to &#39;ceilometerpassword&#39;</p>
-</dd><dt><strong>ks_swift_password</strong>
+to 'ceilometerpassword'</p>
+</dd><dt><b>ks_swift_password</b></dt>
 <dd>
 <p>(optional) Password used by Swift to connect to Keystone API Defaults to
-&#39;swiftpassword&#39;</p>
-</dd><dt><strong>ks_nova_password</strong>
+'swiftpassword'</p>
+</dd><dt><b>ks_nova_password</b></dt>
 <dd>
 <p>(optional) Password used by Nova to connect to Keystone API Defaults to
-&#39;novapassword&#39;</p>
-</dd><dt><strong>ks_neutron_password</strong>
+'novapassword'</p>
+</dd><dt><b>ks_neutron_password</b></dt>
 <dd>
 <p>(optional) Password used by Neutron to connect to Keystone API Defaults to
-&#39;neutronpassword&#39;</p>
-</dd><dt><strong>ks_heat_password</strong>
+'neutronpassword'</p>
+</dd><dt><b>ks_heat_password</b></dt>
 <dd>
 <p>(optional) Password used by Heat to connect to Keystone API Defaults to
-&#39;heatpassword&#39;</p>
-</dd><dt><strong>ks_glance_password</strong>
+'heatpassword'</p>
+</dd><dt><b>ks_glance_password</b></dt>
 <dd>
 <p>(optional) Password used by Glance to connect to Keystone API Defaults to
-&#39;glancepassword&#39;</p>
-</dd><dt><strong>ks_cinder_password</strong>
+'glancepassword'</p>
+</dd><dt><b>ks_cinder_password</b></dt>
 <dd>
 <p>(optional) Password used by Cinder to connect to Keystone API Defaults to
-&#39;cinderpassword&#39;</p>
-</dd><dt><strong>ks_swift_public_proto</strong>
+'cinderpassword'</p>
+</dd><dt><b>ks_swift_public_proto</b></dt>
 <dd>
-<p>(optional) Protocol used to connect to API. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_swift_admin_proto</strong>
+<p>(optional) Protocol used to connect to API. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_swift_admin_proto</b></dt>
 <dd>
-<p>(optional) Protocol for admin endpoint. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_swift_internal_proto</strong>
+<p>(optional) Protocol for admin endpoint. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_swift_internal_proto</b></dt>
 <dd>
-<p>(optional) Protocol for public endpoint. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_ceilometer_public_proto</strong>
+<p>(optional) Protocol for public endpoint. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_ceilometer_public_proto</b></dt>
 <dd>
-<p>(optional) Protocol used to connect to API. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_ceilometer_admin_proto</strong>
+<p>(optional) Protocol used to connect to API. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_ceilometer_admin_proto</b></dt>
 <dd>
-<p>(optional) Protocol for admin endpoint. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_ceilometer_internal_proto</strong>
+<p>(optional) Protocol for admin endpoint. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_ceilometer_internal_proto</b></dt>
 <dd>
-<p>(optional) Protocol for public endpoint. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_heat_public_proto</strong>
+<p>(optional) Protocol for public endpoint. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_heat_public_proto</b></dt>
 <dd>
-<p>(optional) Protocol used to connect to API. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_heat_admin_proto</strong>
+<p>(optional) Protocol used to connect to API. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_heat_admin_proto</b></dt>
 <dd>
-<p>(optional) Protocol for admin endpoint. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_heat_internal_proto</strong>
+<p>(optional) Protocol for admin endpoint. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_heat_internal_proto</b></dt>
 <dd>
-<p>(optional) Protocol for public endpoint. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_keystone_public_proto</strong>
+<p>(optional) Protocol for public endpoint. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_keystone_public_proto</b></dt>
 <dd>
-<p>(optional) Protocol for public endpoint. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_keystone_admin_proto</strong>
+<p>(optional) Protocol for public endpoint. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_keystone_admin_proto</b></dt>
 <dd>
-<p>(optional) Protocol for admin endpoint. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_keystone_internal_proto</strong>
+<p>(optional) Protocol for admin endpoint. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_keystone_internal_proto</b></dt>
 <dd>
-<p>(optional) Protocol for public endpoint. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_nova_public_proto</strong>
+<p>(optional) Protocol for public endpoint. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_nova_public_proto</b></dt>
 <dd>
-<p>(optional) Protocol used to connect to API. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_nova_admin_proto</strong>
+<p>(optional) Protocol used to connect to API. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_nova_admin_proto</b></dt>
 <dd>
-<p>(optional) Protocol for admin endpoint. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_nova_internal_proto</strong>
+<p>(optional) Protocol for admin endpoint. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_nova_internal_proto</b></dt>
 <dd>
-<p>(optional) Protocol for public endpoint. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_neutron_public_proto</strong>
+<p>(optional) Protocol for public endpoint. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_neutron_public_proto</b></dt>
 <dd>
-<p>(optional) Protocol used to connect to API. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_neutron_admin_proto</strong>
+<p>(optional) Protocol used to connect to API. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_neutron_admin_proto</b></dt>
 <dd>
-<p>(optional) Protocol for admin endpoint. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_neutron_internal_proto</strong>
+<p>(optional) Protocol for admin endpoint. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_neutron_internal_proto</b></dt>
 <dd>
-<p>(optional) Protocol for public endpoint. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_trove_public_proto</strong>
+<p>(optional) Protocol for public endpoint. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_trove_public_proto</b></dt>
 <dd>
-<p>(optional) Protocol used to connect to API. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_trove_admin_proto</strong>
+<p>(optional) Protocol used to connect to API. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_trove_admin_proto</b></dt>
 <dd>
-<p>(optional) Protocol for admin endpoint. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_trove_internal_proto</strong>
+<p>(optional) Protocol for admin endpoint. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_trove_internal_proto</b></dt>
 <dd>
-<p>(optional) Protocol for public endpoint. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_glance_public_proto</strong>
+<p>(optional) Protocol for public endpoint. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_glance_public_proto</b></dt>
 <dd>
-<p>(optional) Protocol used to connect to API. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_glance_admin_proto</strong>
+<p>(optional) Protocol used to connect to API. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_glance_admin_proto</b></dt>
 <dd>
-<p>(optional) Protocol for admin endpoint. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_glance_internal_proto</strong>
+<p>(optional) Protocol for admin endpoint. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_glance_internal_proto</b></dt>
 <dd>
-<p>(optional) Protocol for public endpoint. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_cinder_public_proto</strong>
+<p>(optional) Protocol for public endpoint. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_cinder_public_proto</b></dt>
 <dd>
-<p>(optional) Protocol used to connect to API. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_cinder_admin_proto</strong>
+<p>(optional) Protocol used to connect to API. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_cinder_admin_proto</b></dt>
 <dd>
-<p>(optional) Protocol for admin endpoint. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_cinder_internal_proto</strong>
+<p>(optional) Protocol for admin endpoint. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_cinder_internal_proto</b></dt>
 <dd>
-<p>(optional) Protocol for public endpoint. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_ceilometer_public_port</strong>
+<p>(optional) Protocol for public endpoint. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_ceilometer_public_port</b></dt>
 <dd>
 <p>(optional) TCP port to connect to Ceilometer API from public network
-Defaults to &#39;8777&#39;</p>
-</dd><dt><strong>ks_keystone_internal_port</strong>
+Defaults to '8777'</p>
+</dd><dt><b>ks_keystone_internal_port</b></dt>
 <dd>
 <p>(optional) TCP port to connect to Keystone API from internal network
-Defaults to &#39;5000&#39;</p>
-</dd><dt><strong>ks_keystone_public_port</strong>
+Defaults to '5000'</p>
+</dd><dt><b>ks_keystone_public_port</b></dt>
 <dd>
 <p>(optional) TCP port to connect to Keystone API from public network Defaults
-to &#39;5000&#39;</p>
-</dd><dt><strong>ks_keystone_admin_port</strong>
+to '5000'</p>
+</dd><dt><b>ks_keystone_admin_port</b></dt>
 <dd>
 <p>(optional) TCP port to connect to Keystone API from admin network Defaults
-to &#39;35357&#39;</p>
-</dd><dt><strong>ks_swift_public_port</strong>
+to '35357'</p>
+</dd><dt><b>ks_swift_public_port</b></dt>
 <dd>
 <p>(optional) TCP port to connect to Swift API from public network Defaults to
-&#39;8080&#39;</p>
-</dd><dt><strong>ks_trove_public_port</strong>
+'8080'</p>
+</dd><dt><b>ks_trove_public_port</b></dt>
 <dd>
 <p>(optional) TCP port to connect to Trove API from public network Defaults to
-&#39;8779&#39;</p>
-</dd><dt><strong>ks_nova_public_port</strong>
+'8779'</p>
+</dd><dt><b>ks_nova_public_port</b></dt>
 <dd>
 <p>(optional) TCP port to connect to Nova API from public network Defaults to
-&#39;8774&#39;</p>
-</dd><dt><strong>ks_ec2_public_port</strong>
+'8774'</p>
+</dd><dt><b>ks_ec2_public_port</b></dt>
 <dd>
 <p>(optional) TCP port to connect to EC2 API from public network Defaults to
-&#39;8773&#39;</p>
-</dd><dt><strong>ks_swift_dispersion_password</strong>
+'8773'</p>
+</dd><dt><b>ks_swift_dispersion_password</b></dt>
 <dd>
 <p>(optional) Password of the dispersion tenant, used for
 swift-dispersion-report and swift-dispersion-populate tools. Defaults to
-&#39;dispersion&#39;</p>
-</dd><dt><strong>ks_cinder_public_port</strong>
+'dispersion'</p>
+</dd><dt><b>ks_cinder_public_port</b></dt>
 <dd>
 <p>(optional) TCP port to connect to Cinder API from public network Defaults
-to &#39;8776&#39;</p>
-</dd><dt><strong>ks_neutron_public_port</strong>
+to '8776'</p>
+</dd><dt><b>ks_neutron_public_port</b></dt>
 <dd>
 <p>(optional) TCP port to connect to Neutron API from public network Defaults
-to &#39;9696&#39;</p>
-</dd><dt><strong>ks_heat_public_port</strong>
+to '9696'</p>
+</dd><dt><b>ks_heat_public_port</b></dt>
 <dd>
 <p>(optional) TCP port to connect to Heat API from public network Defaults to
-&#39;8004&#39;</p>
-</dd><dt><strong>ks_heat_cfn_public_port</strong>
+'8004'</p>
+</dd><dt><b>ks_heat_cfn_public_port</b></dt>
 <dd>
 <p>(optional) TCP port to connect to Heat API from public network Defaults to
-&#39;8000&#39;</p>
-</dd><dt><strong>ks_glance_api_public_port</strong>
+'8000'</p>
+</dd><dt><b>ks_glance_api_public_port</b></dt>
 <dd>
 <p>(optional) TCP port to connect to Glance API from public network Defaults
-to &#39;9292&#39;</p>
-</dd><dt><strong>api_eth</strong>
+to '9292'</p>
+</dd><dt><b>api_eth</b></dt>
 <dd>
 <p>(optional) Which interface we bind the Keystone server. Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>region</strong>
+'127.0.0.1'</p>
+</dd><dt><b>region</b></dt>
 <dd>
-<p>(optional) OpenStack Region Name Defaults to &#39;RegionOne&#39;</p>
-</dd><dt><strong>verbose</strong>
+<p>(optional) OpenStack Region Name Defaults to 'RegionOne'</p>
+</dd><dt><b>verbose</b></dt>
 <dd>
 <p>(optional) Set log output to verbose output Defaults to true</p>
-</dd><dt><strong>debug</strong>
+</dd><dt><b>debug</b></dt>
 <dd>
 <p>(optional) Set log output to debug output Defaults to true</p>
-</dd><dt><strong>use_syslog</strong>
+</dd><dt><b>use_syslog</b></dt>
 <dd>
 <p>(optional) Use syslog for logging Defaults to true</p>
-</dd><dt><strong>log_facility</strong>
+</dd><dt><b>log_facility</b></dt>
 <dd>
-<p>(optional) Syslog facility to receive log lines Defaults to
-&#39;LOG_LOCAL0&#39;</p>
-</dd><dt><strong>token_driver</strong>
+<p>(optional) Syslog facility to receive log lines Defaults to 'LOG_LOCAL0'</p>
+</dd><dt><b>token_driver</b></dt>
 <dd>
 <p>(optional) Driver to store tokens Defaults to
-&#39;keystone.token.persistence.backends.sql.Token&#39;</p>
-</dd><dt><strong>token_expiration</strong>
+'keystone.token.persistence.backends.sql.Token'</p>
+</dd><dt><b>token_expiration</b></dt>
 <dd>
 <p>(optional) Amount of time a token should remain valid (in seconds) Defaults
-to &#39;3600&#39; (1 hour)</p>
-</dd><dt><strong>cinder_enabled</strong>
+to '3600' (1 hour)</p>
+</dd><dt><b>cinder_enabled</b></dt>
 <dd>
 <p>(optional) Enable or not Cinder (Block Storage Service) Defaults to true</p>
-</dd><dt><strong>trove_enabled</strong>
+</dd><dt><b>trove_enabled</b></dt>
 <dd>
 <p>(optional) Enable or not Trove (Database as a Service) Experimental
 feature. Defaults to false</p>
-</dd><dt><strong>swift_enabled</strong>
+</dd><dt><b>swift_enabled</b></dt>
 <dd>
 <p>(optional) Enable or not OpenStack Swift (Stockage as a Service) Defaults
 to true</p>
-</dd><dt><strong>ks_token_expiration</strong>
+</dd><dt><b>ks_token_expiration</b></dt>
 <dd>
 <p>(optional) Amount of time a token should remain valid (seconds). Defaults
 to 3600 (1 hour).</p>
-</dd><dt><strong>firewall_settings</strong>
+</dd><dt><b>firewall_settings</b></dt>
 <dd>
 <p>(optional) Allow to add custom parameters to firewall rules Should be an
 hash. Default to {}</p>
@@ -513,9 +510,9 @@ hash. Default to {}</p>
 </div>
 
     <div id="footer">
-  Generated on Fri Mar 20 15:58:18 2015 by
+  Generated on Thu Apr  2 23:41:46 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.5).
+  0.8.7.6 (ruby-1.9.3).
 </div>
 
   </body>

@@ -6,7 +6,7 @@
 <title>
   Hostclass: cloud::volume::api
   
-    &mdash; Documentation by YARD 0.8.7.4
+    &mdash; Documentation by YARD 0.8.7.6
   
 </title>
 
@@ -92,61 +92,61 @@
   <div class="discussion">
     <p>
 <p>Copyright (C) 2014 eNovance SAS &lt;licensing@enovance.com&gt; Licensed
-under the Apache License, Version 2.0 (the “License”); you may not use this
+under the Apache License, Version 2.0 (the "License"); you may not use this
 file except in compliance with the License. You may obtain a copy of the
 License at</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_http'>http</span><span class='symbol'>:/</span><span class='op'>/</span><span class='id identifier rubyid_www'>www</span><span class='period'>.</span><span class='id identifier rubyid_apache'>apache</span><span class='period'>.</span><span class='id identifier rubyid_org'>org</span><span class='op'>/</span><span class='id identifier rubyid_licenses'>licenses</span><span class='op'>/</span><span class='const'>LICENSE</span><span class='op'>-</span><span class='float'>2.0</span></code></pre>
 
 <p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
 WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations
 under the License.</p>
 
-<h2 id="label-Class%3A+cloud%3A%3Avolume%3A%3Aapi">Class: cloud::volume::api</h2>
+<h2>Class: cloud::volume::api</h2>
 
 <p>Volume API node</p>
 
-<h3 id="label-Parameters%3A">Parameters:</h3>
-<dl class="rdoc-list label-list"><dt><strong>default_volume_type</strong>
+<h3>Parameters:</h3>
+<dl class="rdoc-list"><dt><b>default_volume_type</b></dt>
 <dd>
 <p>(required) default volume type to use. This should contain the name of the
 default volume type to use. If not configured, it produces an error when
 creating a volume without specifying a type.</p>
-</dd><dt><strong>ks_cinder_internal_port</strong>
+</dd><dt><b>ks_cinder_internal_port</b></dt>
 <dd>
 <p>(optional) TCP port to connect to Cinder API from public network Defaults
-to &#39;8776&#39;</p>
-</dd><dt><strong>ks_keystone_internal_host</strong>
+to '8776'</p>
+</dd><dt><b>ks_keystone_internal_host</b></dt>
 <dd>
 <p>(optional) Internal Hostname or IP to connect to Keystone API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_keystone_internal_proto</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_keystone_internal_proto</b></dt>
 <dd>
-<p>(optional) Protocol for public endpoint. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_glance_internal_host</strong>
+<p>(optional) Protocol for public endpoint. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_glance_internal_host</b></dt>
 <dd>
 <p>(optional) Internal Hostname or IP to connect to Glance API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_cinder_password</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_cinder_password</b></dt>
 <dd>
 <p>(optional) Password used by Cinder to connect to Keystone API Defaults to
-&#39;cinderpassword&#39;</p>
-</dd><dt><strong>ks_glance_api_internal_port</strong>
+'cinderpassword'</p>
+</dd><dt><b>ks_glance_api_internal_port</b></dt>
 <dd>
 <p>(optional) TCP port to connect to Glance API from public network Defaults
-to &#39;9292&#39;</p>
-</dd><dt><strong>api_eth</strong>
+to '9292'</p>
+</dd><dt><b>api_eth</b></dt>
 <dd>
 <p>(optional) Which interface we bind the Cinder API server. Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_glance_internal_proto</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_glance_internal_proto</b></dt>
 <dd>
-<p>(optional) Protocol for public endpoint. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>firewall_settings</strong>
+<p>(optional) Protocol for public endpoint. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>firewall_settings</b></dt>
 <dd>
 <p>(optional) Allow to add custom parameters to firewall rules Should be an
 hash. Default to {}</p>
@@ -168,9 +168,9 @@ hash. Default to {}</p>
 </div>
 
     <div id="footer">
-  Generated on Fri Mar 20 15:58:18 2015 by
+  Generated on Thu Apr  2 23:41:46 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.5).
+  0.8.7.6 (ruby-1.9.3).
 </div>
 
   </body>

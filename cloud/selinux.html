@@ -6,7 +6,7 @@
 <title>
   Hostclass: cloud::selinux
   
-    &mdash; Documentation by YARD 0.8.7.4
+    &mdash; Documentation by YARD 0.8.7.6
   
 </title>
 
@@ -92,41 +92,40 @@
   <div class="discussion">
     <p>
 <p>Copyright (C) 2014 eNovance SAS &lt;licensing@enovance.com&gt; Licensed
-under the Apache License, Version 2.0 (the “License”); you may not use this
+under the Apache License, Version 2.0 (the "License"); you may not use this
 file except in compliance with the License. You may obtain a copy of the
 License at</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_http'>http</span><span class='symbol'>:/</span><span class='op'>/</span><span class='id identifier rubyid_www'>www</span><span class='period'>.</span><span class='id identifier rubyid_apache'>apache</span><span class='period'>.</span><span class='id identifier rubyid_org'>org</span><span class='op'>/</span><span class='id identifier rubyid_licenses'>licenses</span><span class='op'>/</span><span class='const'>LICENSE</span><span class='op'>-</span><span class='float'>2.0</span></code></pre>
 
 <p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
 WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations
 under the License.</p>
 
-<h2 id="label-Class%3A+cloud%3A%3Aselinux">Class: cloud::selinux</h2>
+<h2>Class: cloud::selinux</h2>
 
 <p>Helper class to configure SELinux on nodes</p>
 
-<h3 id="label-Parameters%3A">Parameters:</h3>
-<dl class="rdoc-list label-list"><dt><strong>mode</strong>
+<h3>Parameters:</h3>
+<dl class="rdoc-list"><dt><b>mode</b></dt>
 <dd>
-<p>(optional) SELinux mode the system should be in Defaults to
-&#39;permissive&#39; Possible values : disabled, permissive, enforcing</p>
-</dd><dt><strong>directory</strong>
+<p>(optional) SELinux mode the system should be in Defaults to 'permissive'
+Possible values : disabled, permissive, enforcing</p>
+</dd><dt><b>directory</b></dt>
 <dd>
 <p>(optional) Path where to find the SELinux modules Defaults to
-&#39;/usr/share/selinux&#39;</p>
-</dd><dt><strong>booleans</strong>
+'/usr/share/selinux'</p>
+</dd><dt><b>booleans</b></dt>
 <dd>
 <p>(optional) Set of booleans to persistently enables SELinux booleans are the
-one getsebool -a returns Defaults [] Example: [&#39;rsync_full_access&#39;,
-&#39;haproxy_connect_any&#39;]</p>
-</dd><dt><strong>modules</strong>
+one getsebool -a returns Defaults [] Example: ['rsync_full_access',
+'haproxy_connect_any']</p>
+</dd><dt><b>modules</b></dt>
 <dd>
 <p>(optional) Set of modules to load on the system Defaults [] Example:
-[&#39;module1&#39;, &#39;module2&#39;] Note: Those module should be in the
-$directory path</p>
+['module1', 'module2'] Note: Those module should be in the $directory path</p>
 </dd></dl>
 </p>
   </div>
@@ -145,9 +144,9 @@ $directory path</p>
 </div>
 
     <div id="footer">
-  Generated on Fri Mar 20 15:58:17 2015 by
+  Generated on Thu Apr  2 23:41:46 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.5).
+  0.8.7.6 (ruby-1.9.3).
 </div>
 
   </body>

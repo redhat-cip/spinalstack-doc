@@ -6,7 +6,7 @@
 <title>
   Hostclass: cloud
   
-    &mdash; Documentation by YARD 0.8.7.4
+    &mdash; Documentation by YARD 0.8.7.6
   
 </title>
 
@@ -92,102 +92,99 @@
   <div class="discussion">
     <p>
 <p>Copyright (C) 2014 eNovance SAS &lt;licensing@enovance.com&gt; Licensed
-under the Apache License, Version 2.0 (the “License”); you may not use this
+under the Apache License, Version 2.0 (the "License"); you may not use this
 file except in compliance with the License. You may obtain a copy of the
 License at</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_http'>http</span><span class='symbol'>:/</span><span class='op'>/</span><span class='id identifier rubyid_www'>www</span><span class='period'>.</span><span class='id identifier rubyid_apache'>apache</span><span class='period'>.</span><span class='id identifier rubyid_org'>org</span><span class='op'>/</span><span class='id identifier rubyid_licenses'>licenses</span><span class='op'>/</span><span class='const'>LICENSE</span><span class='op'>-</span><span class='float'>2.0</span></code></pre>
 
 <p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
 WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations
 under the License.</p>
 
-<h2 id="label-Class%3A+cloud">Class: cloud</h2>
+<h2>Class: cloud</h2>
 
 <p>Installs the system requirements</p>
 
-<h3 id="label-Parameters%3A">Parameters:</h3>
-<dl class="rdoc-list label-list"><dt><strong>rhn_registration</strong>
+<h3>Parameters:</h3>
+<dl class="rdoc-list"><dt><b>rhn_registration</b></dt>
 <dd>
 <p>(optional) The RedHat network authentication token Defaults to undef</p>
-</dd><dt><strong>root_password</strong>
+</dd><dt><b>root_password</b></dt>
 <dd>
-<p>(optional) Unix root password Defaults to &#39;root&#39;</p>
-</dd><dt><strong>dns_ips</strong>
+<p>(optional) Unix root password Defaults to 'root'</p>
+</dd><dt><b>dns_ips</b></dt>
 <dd>
 <p>(optional) Hostname or IP of the Domain Name Server (dns) used Should by an
-array. Defaults to google public dns [&#39;8.8.8.8&#39;, &#39;8.8.4.4&#39;]</p>
-</dd><dt><strong>site_domain</strong>
+array. Defaults to google public dns ['8.8.8.8', '8.8.4.4']</p>
+</dd><dt><b>site_domain</b></dt>
 <dd>
 <p>(optional) Domain name (used for search and domain fields of resolv.conf
-configuration file Defaults to &#39;mydomain&#39;</p>
-</dd><dt><strong>motd_title</strong>
+configuration file Defaults to 'mydomain'</p>
+</dd><dt><b>motd_title</b></dt>
 <dd>
-<p>(optional) A string used in the top of the server&#39;s motd Defaults to
-&#39;eNovance IT Operations&#39;</p>
-</dd><dt><strong>selinux_mode</strong>
+<p>(optional) A string used in the top of the server's motd Defaults to
+'eNovance IT Operations'</p>
+</dd><dt><b>selinux_mode</b></dt>
 <dd>
-<p>(optional) SELinux mode the system should be in Defaults to
-&#39;permissive&#39; Possible values : disabled, permissive, enforcing</p>
-</dd><dt><strong>selinux_directory</strong>
+<p>(optional) SELinux mode the system should be in Defaults to 'permissive'
+Possible values : disabled, permissive, enforcing</p>
+</dd><dt><b>selinux_directory</b></dt>
 <dd>
 <p>(optional) Path where to find the SELinux modules Defaults to
-&#39;/usr/share/selinux&#39;</p>
-</dd><dt><strong>selinux_booleans</strong>
+'/usr/share/selinux'</p>
+</dd><dt><b>selinux_booleans</b></dt>
 <dd>
 <p>(optional) Set of booleans to persistently enables SELinux booleans are the
-one getsebool -a returns Defaults [] Example: [&#39;rsync_full_access&#39;,
-&#39;haproxy_connect_any&#39;]</p>
-</dd><dt><strong>selinux_modules</strong>
+one getsebool -a returns Defaults [] Example: ['rsync_full_access',
+'haproxy_connect_any']</p>
+</dd><dt><b>selinux_modules</b></dt>
 <dd>
 <p>(optional) Set of modules to load on the system Defaults [] Example:
-[&#39;module1&#39;, &#39;module2&#39;] Note: Those module should be in the
-$directory path</p>
-</dd><dt><strong>limits</strong>
+['module1', 'module2'] Note: Those module should be in the $directory path</p>
+</dd><dt><b>limits</b></dt>
 <dd>
 <p>(optional) Set of limits to set in /etc/security/limits.d/ Defaults {}
 Example:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='lbrace'>{</span>
-  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mysql_nofile</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ensure</span><span class='tstring_end'>&#39;</span></span>     <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>present</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>user</span><span class='tstring_end'>&#39;</span></span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mysql</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>limit_type</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>nofile</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>both</span><span class='tstring_end'>&#39;</span></span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>16384</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>mysql_nofile</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+     <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ensure</span><span class='tstring_end'>'</span></span>     <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>present</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+     <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>user</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>mysql</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+     <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>limit_type</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>nofile</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+     <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>both</span><span class='tstring_end'>'</span></span>       <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>16384</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
   <span class='rbrace'>}</span><span class='comma'>,</span>
-<span class='rbrace'>}</span>
-</code></pre>
-</dd><dt><strong>sysctl</strong>
+<span class='rbrace'>}</span></code></pre>
+</dd><dt><b>sysctl</b></dt>
 <dd>
 <p>(optional) Set of sysctl values to set. Defaults {} Example:</p>
 
 <pre class="code ruby"><code class="ruby">{
-  &#39;net.ipv4.ip_forward&#39; =&gt; {
-     &#39;value&#39; =&gt; &#39;1&#39;,
+  'net.ipv4.ip_forward' =&gt; {
+     'value' =&gt; '1',
   },
-  &#39;net.ipv6.conf.all.forwarding =&gt; {
-     &#39;value&#39; =&gt; &#39;1&#39;,
+  'net.ipv6.conf.all.forwarding =&gt; {
+     'value' =&gt; '1',
   },
-}
-</code></pre>
-</dd><dt><strong>manage_firewall</strong>
+}</code></pre>
+</dd><dt><b>manage_firewall</b></dt>
 <dd>
 <p>(optional) Completely enable or disable firewall settings (false means
 disabled, and true means enabled) Defaults to false</p>
-</dd><dt><strong>firewall_rules</strong>
+</dd><dt><b>firewall_rules</b></dt>
 <dd>
 <p>(optional) Allow to add custom firewall rules Should be an hash. Default to
 {}</p>
-</dd><dt><strong>purge_firewall_rules</strong>
+</dd><dt><b>purge_firewall_rules</b></dt>
 <dd>
 <p>(optional) Boolean, purge all firewall resources Defaults to false</p>
-</dd><dt><strong>firewall_pre_extras</strong>
+</dd><dt><b>firewall_pre_extras</b></dt>
 <dd>
 <p>(optional) Allow to add custom parameters to firewall rules (pre stage)
 Should be an hash. Default to {}</p>
-</dd><dt><strong>firewall_post_extras</strong>
+</dd><dt><b>firewall_post_extras</b></dt>
 <dd>
 <p>(optional) Allow to add custom parameters to firewall rules (post stage)
 Should be an hash. Default to {}</p>
@@ -209,9 +206,9 @@ Should be an hash. Default to {}</p>
 </div>
 
     <div id="footer">
-  Generated on Fri Mar 20 15:58:17 2015 by
+  Generated on Thu Apr  2 23:41:46 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.5).
+  0.8.7.6 (ruby-1.9.3).
 </div>
 
   </body>

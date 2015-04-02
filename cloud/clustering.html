@@ -6,7 +6,7 @@
 <title>
   Hostclass: cloud::clustering
   
-    &mdash; Documentation by YARD 0.8.7.4
+    &mdash; Documentation by YARD 0.8.7.6
   
 </title>
 
@@ -91,48 +91,47 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     <p>
-<h2 id="label-Class%3A+cloud%3A%3Aclustering">Class: cloud::clustering</h2>
+<h2>Class: cloud::clustering</h2>
 
 <p>Initialize Pacemaker / Corosync cluster</p>
 
-<h3 id="label-Parameters%3A">Parameters:</h3>
-<dl class="rdoc-list label-list"><dt><strong>cluster_members</strong>
+<h3>Parameters:</h3>
+<dl class="rdoc-list"><dt><b>cluster_members</b></dt>
 <dd>
 <p>(required) Array of hostnames of cluster nodes</p>
-</dd><dt><strong>cluster_ip</strong>
+</dd><dt><b>cluster_ip</b></dt>
 <dd>
 <p>(optional) IP address used by Corosync to send multicast traffic Defaults
-to &#39;127.0.0.1&#39;</p>
-</dd><dt><strong>cluster_auth</strong>
+to '127.0.0.1'</p>
+</dd><dt><b>cluster_auth</b></dt>
 <dd>
-<p>(optional) Controls corosync&#39;s ability to authenticate and encrypt
+<p>(optional) Controls corosync's ability to authenticate and encrypt
 multicast messages. Defaults to false</p>
-</dd><dt><strong>cluster_authkey</strong>
+</dd><dt><b>cluster_authkey</b></dt>
 <dd>
-<p>(optional) Specifies the path to the CA which is used to sign
-Corosync&#39;s certificate. Defaults to
-&#39;/var/lib/puppet/ssl/certs/ca.pem&#39;</p>
-</dd><dt><strong>cluster_recheck_interval</strong>
+<p>(optional) Specifies the path to the CA which is used to sign Corosync's
+certificate. Defaults to '/var/lib/puppet/ssl/certs/ca.pem'</p>
+</dd><dt><b>cluster_recheck_interval</b></dt>
 <dd>
 <p>(optional) This tells the cluster to periodically recalculate the ideal
 state of the cluster. Defaults to 5min</p>
-</dd><dt><strong>pe_warn_series_max</strong>
+</dd><dt><b>pe_warn_series_max</b></dt>
 <dd>
 <p>(optional) The number of PE inputs resulting in WARNINGs to save. Used when
 reporting problems. Defaults to 1000</p>
-</dd><dt><strong>pe_input_series_max</strong>
+</dd><dt><b>pe_input_series_max</b></dt>
 <dd>
-<p>(optional) The number of “normal” PE inputs to save. Used when reporting
+<p>(optional) The number of "normal" PE inputs to save. Used when reporting
 problems. Defaults to 1000</p>
-</dd><dt><strong>pe_error_series_max</strong>
+</dd><dt><b>pe_error_series_max</b></dt>
 <dd>
 <p>(optional) The number of PE inputs resulting in ERRORs to save. Used when
 reporting problems. Defaults to 1000</p>
-</dd><dt><strong>multicast_address</strong>
+</dd><dt><b>multicast_address</b></dt>
 <dd>
 <p>(optionnal) IP address used to send multicast traffic Defaults to
-&#39;239.192.168.1&#39;</p>
-</dd><dt><strong>firewall_settings</strong>
+'239.192.168.1'</p>
+</dd><dt><b>firewall_settings</b></dt>
 <dd>
 <p>(optional) Allow to add custom parameters to firewall rules Should be a
 hash. Default to {}</p>
@@ -154,9 +153,9 @@ hash. Default to {}</p>
 </div>
 
     <div id="footer">
-  Generated on Fri Mar 20 15:58:18 2015 by
+  Generated on Thu Apr  2 23:41:46 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.5).
+  0.8.7.6 (ruby-1.9.3).
 </div>
 
   </body>

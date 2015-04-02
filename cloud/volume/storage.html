@@ -6,7 +6,7 @@
 <title>
   Hostclass: cloud::volume::storage
   
-    &mdash; Documentation by YARD 0.8.7.4
+    &mdash; Documentation by YARD 0.8.7.6
   
 </title>
 
@@ -92,73 +92,72 @@
   <div class="discussion">
     <p>
 <p>Copyright (C) 2014 eNovance SAS &lt;licensing@enovance.com&gt; Licensed
-under the Apache License, Version 2.0 (the “License”); you may not use this
+under the Apache License, Version 2.0 (the "License"); you may not use this
 file except in compliance with the License. You may obtain a copy of the
 License at</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_http'>http</span><span class='symbol'>:/</span><span class='op'>/</span><span class='id identifier rubyid_www'>www</span><span class='period'>.</span><span class='id identifier rubyid_apache'>apache</span><span class='period'>.</span><span class='id identifier rubyid_org'>org</span><span class='op'>/</span><span class='id identifier rubyid_licenses'>licenses</span><span class='op'>/</span><span class='const'>LICENSE</span><span class='op'>-</span><span class='float'>2.0</span></code></pre>
 
 <p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
 WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations
 under the License. Volume storage</p>
 
-<h3 id="label-Parameters">Parameters</h3>
-<dl class="rdoc-list label-list"><dt><strong>ks_keystone_internal_proto</strong>
+<h3>Parameters</h3>
+<dl class="rdoc-list"><dt><b>ks_keystone_internal_proto</b></dt>
 <dd>
-<p>(optional) Protocol used to connect to API. Could be &#39;http&#39; or
-&#39;https&#39;. Defaults to &#39;http&#39;</p>
-</dd><dt><strong>ks_keystone_internal_host</strong>
+<p>(optional) Protocol used to connect to API. Could be 'http' or 'https'.
+Defaults to 'http'</p>
+</dd><dt><b>ks_keystone_internal_host</b></dt>
 <dd>
 <p>(optional) Internal Hostname or IP to connect to Keystone API Defaults to
-&#39;127.0.0.1&#39;</p>
-</dd><dt><strong>ks_keystone_internal_port</strong>
+'127.0.0.1'</p>
+</dd><dt><b>ks_keystone_internal_port</b></dt>
 <dd>
 <p>(optional) TCP port to connect to Keystone API from admin network Default
-to &#39;5000&#39;</p>
-</dd><dt><strong>ks_cinder_password</strong>
+to '5000'</p>
+</dd><dt><b>ks_cinder_password</b></dt>
 <dd>
 <p>(optional) Password used by Cinder to connect to Keystone API Defaults to
-&#39;secrete&#39;</p>
-</dd><dt><strong>cinder_backends</strong>
+'secrete'</p>
+</dd><dt><b>cinder_backends</b></dt>
 <dd>
 <p>(optionnal) Hash of the Cinder backends to enable Example: cinder_backends
 = {</p>
 
-<pre class="code ruby"><code class="ruby">&#39;rbd&#39; =&gt; {
-   &#39;lowcost&#39;  =&gt; { &#39;rbd_pool&#39; =&gt; &#39;slow&#39;, &#39;rbd_user&#39; =&gt; &#39;cinder&#39;, &#39;rbd_secret_uuid&#39; =&gt; &#39;123&#39; },
-   &#39;standard&#39; =&gt; { &#39;rbd_pool&#39; =&gt; &#39;normal&#39;, &#39;rbd_user&#39; =&gt; &#39;cinder&#39;, &#39;rbd_secret_uuid&#39; =&gt; &#39;123&#39; }
+<pre class="code ruby"><code class="ruby">'rbd' =&gt; {
+   'lowcost'  =&gt; { 'rbd_pool' =&gt; 'slow', 'rbd_user' =&gt; 'cinder', 'rbd_secret_uuid' =&gt; '123' },
+   'standard' =&gt; { 'rbd_pool' =&gt; 'normal', 'rbd_user' =&gt; 'cinder', 'rbd_secret_uuid' =&gt; '123' }
 },
-&#39;netapp&#39; =&gt; {
-   &#39;premium&#39; =&gt; { &#39;netapp_server_hostname&#39; =&gt; &#39;netapp.host&#39;, &#39;netapp_login&#39; =&gt; &#39;joe&#39;, &#39;netapp_password&#39; =&gt; &#39;secret&#39; }
-}
-</code></pre>
+'netapp' =&gt; {
+   'premium' =&gt; { 'netapp_server_hostname' =&gt; 'netapp.host', 'netapp_login' =&gt; 'joe', 'netapp_password' =&gt; 'secret' }
+}</code></pre>
 
 <p>} Defaults to undef</p>
-</dd><dt><strong>cinder_rbd_pool</strong>
+</dd><dt><b>cinder_rbd_pool</b></dt>
 <dd>
 <p>(optional) Name of the Ceph pool which which store the cinder images
-Defaults to &#39;volumes&#39;</p>
-</dd><dt><strong>cinder_rbd_user</strong>
+Defaults to 'volumes'</p>
+</dd><dt><b>cinder_rbd_user</b></dt>
 <dd>
 <p>(optional) User name used to acces to the cinder rbd pool Defaults to
-&#39;cinder&#39;</p>
-</dd><dt><strong>cinder_rbd_secret_uuid</strong>
+'cinder'</p>
+</dd><dt><b>cinder_rbd_secret_uuid</b></dt>
 <dd>
 <p>(optional) A required parameter to use cephx. Defaults to false</p>
-</dd><dt><strong>cinder_rbd_conf</strong>
+</dd><dt><b>cinder_rbd_conf</b></dt>
 <dd>
 <p>(optional) Path to the ceph configuration file to use Defaults to
-&#39;/etc/ceph/ceph.conf&#39;</p>
-</dd><dt><strong>cinder_rbd_flatten_volume_from_snapshot</strong>
+'/etc/ceph/ceph.conf'</p>
+</dd><dt><b>cinder_rbd_flatten_volume_from_snapshot</b></dt>
 <dd>
 <p>(optional) Enable flatten volumes created from snapshots. Defaults to false</p>
-</dd><dt><strong>cinder_rbd_max_clone_depth</strong>
+</dd><dt><b>cinder_rbd_max_clone_depth</b></dt>
 <dd>
 <p>(optional) Maximum number of nested clones that can be taken of a volume
 before enforcing a flatten prior to next clone. A value of zero disables
-cloning Defaults to &#39;5&#39;</p>
+cloning Defaults to '5'</p>
 </dd></dl>
 </p>
   </div>
@@ -177,9 +176,9 @@ cloning Defaults to &#39;5&#39;</p>
 </div>
 
     <div id="footer">
-  Generated on Fri Mar 20 15:58:18 2015 by
+  Generated on Thu Apr  2 23:41:47 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.5).
+  0.8.7.6 (ruby-1.9.3).
 </div>
 
   </body>
