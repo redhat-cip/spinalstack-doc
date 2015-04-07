@@ -65,7 +65,7 @@ puppet-elasticsearch
 ====================================== ===================== ===============================================================================================
 name                                   default               purpose
 ====================================== ===================== ===============================================================================================
-elasticsearch::init_template           undef                 Name of the initd file. Possible value 'elasticsearch.RedHat.erb' or 'elasticsearch.Debian.erb'
+elasticsearch::init_template           undef                 Name of the initd file. Possible value 'elasticsearch.RedHat.erb'
 ====================================== ===================== ===============================================================================================
 
 kibana3

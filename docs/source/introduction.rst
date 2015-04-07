@@ -15,7 +15,7 @@ Project features
 4. Post-deployment checks and runset of tests to validate the deployed OpenStack
 5. Orchestration of upgrades without downtime
 6. View logs in real-time through the UI
-7. Support for Red Hat and Debian
+7. Support for Red Hat
 8. Based 1OO% on upstream
 
 

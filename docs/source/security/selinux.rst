@@ -50,4 +50,4 @@ In advanced deployments, you will need to tweak SElinux policy, and Spinal Stack
     - swiftobject-sps
 
 
-Note that this is a first implementation of SElinux in Spinal Stack. This feature remains experimental for now and is not supported on install-server nodes, neither on Debian.
+Note that this is a first implementation of SElinux in Spinal Stack. This feature remains experimental for now and is not supported on install-server nodes.
