@@ -90,37 +90,7 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>
-<p>Copyright (C) 2014 eNovance SAS &lt;licensing@enovance.com&gt; Licensed
-under the Apache License, Version 2.0 (the "License"); you may not use this
-file except in compliance with the License. You may obtain a copy of the
-License at</p>
-
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_http'>http</span><span class='symbol'>:/</span><span class='op'>/</span><span class='id identifier rubyid_www'>www</span><span class='period'>.</span><span class='id identifier rubyid_apache'>apache</span><span class='period'>.</span><span class='id identifier rubyid_org'>org</span><span class='op'>/</span><span class='id identifier rubyid_licenses'>licenses</span><span class='op'>/</span><span class='const'>LICENSE</span><span class='op'>-</span><span class='float'>2.0</span></code></pre>
-
-<p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
-License for the specific language governing permissions and limitations
-under the License.</p>
-
-<h2>Class: cloud::image::api</h2>
-
-<p>Install API Image Server (Glance API)</p>
-
-<h3>Parameters:</h3>
-<dl class="rdoc-list"><dt><b>glance_db_host</b></dt>
-<dd>
-<p>(optional) Hostname or IP address to connect to glance database Defaults to
-'127.0.0.1'</p>
-</dd><dt><b>glance_db_user</b></dt>
-<dd>
-<p>(optional) Username to connect to glance database Defaults to 'glance'</p>
-</dd><dt><b>glance_db_password</b></dt>
-<dd>
-<p>(optional) Password to connect to glance database Defaults to
-'glancepassword'</p>
-</dd><dt><b>ks_keystone_internal_host</b></dt>
+    <p><dl class="rdoc-list"><dt><b>ks_keystone_internal_host</b></dt>
 <dd>
 <p>(optional) Internal Hostname or IP to connect to Keystone API Defaults to
 '127.0.0.1'</p>
@@ -224,13 +194,13 @@ hash. Default to {}</p>
 <h2>Parameter Summary</h2>
 <div class="tags">
   <ul class="param">
-    <li><span class="name">glance_db_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">glance_db_user </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'glance'</tt></li><li><span class="name">glance_db_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'glancepassword'</tt></li><li><span class="name">ks_keystone_internal_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_keystone_internal_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_glance_internal_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_glance_api_internal_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => '9292'</tt></li><li><span class="name">ks_glance_registry_internal_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => '9191'</tt></li><li><span class="name">ks_glance_registry_internal_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_glance_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'glancepassword'</tt></li><li><span class="name">rabbit_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'rabbit_password'</tt></li><li><span class="name">rabbit_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">api_eth </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">openstack_vip </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">glance_rbd_pool </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'images'</tt></li><li><span class="name">glance_rbd_user </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'glance'</tt></li><li><span class="name">verbose </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">debug </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">log_facility </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'LOG_LOCAL0'</tt></li><li><span class="name">use_syslog </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">backend </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'rbd'</tt></li><li><span class="name">known_stores </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['rbd', 'http']</tt></li><li><span class="name">filesystem_store_datadir </span><span class="type">(<tt>TBD</tt>)</span><tt> => '/var/lib/glance/images/'</tt></li><li><span class="name">nfs_device </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">nfs_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'defaults'</tt></li><li><span class="name">pipeline </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'keystone'</tt></li><li><span class="name">firewall_settings </span><span class="type">(<tt>TBD</tt>)</span><tt> => {}</tt></li>
+    <li><span class="name">glance_db_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">glance_db_user </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'glance'</tt></li><li><span class="name">glance_db_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'glancepassword'</tt></li><li><span class="name">glance_db_idle_timeout </span><span class="type">(<tt>TBD</tt>)</span><tt> => 5000</tt></li><li><span class="name">ks_keystone_internal_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_keystone_internal_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_glance_internal_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_glance_api_internal_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => '9292'</tt></li><li><span class="name">ks_glance_registry_internal_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => '9191'</tt></li><li><span class="name">ks_glance_registry_internal_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_glance_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'glancepassword'</tt></li><li><span class="name">rabbit_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'rabbit_password'</tt></li><li><span class="name">rabbit_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">api_eth </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">openstack_vip </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">glance_rbd_pool </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'images'</tt></li><li><span class="name">glance_rbd_user </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'glance'</tt></li><li><span class="name">verbose </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">debug </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">log_facility </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'LOG_LOCAL0'</tt></li><li><span class="name">use_syslog </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">backend </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'rbd'</tt></li><li><span class="name">known_stores </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['rbd', 'http']</tt></li><li><span class="name">filesystem_store_datadir </span><span class="type">(<tt>TBD</tt>)</span><tt> => '/var/lib/glance/images/'</tt></li><li><span class="name">nfs_device </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">nfs_options </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'defaults'</tt></li><li><span class="name">pipeline </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'keystone'</tt></li><li><span class="name">firewall_settings </span><span class="type">(<tt>TBD</tt>)</span><tt> => {}</tt></li>
   </ul>
 </div>
 </div>
 
     <div id="footer">
-  Generated on Fri Apr 10 02:27:20 2015 by
+  Generated on Sat Apr 11 02:27:25 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-1.9.3).
 </div>

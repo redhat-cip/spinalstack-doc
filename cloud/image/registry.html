@@ -120,6 +120,9 @@ under the License.</p>
 <dd>
 <p>(optional) Password to connect to glance database Defaults to
 'glancepassword'</p>
+</dd><dt><b>glance_db_idle_timeout</b></dt>
+<dd>
+<p>(optional) Timeout before idle SQL connections are reaped. Defaults 5000</p>
 </dd><dt><b>ks_keystone_internal_host</b></dt>
 <dd>
 <p>(optional) Internal Hostname or IP to connect to Keystone API Defaults to
@@ -172,13 +175,13 @@ hash. Default to {}</p>
 <h2>Parameter Summary</h2>
 <div class="tags">
   <ul class="param">
-    <li><span class="name">glance_db_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">glance_db_user </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'glance'</tt></li><li><span class="name">glance_db_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'glancepassword'</tt></li><li><span class="name">ks_keystone_internal_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_keystone_internal_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_glance_internal_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_glance_registry_internal_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => '9191'</tt></li><li><span class="name">ks_glance_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'glancepassword'</tt></li><li><span class="name">api_eth </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">verbose </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">debug </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">log_facility </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'LOG_LOCAL0'</tt></li><li><span class="name">use_syslog </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">firewall_settings </span><span class="type">(<tt>TBD</tt>)</span><tt> => {}</tt></li>
+    <li><span class="name">glance_db_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">glance_db_user </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'glance'</tt></li><li><span class="name">glance_db_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'glancepassword'</tt></li><li><span class="name">glance_db_idle_timeout </span><span class="type">(<tt>TBD</tt>)</span><tt> => 5000</tt></li><li><span class="name">ks_keystone_internal_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_keystone_internal_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_glance_internal_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_glance_registry_internal_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => '9191'</tt></li><li><span class="name">ks_glance_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'glancepassword'</tt></li><li><span class="name">api_eth </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">verbose </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">debug </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">log_facility </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'LOG_LOCAL0'</tt></li><li><span class="name">use_syslog </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">firewall_settings </span><span class="type">(<tt>TBD</tt>)</span><tt> => {}</tt></li>
   </ul>
 </div>
 </div>
 
     <div id="footer">
-  Generated on Fri Apr 10 02:27:21 2015 by
+  Generated on Sat Apr 11 02:27:26 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-1.9.3).
 </div>
