@@ -57,7 +57,7 @@ Generate CA and certificates
    echo '00' > file.srl
 
    # generate the crt file
-   openssl x509 -req -in star_$domain.req -CA ca.pem -CAkey privkey.pem -CAserial file.srl -out star_$domain.crt
+   openssl x509 -req -days 3650 -in star_$domain.req -CA ca.pem -CAkey privkey.pem -CAserial file.srl -out star_$domain.crt
 
    # generate the pem file for haproxy
    cat star_$domain.key star_$domain.crt > star_$domain.pem
