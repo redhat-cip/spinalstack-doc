@@ -18,6 +18,7 @@ rabbit_ip                Ip address of RabbitMQ interface                       
 rabbit                   Boolean to described if RabbitMQ should be load balanced false
 rabbit_bind_options      An array of HAProxy bind options                         Global HAProxy binding options array
 erlang_cookie            Erlang cookie to use                                     No default, the parameter is required
+rabbit_cluster_count     Number of nodes where queues are mirrored                undef, so all RabbitMQ nodes will be mirrored
 ======================== ======================================================== =================================================================
 
 Upgrade from I.1.3.0 to J.1.0.0
