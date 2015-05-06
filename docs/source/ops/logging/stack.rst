@@ -40,5 +40,5 @@ It can be easily scaled, simply by adding a new ElasticSearch instance to the sa
 kibana3
 -------
 
-Kibana is the visual interface to the ElasticSearch cluster. It is developped by the ElasticSearch team itself, it hence provides a good integration with ElasticSearch.
+Kibana is the visual interface to the ElasticSearch cluster. It is developed by the ElasticSearch team itself, it hence provides a good integration with ElasticSearch.
 Kibana is a set a javascript files ran behind a web server.
