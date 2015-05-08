@@ -31,6 +31,7 @@ neutron_ha_vrrp_auth_password               VRRP auth password               -
 neutron_l3_allow_automatic_l3agent_failover Enable/disable auto rescheduling false
 neutron_l3_agent_mode                       Working agent for the agent      legacy
 enable_distributed_routing                  Enable/disable DVR_              false
+enable_l2_population                        Enable/disable L2 population     true
 =========================================== ================================ =======
 
 .. warning::
@@ -40,7 +41,7 @@ enable_distributed_routing                  Enable/disable DVR_              fal
     In OpenStack Juno, DVR & VRRP can't work together. That means you can't enable neutron_l3_ha_enabled and enable_distributed_routing in the same time. If you try to do it, Puppet will fail to avoid any configuration error.
 
 .. warning::
-    In OpenStack Juno, VRRP can't work with l2population mechanism driver. Ensure neutron_mechanism_drivers parameter does not contain l2population in the array. Please read this blogpost_ for more informations about HA compatiblity.
+    In OpenStack Juno, VRRP can't work with l2population mechanism driver. Ensure neutron_mechanism_drivers parameter does not contain l2population in the array and enable_l2_population is at false. Please read this blogpost_ for more informations about HA compatiblity.
 
 .. note::
     neutron_l3_allow_automatic_l3agent_failover allows to re-schedule virtual routers if a Neutron L3 agent goes down.
