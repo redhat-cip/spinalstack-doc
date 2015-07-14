@@ -121,6 +121,15 @@ $::hostname</p>
 <dd>
 <p>(optional) Store the queues on the disc or in the RAM. Could be set to
 'disk' or 'ram'. Defaults to 'disc'</p>
+</dd><dt><b>cluster_count</b></dt>
+<dd>
+<p>(optional) Queue is mirrored to count nodes in the cluster. If there are
+less than count nodes in the cluster, the queue is mirrored to all nodes.
+If there are more than count nodes in the cluster, and a node containing a
+mirror goes down, then a new mirror will be created on another node. If a
+value is set, RabbitMQ policy will be 'exactly'. Otherwise, undef will set
+the policy to 'all' by default. To enable this feature, you need
+'haproxy_binding' to true. Defaults to undef</p>
 </dd><dt><b>haproxy_binding</b></dt>
 <dd>
 <p>(optional) Enable or not HAproxy binding for load-balancing. Defaults to
@@ -152,13 +161,13 @@ hash. Default to {}</p>
 <h2>Parameter Summary</h2>
 <div class="tags">
   <ul class="param">
-    <li><span class="name">erlang_cookie </span><span class="type">(<tt>TBD</tt>)</span></li><li><span class="name">cluster_node_type </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'disc'</tt></li><li><span class="name">rabbit_names </span><span class="type">(<tt>TBD</tt>)</span><tt> => $::hostname</tt></li><li><span class="name">rabbit_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'rabbitpassword'</tt></li><li><span class="name">haproxy_binding </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">rabbitmq_ip </span><span class="type">(<tt>TBD</tt>)</span><tt> => $::ipaddress</tt></li><li><span class="name">rabbitmq_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => '5672'</tt></li><li><span class="name">firewall_settings </span><span class="type">(<tt>TBD</tt>)</span><tt> => {}</tt></li>
+    <li><span class="name">erlang_cookie </span><span class="type">(<tt>TBD</tt>)</span></li><li><span class="name">cluster_node_type </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'disc'</tt></li><li><span class="name">cluster_count </span><span class="type">(<tt>TBD</tt>)</span><tt> => undef</tt></li><li><span class="name">rabbit_names </span><span class="type">(<tt>TBD</tt>)</span><tt> => $::hostname</tt></li><li><span class="name">rabbit_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'rabbitpassword'</tt></li><li><span class="name">haproxy_binding </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">rabbitmq_ip </span><span class="type">(<tt>TBD</tt>)</span><tt> => $::ipaddress</tt></li><li><span class="name">rabbitmq_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => '5672'</tt></li><li><span class="name">firewall_settings </span><span class="type">(<tt>TBD</tt>)</span><tt> => {}</tt></li>
   </ul>
 </div>
 </div>
 
     <div id="footer">
-  Generated on Wed Apr 15 02:27:20 2015 by
+  Generated on Tue Jul 14 12:33:03 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-1.9.3).
 </div>

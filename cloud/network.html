@@ -137,8 +137,13 @@ under the License.</p>
 <p>(optional) DHCP Lease duration (in seconds) Defaults to '120'</p>
 </dd><dt><b>plugin</b></dt>
 <dd>
-<p>(optional) Neutron plugin name Supported values: 'ml2', 'n1kv'. Defaults to
-'ml2'</p>
+<p>(optional) Neutron plugin name Supported values: 'ml2', 'n1kv',
+'opencontrail'. Defaults to 'ml2'</p>
+</dd><dt><b>service_plugins</b></dt>
+<dd>
+<p>(optional) List of service plugin entrypoints to be loaded from the neutron
+service_plugins namespace Defaults to
+['neutron.services.loadbalancer.plugin.LoadBalancerPlugin','neutron.services.metering.metering_plugin.MeteringPlugin','neutron.services.l3_router.l3_router_plugin.L3RouterPlugin']</p>
 </dd></dl>
 </p>
   </div>
@@ -151,13 +156,13 @@ under the License.</p>
 <h2>Parameter Summary</h2>
 <div class="tags">
   <ul class="param">
-    <li><span class="name">verbose </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">debug </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">rabbit_hosts </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['127.0.0.1:5672']</tt></li><li><span class="name">rabbit_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'rabbitpassword'</tt></li><li><span class="name">api_eth </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">use_syslog </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">log_facility </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'LOG_LOCAL0'</tt></li><li><span class="name">dhcp_lease_duration </span><span class="type">(<tt>TBD</tt>)</span><tt> => '120'</tt></li><li><span class="name">plugin </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'ml2'</tt></li>
+    <li><span class="name">verbose </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">debug </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">rabbit_hosts </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['127.0.0.1:5672']</tt></li><li><span class="name">rabbit_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'rabbitpassword'</tt></li><li><span class="name">api_eth </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">use_syslog </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">log_facility </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'LOG_LOCAL0'</tt></li><li><span class="name">dhcp_lease_duration </span><span class="type">(<tt>TBD</tt>)</span><tt> => '120'</tt></li><li><span class="name">plugin </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'ml2'</tt></li><li><span class="name">service_plugins </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['neutron.services.loadbalancer.plugin.LoadBalancerPlugin','neutron.services.metering.metering_plugin.MeteringPlugin','neutron.services.l3_router.l3_router_plugin.L3RouterPlugin']</tt></li>
   </ul>
 </div>
 </div>
 
     <div id="footer">
-  Generated on Wed Apr 15 02:27:20 2015 by
+  Generated on Tue Jul 14 12:33:03 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-1.9.3).
 </div>

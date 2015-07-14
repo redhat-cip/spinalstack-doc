@@ -188,8 +188,8 @@ hash. Default to {}</p>
 value ['local', 'flat', 'vlan', 'gre', 'vxlan']</p>
 </dd><dt><b>plugin</b></dt>
 <dd>
-<p>(optional) Neutron plugin name Supported values: 'ml2', 'n1kv'. Defaults to
-'ml2'</p>
+<p>(optional) Neutron plugin name Supported values: 'ml2', 'n1kv',
+'opencontrail'. Defaults to 'ml2'</p>
 </dd><dt><b>l3_ha</b></dt>
 <dd>
 <p>(optional) Enable L3 agent HA Defaults to false.</p>
@@ -201,6 +201,16 @@ not compatible with l3_ha Defaults to false</p>
 <dd>
 <p>(optional) TCP port to connect to Keystone API from admin network Defaults
 to '35357'</p>
+</dd><dt><b>ks_keystone_admin_user</b></dt>
+<dd>
+<p>(optional) Admin user to connect to Keystone API Defaults to 'admin'</p>
+</dd><dt><b>ks_keystone_admin_password</b></dt>
+<dd>
+<p>(optional) Password for admin user to connect to Keystone API Defaults to
+'password'</p>
+</dd><dt><b>ks_keystone_admin_token</b></dt>
+<dd>
+<p>(optional) Token to connect to Keystone API as admin user Defaults to undef</p>
 </dd><dt><b>provider_vlan_ranges</b></dt>
 <dd>
 <p>(optionnal) VLAN range for provider networks Defaults to
@@ -225,7 +235,20 @@ colon-separated id ranges Defaults to ['1:10000']</p>
 </dd><dt><b>vni_ranges</b></dt>
 <dd>
 <p>(optional) VxLan Network ID range. used by the ml2 plugin List of
-colon-separated id ranges Defautls to ['1:10000']</p>
+colon-separated id ranges Defaults to ['1:10000']</p>
+</dd><dt><b>contrail_api_server_ip</b></dt>
+<dd>
+<p>(optional) IP address of the Contrail API Defaults to 127.0.0.1</p>
+</dd><dt><b>contrail_api_server_port</b></dt>
+<dd>
+<p>(optional) Port of the Contrail API Defaults to 8082</p>
+</dd><dt><b>contrail_multi_tenancy</b></dt>
+<dd>
+<p>(optional) Should Contrail support multi tenancy Boolean. Defaults to true</p>
+</dd><dt><b>contrail_extensions</b></dt>
+<dd>
+<p>(optional) Array of extensions enabled for Contrail Array of extensions
+Defaults to ["]</p>
 </dd><dt><b>mechanism_drivers</b></dt>
 <dd>
 <p>(optional) Neutron mechanism drivers to run List of drivers. Note: if l3-ha
@@ -243,13 +266,13 @@ is True, do not include l2population (not compatible in Juno). Defaults to
 <h2>Parameter Summary</h2>
 <div class="tags">
   <ul class="param">
-    <li><span class="name">neutron_db_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">neutron_db_user </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'neutron'</tt></li><li><span class="name">neutron_db_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'neutronpassword'</tt></li><li><span class="name">neutron_db_idle_timeout </span><span class="type">(<tt>TBD</tt>)</span><tt> => 5000</tt></li><li><span class="name">ks_neutron_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'neutronpassword'</tt></li><li><span class="name">ks_keystone_admin_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_keystone_admin_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_keystone_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 5000</tt></li><li><span class="name">ks_neutron_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 9696</tt></li><li><span class="name">api_eth </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_admin_tenant </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'admin'</tt></li><li><span class="name">nova_url </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http://127.0.0.1:8774/v2'</tt></li><li><span class="name">nova_admin_auth_url </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http://127.0.0.1:5000/v2.0'</tt></li><li><span class="name">nova_admin_username </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'nova'</tt></li><li><span class="name">nova_admin_tenant_name </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'services'</tt></li><li><span class="name">nova_admin_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'novapassword'</tt></li><li><span class="name">nova_region_name </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'RegionOne'</tt></li><li><span class="name">manage_ext_network </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">firewall_settings </span><span class="type">(<tt>TBD</tt>)</span><tt> => {}</tt></li><li><span class="name">flat_networks </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['public']</tt></li><li><span class="name">tenant_network_types </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['gre']</tt></li><li><span class="name">type_drivers </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['gre', 'vlan', 'flat']</tt></li><li><span class="name">provider_vlan_ranges </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['physnet1:1000:2999']</tt></li><li><span class="name">plugin </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'ml2'</tt></li><li><span class="name">mechanism_drivers </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['linuxbridge', 'openvswitch','l2population']</tt></li><li><span class="name">l3_ha </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">router_distributed </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">n1kv_vsm_ip </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">n1kv_vsm_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'secrete'</tt></li><li><span class="name">ks_keystone_admin_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 35357</tt></li><li><span class="name">tunnel_id_ranges </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['1:10000']</tt></li><li><span class="name">vni_ranges </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['1:10000']</tt></li>
+    <li><span class="name">neutron_db_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">neutron_db_user </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'neutron'</tt></li><li><span class="name">neutron_db_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'neutronpassword'</tt></li><li><span class="name">neutron_db_idle_timeout </span><span class="type">(<tt>TBD</tt>)</span><tt> => 5000</tt></li><li><span class="name">ks_neutron_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'neutronpassword'</tt></li><li><span class="name">ks_keystone_admin_host </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">ks_keystone_admin_proto </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http'</tt></li><li><span class="name">ks_keystone_admin_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 35357</tt></li><li><span class="name">ks_keystone_admin_user </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'admin'</tt></li><li><span class="name">ks_admin_tenant </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'admin'</tt></li><li><span class="name">ks_keystone_admin_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'password'</tt></li><li><span class="name">ks_keystone_admin_token </span><span class="type">(<tt>TBD</tt>)</span><tt> => undef</tt></li><li><span class="name">ks_keystone_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 5000</tt></li><li><span class="name">ks_neutron_public_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => 9696</tt></li><li><span class="name">api_eth </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">nova_url </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http://127.0.0.1:8774/v2'</tt></li><li><span class="name">nova_admin_auth_url </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'http://127.0.0.1:5000/v2.0'</tt></li><li><span class="name">nova_admin_username </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'nova'</tt></li><li><span class="name">nova_admin_tenant_name </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'services'</tt></li><li><span class="name">nova_admin_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'novapassword'</tt></li><li><span class="name">nova_region_name </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'RegionOne'</tt></li><li><span class="name">manage_ext_network </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">firewall_settings </span><span class="type">(<tt>TBD</tt>)</span><tt> => {}</tt></li><li><span class="name">flat_networks </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['public']</tt></li><li><span class="name">tenant_network_types </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['gre']</tt></li><li><span class="name">type_drivers </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['gre', 'vlan', 'flat']</tt></li><li><span class="name">provider_vlan_ranges </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['physnet1:1000:2999']</tt></li><li><span class="name">plugin </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'ml2'</tt></li><li><span class="name">mechanism_drivers </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['linuxbridge', 'openvswitch','l2population']</tt></li><li><span class="name">l3_ha </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">router_distributed </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">n1kv_vsm_ip </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">n1kv_vsm_password </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'secrete'</tt></li><li><span class="name">tunnel_id_ranges </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['1:10000']</tt></li><li><span class="name">vni_ranges </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['1:10000']</tt></li><li><span class="name">contrail_api_server_ip </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">contrail_api_server_port </span><span class="type">(<tt>TBD</tt>)</span><tt> => '8082'</tt></li><li><span class="name">contrail_multi_tenancy </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">contrail_extensions </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['']</tt></li>
   </ul>
 </div>
 </div>
 
     <div id="footer">
-  Generated on Wed Apr 15 02:27:21 2015 by
+  Generated on Tue Jul 14 12:33:04 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-1.9.3).
 </div>

@@ -226,6 +226,15 @@ Supported tunnel types are: vxlan. Defaults to ['gre']</p>
 </dd><dt><b>n1kv_vsm_domain_id</b></dt>
 <dd>
 <p>(optional) N1000 KV Domain ID (does nothing?) Defaults to 1000</p>
+</dd><dt><b>enable_tunneling</b></dt>
+<dd>
+<p>(optional) Enable or not tunneling. Should be disable if using VLAN but
+enabled if using GRE or VXLAN. Defailts to true</p>
+</dd><dt><b>l2_population</b></dt>
+<dd>
+<p>(optional) Enable or not L2 population. If enabled, should be part of
+mechanism_drivers in cloud::network::controller. Should be disabled if
+running L3 HA with VRRP in Juno. Defaults to true</p>
 </dd><dt><b>firewall_settings</b></dt>
 <dd>
 <p>(optional) Allow to add custom parameters to firewall rules Should be an
@@ -242,13 +251,13 @@ hash. Default to {}</p>
 <h2>Parameter Summary</h2>
 <div class="tags">
   <ul class="param">
-    <li><span class="name">driver </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'ml2_ovs'</tt></li><li><span class="name">manage_ext_network </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">external_int </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'eth1'</tt></li><li><span class="name">external_bridge </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'br-pub'</tt></li><li><span class="name">firewall_settings </span><span class="type">(<tt>TBD</tt>)</span><tt> => {}</tt></li><li><span class="name">tunnel_types </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['gre']</tt></li><li><span class="name">tunnel_eth </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">provider_bridge_mappings </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['public:br-pub']</tt></li><li><span class="name">enable_distributed_routing </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">n1kv_vsm_ip </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">n1kv_vsm_domain_id </span><span class="type">(<tt>TBD</tt>)</span><tt> => 1000</tt></li><li><span class="name">host_mgmt_intf </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'eth1'</tt></li><li><span class="name">uplink_profile </span><span class="type">(<tt>TBD</tt>)</span><tt> => {}</tt></li><li><span class="name">vtep_config </span><span class="type">(<tt>TBD</tt>)</span><tt> => {}</tt></li><li><span class="name">node_type </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'compute'</tt></li><li><span class="name">vteps_in_same_subnet </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">n1kv_source </span><span class="type">(<tt>TBD</tt>)</span><tt> => ''</tt></li><li><span class="name">n1kv_version </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'present'</tt></li>
+    <li><span class="name">driver </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'ml2_ovs'</tt></li><li><span class="name">manage_ext_network </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">external_int </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'eth1'</tt></li><li><span class="name">external_bridge </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'br-pub'</tt></li><li><span class="name">firewall_settings </span><span class="type">(<tt>TBD</tt>)</span><tt> => {}</tt></li><li><span class="name">tunnel_types </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['gre']</tt></li><li><span class="name">tunnel_eth </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">enable_tunneling </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">l2_population </span><span class="type">(<tt>TBD</tt>)</span><tt> => true</tt></li><li><span class="name">provider_bridge_mappings </span><span class="type">(<tt>TBD</tt>)</span><tt> => ['public:br-pub']</tt></li><li><span class="name">enable_distributed_routing </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">n1kv_vsm_ip </span><span class="type">(<tt>TBD</tt>)</span><tt> => '127.0.0.1'</tt></li><li><span class="name">n1kv_vsm_domain_id </span><span class="type">(<tt>TBD</tt>)</span><tt> => 1000</tt></li><li><span class="name">host_mgmt_intf </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'eth1'</tt></li><li><span class="name">uplink_profile </span><span class="type">(<tt>TBD</tt>)</span><tt> => {}</tt></li><li><span class="name">vtep_config </span><span class="type">(<tt>TBD</tt>)</span><tt> => {}</tt></li><li><span class="name">node_type </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'compute'</tt></li><li><span class="name">vteps_in_same_subnet </span><span class="type">(<tt>TBD</tt>)</span><tt> => false</tt></li><li><span class="name">n1kv_source </span><span class="type">(<tt>TBD</tt>)</span><tt> => ''</tt></li><li><span class="name">n1kv_version </span><span class="type">(<tt>TBD</tt>)</span><tt> => 'present'</tt></li>
   </ul>
 </div>
 </div>
 
     <div id="footer">
-  Generated on Wed Apr 15 02:27:20 2015 by
+  Generated on Tue Jul 14 12:33:04 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-1.9.3).
 </div>
