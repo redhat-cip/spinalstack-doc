@@ -50,6 +50,16 @@
       Puppet Plugin List
     </a>
   
+    <a class="full_list_link" id="puppet_type_list_link"
+        href="puppet_type_list.html">
+      Puppet Type List
+    </a>
+  
+    <a class="full_list_link" id="puppet_provider_list_link"
+        href="puppet_provider_list.html">
+      Puppet Provider List
+    </a>
+  
     <a class="full_list_link" id="class_list_link"
         href="class_list.html">
       Class List
@@ -71,180 +81,17 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><div id='filecontents'><h1>puppet-openstack-cloud</h1>
+    <div id="content"><div id='filecontents'>
+<p>This project is no longer maintained.</p>
 
-<p><a href="https://travis-ci.org/enovance/puppet-openstack-cloud"><img src="https://api.travis-ci.org/enovance/puppet-openstack-cloud.svg?branch=master" alt="Build Status"></a>
-<a href="https://forge.puppetlabs.com/eNovance/cloud"><img src="http://img.shields.io/puppetforge/v/eNovance/cloud.svg" alt="Puppet Forge"></a>
-<a href="http://www.apache.org/licenses/LICENSE-2.0.html"><img src="http://img.shields.io/:license-apache-blue.svg" alt="License"></a></p>
-
-<h4>Table of Contents</h4>
-
-<ol>
-<li><a href="#overview">Overview - What is the cloud module?</a></li>
-<li><a href="#module-description">Module Description - What does the module do?</a></li>
-<li><a href="#setup">Setup - The basics of getting started with puppet-openstack-cloud</a></li>
-<li><a href="#implementation">Implementation - An under-the-hood peek at what the module is doing</a></li>
-<li><a href="#limitations">Limitations - OS compatibility, etc.</a></li>
-<li><a href="#involved">Getting Involved - How to go deeper</a></li>
-<li><a href="#development">Development - Guide for contributing to the module</a></li>
-<li><a href="#contributors">Contributors - Those with commits</a></li>
-<li><a href="#release-notes">Release Notes - Notes on the most recent updates to the module</a></li>
-</ol>
-
-<h2>Overview</h2>
-
-<p>The <a href="https://wiki.openstack.org/wiki/Puppet-openstack/puppet-openstack-cloud">puppet-openstack-cloud</a> module is a flexible Puppet composition layer capable of configuring the core <a href="http://docs.openstack.org/">OpenStack</a> services:</p>
-
-<ul>
-<li><a href="https://github.com/stackforge/puppet-nova">Nova</a> (compute)</li>
-<li><a href="https://github.com/stackforge/puppet-glance">Glance</a> (image)</li>
-<li><a href="https://github.com/stackforge/puppet-keystone">Keystone</a> (identity)</li>
-<li><a href="https://github.com/stackforge/puppet-cinder">Cinder</a> (volume)</li>
-<li><a href="https://github.com/stackforge/puppet-horizon">Horizon</a> (dashboard)</li>
-<li><a href="https://github.com/stackforge/puppet-heat">Heat</a> (orchestration)</li>
-<li><a href="https://github.com/stackforge/puppet-ceilometer">Ceilometer</a> (telemetry)</li>
-<li><a href="https://github.com/stackforge/puppet-neutron">Neutron</a> (networking)</li>
-<li><a href="https://github.com/stackforge/puppet-swift">Swift</a> (object storage)</li>
-<li><a href="https://github.com/stackforge/puppet-trove">Trove</a> (database as a service)</li>
-</ul>
-
-<p>Cinder, Glance and Nova can use Ceph as backend storage, using <a href="https://github.com/enovance/puppet-ceph">puppet-ceph</a>.</p>
-
-<p>Only KVM and QEMU are supported as hypervisors, for now.</p>
-
-<p>Neutron use ML2 plugin with GRE and Open-vSwitch drivers.</p>
-
-<p>Cinder has multi-backend support:</p>
-
-<ul>
-<li>RBD (default)</li>
-<li>NetAPP</li>
-<li>iSCSI</li>
-<li>EMC VNX direct</li>
-<li>NFS</li>
-</ul>
-
-<p>Glance supports different backends:</p>
-
-<ul>
-<li>RBD (default)</li>
-<li>file</li>
-<li>NFS (mount a NFS share by using file backend)</li>
-<li>Swift</li>
-</ul>
-
-<p>Neutron supports:</p>
-
-<ul>
-<li>ML2 plugin with OVS agent (GRE + VXLAN supported)</li>
-<li>Cisco plugin with N1KV agent (non-ML2)</li>
-</ul>
-
-<p>Trove support is now experimental.</p>
-
-<p><a href="http://docs.puppetlabs.com/learning/modules1.html#modules">Puppet Modules</a> are a collection of related contents that can be used to model the configuration of a discrete service.</p>
-
-<p>These Puppet modules are based on the <a href="http://docs.openstack.org/">openstack documentation</a>.</p>
-
-<h2>Module Description</h2>
-
-<p>There are a lot of moving pieces in OpenStack, consequently there are several Puppet modules needed to cover all these pieces.  Each module is then made up of several class definitions, resource declarations, defined resources, and custom types/providers.  A common pattern to reduce this complexity in Puppet is to create a composite module that bundles all these component type modules into a common set of configurations.  The cloud module is doing this compositing and exposing a set of variables needed to be successful in getting a functional stack up and running.</p>
-
-<h3>Pre-module Dependencies</h3>
-
-<ul>
-<li><a href="http://docs.puppetlabs.com/puppet/">Puppet</a> 3 or greater</li>
-<li><a href="http://www.puppetlabs.com/puppet/related-projects/facter/">Facter</a> 1.6.1 or greater (versions that support the osfamily fact)</li>
-</ul>
-
-<h3>Notes about Puppet3</h3>
-
-<p>Puppet 3.x isn&#39;t yet available on Debian/RedHat stable osfamily, but hopefully puppet provides a Official repository, please see <a href="http://docs.puppetlabs.com/guides/puppetlabs_package_repositories.html">this page</a> for the setup.</p>
-
-<p><strong>Platforms</strong></p>
-
-<p>These modules have been fully tested on Ubuntu Precise and Debian Wheezy and RHEL 6.</p>
-
-<h2>Setup</h2>
-
-<p><strong>What the cloud module affects</strong></p>
-
-<ul>
-<li>The entirety of OpenStack!</li>
-</ul>
-
-<h3>Installing Puppet</h3>
-
-<p>Puppet Labs provides two tools for getting started with managing configuration modeling with Puppet, Puppet Enterprise or its underlying opensource projects, i.e. Puppet and MCollective.</p>
-
-<ul>
-<li><a href="http://docs.puppetlabs.com/#puppet-enterprisepelatest">Puppet Enterprise</a> is a complete configuration management platform, with an optimized set of components proven to work well together.  Is free up to 10 nodes so if you&#39;re just using Puppet for OpenStack management this might just work perfectly.  It will come configured with a handful of extra components that make for a richer experience, like a web interface for managing the orchestration of Puppet and certificate management.</li>
-<li><a href="http://docs.puppetlabs.com/#puppetpuppet">Puppet</a> manages your servers: you describe machine configurations in an easy-to-read declarative language, and Puppet will bring your systems into the desired state and keep them there.  This is the opensource version of Puppet and should be available in your operating system&#39;s package repositories but it is generally suggested you use the <a href="http://yum.puppetlabs.com">yum</a> or <a href="http://apt.puppetlabs.com">apt</a> repositories from Puppet Labs if possible.</li>
-</ul>
-
-<p>Consult the documentation linked above to help you make your decision but don&#39;t fret about the choice to much, opensource Puppet agents are compatible with Puppet Enterprise Puppet masters.</p>
-
-<h3>Optional Puppet features</h3>
-
-<p>The swift portions of this module needs Puppet&#39;s <a href="http://docs.puppetlabs.com/puppet/3/reference/lang_exported.html">exported resources</a>.  Exported resources leverages the PuppetDB to export and share data across other Puppet managed nodes.</p>
-
-<h3>Installing latest unstable cloud module from source</h3>
-
-<pre class="code ruby"><code class="ruby">cd /etc/puppet/modules
-git clone git@github.com:redhat-openstack/openstack-puppet-modules.git modules
-cd modules
-git checkout -b puppet-openstack-cloud origin/enovance
-gem install --no-ri --no-rdoc r10k
-# a debian package is available in jessie
-PUPPETFILE=./Puppetfile PUPPETFILE_DIR=../ r10k --verbose 3 puppetfile install
-</code></pre>
-
-<p><strong>Pre-puppet setup</strong></p>
-
-<p>The things that follow can be handled by Puppet but are out of scope of this document and are not included in the cloud module.</p>
-
-<h3>Beginning with puppet-openstack-cloud</h3>
-
-<p>Utilization of this module can come in many forms.  It was designed to be capable of deploying all services to a single node or distributed across several.  This is not an exhaustive list, we recommend you consult and understand all the manifests included in this module and the <a href="http://docs.openstack.org">core openstack</a> documentation.</p>
-
-<h2>Implementation</h2>
-
-<p>(more doc should be written here)</p>
-
-<h2>Limitations</h2>
-
-<ul>
-<li>Deploys only with rabbitmq and mysql RPC/data backends.</li>
-<li>Not backwards compatible with pre-2.x release of the cloud modules.</li>
-</ul>
-
-<h2>Getting Involved</h2>
-
-<p>Need a feature? Found a bug? Let us know!</p>
-
-<p>We are extremely interested in growing a community of OpenStack experts and users around these modules so they can serve as an example of consolidated best practices of how to deploy OpenStack.</p>
-
-<p>The best way to get help with this set of modules is to email the group associated with this project:</p>
-
-<p>dev [at] enovance [dot] com</p>
-
-<p>Issues should be opened here:</p>
-
-<p><a href="https://bugs.launchpad.net/puppet-openstack-cloud/+filebug">https://bugs.launchpad.net/puppet-openstack-cloud/+filebug</a></p>
-
-<h2>Contributors</h2>
-
-<ul>
-<li><a href="http://stackalytics.com/?project_type=stackforge&amp;module=puppet-openstack-cloud&amp;release=all&amp;metric=commits">http://stackalytics.com/?project_type=stackforge&amp;module=puppet-openstack-cloud&amp;release=all&amp;metric=commits</a></li>
-</ul>
-
-<h2>Release Notes</h2>
-
-<p>See <a href="https://github.com/stackforge/puppet-openstack-cloud/blob/master/CHANGELOG.md">CHANGELOG</a> file.</p>
+<p>The contents of this repository are still available in the Git source code
+management system. To see the contents of this repository before it reached
+its end of life, please check out the previous commit with  "git checkout
+HEAD^1".</p>
 </div></div>
 
     <div id="footer">
-  Generated on Mon Sep  7 12:52:53 2015 by
+  Generated on Sun Oct 18 02:27:18 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-1.9.3).
 </div>
